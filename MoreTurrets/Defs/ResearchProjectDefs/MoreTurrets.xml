@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Research>
+
+
+  
+	<ResearchProjectDef>
+		<defName>SimpleDefences</defName>
+		<label>Simple Defences</label>
+		<description>No point letting these spare pistols go to waste right?</description>
+		<totalCost>10000</totalCost>
+		<prerequisites></prerequisites>
+	</ResearchProjectDef>
+  
+  <ResearchProjectDef>
+		<defName>AdvancedDefences</defName>
+		<label>Advanced Defences</label>
+		<description>We need crowd control defences!</description>
+		<totalCost>40000</totalCost>
+		<prerequisites><li>SimpleDefences</li></prerequisites>
+	</ResearchProjectDef>
+  
+
+
+</Research>

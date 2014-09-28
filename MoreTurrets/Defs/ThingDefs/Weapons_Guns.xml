@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="BaseGun" Abstract="True">
+		<category>Item</category>
+		<eType>Equipment</eType>
+		<thingClass>Equipment</thingClass>
+		<label>Gun</label>
+		<equipmentType>Primary</equipmentType>
+		<isGun>True</isGun>
+		<pathCost>10</pathCost>
+		<useStandardHealth>True</useStandardHealth>
+		<selectable>True</selectable>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<techLevel>Midworld</techLevel>
+		<storeCategories>
+			<li>Weapons</li>
+		</storeCategories>
+		<comps>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+		</comps>
+		<verb>
+      <category>Nonnative</category>
+			<verbClass>Verb_Shoot</verbClass>
+			<cooldownTicks>40</cooldownTicks>
+			<label>VerbGun</label>
+			<description>Fire a bullet.</description>
+			<hasStandardCommand>true</hasStandardCommand>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<worldObjectTargetsMustBeAutoAttackable>true</worldObjectTargetsMustBeAutoAttackable>
+			</targetParams>
+			<canMiss>true</canMiss>
+		</verb>
+	</ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+  
+	<ThingDef Name="BaseBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<baseMaterialType>Transparent</baseMaterialType>
+	</ThingDef>
+
+  <!-- ================ PistolPole gun ============== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_PistolPole</defName>
+		<label>Pistol Pole bullet</label>
+		<texturePath>Things/Projectile/Bullet_Small</texturePath>
+		<projectile>
+      <damageDef>Bullet</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_PistolPole</defName>
+		<label>Pistol Pole gun</label>
+		<menuHidden>true</menuHidden>
+		<description>Jury-rigged Pistol attached to a pole.</description>
+		<texturePath>Things/Item/Equipment/Default</texturePath>
+		<soundInteract>InteractPistol</soundInteract>
+		<canBeSpawningInventory>false</canBeSpawningInventory>
+		<weaponTags>
+			<li>TurretGun</li>
+		</weaponTags>
+		<verb>
+			<projectileDef>Bullet_PistolPole</projectileDef>
+			<warmupTicks>120</warmupTicks>
+			<range>24</range>
+      <accuracyTouch>0.91</accuracyTouch>
+      <accuracyShort>0.71</accuracyShort>
+      <accuracyMedium>0.50</accuracyMedium>
+      <accuracyLong>0.32</accuracyLong>
+			<fireSound>ShotPistol</fireSound>
+		</verb>
+	</ThingDef>
+  
+  <!-- ================ FlameThrower gun ============== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_FlameThrower</defName>
+		<label>FlameThrower Jet</label>
+		<texturePath>Things/Projectile/Jet</texturePath>
+    <thingClass>BulletIncendiary</thingClass>
+		<projectile>
+      <damageDef>Flame</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_FlameThrower</defName>
+		<label>Flame Thrower</label>
+		<description>Probably not for people with Pyrophobia...Pyromaniacs though....*evil grin*</description>
+		<texturePath>Things/Weapons/FlameThrower</texturePath>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<basePrice>950</basePrice>
+		<verb>
+			<projectileDef>Bullet_FlameThrower</projectileDef>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <accuracyTouch>0.71</accuracyTouch>
+      <accuracyShort>0.51</accuracyShort>
+      <accuracyMedium>0.25</accuracyMedium>
+      <accuracyLong>0.11</accuracyLong>
+			<warmupTicks>180</warmupTicks>
+      <burstShotCount>20</burstShotCount>
+      <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+			<range>15</range>
+			<fireSound>FlameThrower</fireSound>
+		</verb>
+	</ThingDef>
+  
+</ThingDefs>

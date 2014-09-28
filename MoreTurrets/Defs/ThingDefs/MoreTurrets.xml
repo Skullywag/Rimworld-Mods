@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BuildingBase">
+    <defName>PistolPole</defName>
+    <eType>Building_Turret</eType>
+    <label>Pistol Pole</label>
+    <thingClass>Building_TurretGun</thingClass>
+    <texturePath>Things/Building/Security/PistolPoleImprovised</texturePath>
+    <altitudeLayer>Waist</altitudeLayer>
+    <maxHealth>60</maxHealth>
+    <tickerType>Normal</tickerType>
+    <description>A Pistol, a log, some metal and a potato, McGyver would be proud.</description>
+    <flammability>1.0</flammability>
+    <size>(1,1)</size>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.4</fillPercent>
+    <costList>
+      <li>
+        <thingDef>Gun_Pistol</thingDef>
+        <count>1</count>
+      </li>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>20</count>
+      </li>
+      <li>
+        <thingDef>RawPotatoes</thingDef>
+        <count>1</count>
+      </li>
+      <li>
+        <thingDef>WoodLog</thingDef>
+        <count>1</count>
+      </li>
+    </costList>
+    <workToBuild>200</workToBuild>
+    <overdraw>true</overdraw>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <beauty>Ugly</beauty>
+    <filthLeavings>
+      <li>
+        <thingDef>SlagRubble</thingDef>
+        <count>1</count>
+      </li>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <surfaceNeeded>Light</surfaceNeeded>
+    <designationCategory>Security</designationCategory>
+    <researchPrerequisite>SimpleDefences</researchPrerequisite>
+    <specialDisplayRadius>23.9</specialDisplayRadius>
+    <building>
+      <turretGunDef>Gun_PistolPole</turretGunDef>
+      <turretburstCooldownTicks>160</turretburstCooldownTicks>
+      <turretTopTexturePath>Things/Building/Security/TurretImprovised_Top</turretTopTexturePath>
+    </building>
+    <designationHotKey>U</designationHotKey>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>FlamerTurret</defName>
+    <eType>Building_Turret</eType>
+    <label>FlameThrower Turret</label>
+    <thingClass>Building_TurretGun</thingClass>
+    <texturePath>Things/Building/Security/FlameTurret</texturePath>
+    <altitudeLayer>Waist</altitudeLayer>
+    <maxHealth>150</maxHealth>
+    <tickerType>Normal</tickerType>
+    <description>BBQ squirrel anyone?.</description>
+    <comps>
+			<li><compClass>CompForbiddable</compClass></li>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+		</comps>
+    <flammability>1.0</flammability>
+    <size>(2,2)</size>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.4</fillPercent>
+    <costList>
+      <li>
+        <thingDef>Gun_FlameThrower</thingDef>
+        <count>1</count>
+      </li>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>200</count>
+      </li>
+    </costList>
+    <workToBuild>800</workToBuild>
+    <overdraw>true</overdraw>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <beauty>Ugly</beauty>
+    <filthLeavings>
+      <li>
+        <thingDef>SlagRubble</thingDef>
+        <count>4</count>
+      </li>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <researchPrerequisite>AdvancedDefences</researchPrerequisite>
+    <surfaceNeeded>Light</surfaceNeeded>
+    <designationCategory>Security</designationCategory>
+    <specialDisplayRadius>14.9</specialDisplayRadius>
+    <building>
+      <turretGunDef>Gun_FlameThrower</turretGunDef>
+      <turretburstCooldownTicks>180</turretburstCooldownTicks>
+      <turretTopTexturePath>Things/Building/Security/TurretFlameThrower_Top</turretTopTexturePath>
+    </building>
+    <designationHotKey>U</designationHotKey>
+  </ThingDef>
+
+
+</Buildings>
