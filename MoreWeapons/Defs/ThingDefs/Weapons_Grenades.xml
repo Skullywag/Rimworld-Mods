@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- ==================== Bases ========================== -->
+
+	<ThingDef Name="BaseEquipment" Abstract="True">
+		<eType>Equipment</eType>
+		<equipmentType>Secondary</equipmentType>
+		<label>Equipment lacks label</label>
+		<thingClass>Equipment</thingClass>
+		<category>Item</category>
+		<useStandardHealth>true</useStandardHealth>
+		<selectable>true</selectable>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<description>Equipment lacks desc.</description>
+		<weaponTags>
+			<li>Grenade</li>
+		</weaponTags>
+		<comps>
+			<li><compClass>CompForbiddable</compClass></li>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<storeCategories>
+			<li>Weapons</li>
+		</storeCategories>
+		<tickerType>Never</tickerType>
+    <verb>
+      <category>Nonnative</category>
+    </verb>
+  </ThingDef>
+
+
+	<ThingDef Name="BaseGrenade" Abstract="True">
+		<category>Projectile</category>
+		<altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <label>Projectile</label>
+		<tickerType>Normal</tickerType>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<baseMaterialType>Transparent</baseMaterialType>
+		<projectile>
+			<speed>12</speed>
+			<flyOverhead>false</flyOverhead>
+    </projectile>
+	</ThingDef>
+
+	
+	<!-- ==================== Stun grenade ========================== -->
+	
+	<ThingDef ParentName="BaseGrenade">
+		<defName>Proj_GrenadeStun</defName>
+		<label>Stun grenade</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<texturePath>Things/Weapons/StunGrenade</texturePath>
+		<projectile>
+			<explosionRadius>3.5</explosionRadius>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<explosionDelay>50</explosionDelay>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseEquipment">
+		<defName>Weapon_GrenadeStun</defName>
+		<equipmentType>Primary</equipmentType>
+		<label>Stun grenades</label>
+		<description>A grenade containing some magnesium and ammonium perchlorate..FLASHY!</description>
+		<texturePath>Things/Weapons/StunGrenades</texturePath>
+		<soundInteract>InteractGrenade</soundInteract>
+		<basePrice>300</basePrice>
+		<techLevel>Midworld</techLevel>
+    <tradersCarry>true</tradersCarry>
+		<verb>
+      <verbClass>Verb_LaunchProjectile</verbClass>
+      <canMiss>true</canMiss>
+      <hasStandardCommand>true</hasStandardCommand>
+			<label>Stun grenades</label>
+			<description>Thrown explosive.</description>
+			<range>12.9</range>
+      <forcedMissRadius>1.0</forcedMissRadius>
+      <warmupTicks>108</warmupTicks>
+			<cooldownTicks>200</cooldownTicks>
+			<noiseRadius>4</noiseRadius>
+			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+			<fireSound>ThrowGrenade</fireSound>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+				<worldObjectTargetsMustBeAutoAttackable>true</worldObjectTargetsMustBeAutoAttackable>
+			</targetParams>
+			<projectileDef>Proj_GrenadeStun</projectileDef>
+		</verb>
+	</ThingDef>
+
+</ThingDefs>

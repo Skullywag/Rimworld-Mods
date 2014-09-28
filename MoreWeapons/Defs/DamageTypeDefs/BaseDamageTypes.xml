@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DamageTypes>
+
+  <!-- External violence -->
+
+  <DamageTypeDef>
+    <defName>Spasm</defName>
+    <incapChanceMultiplier>1</incapChanceMultiplier>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <interruptJobs>true</interruptJobs>
+    <makesBlood>false</makesBlood>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} died from nerve damage.</deathMessage>
+  	<injury>Spasm</injury>
+  	<skinInjury>Spasm</skinInjury>
+  	<solidInjury>Spasm</solidInjury>
+  </DamageTypeDef>
+
+
+</DamageTypes>
