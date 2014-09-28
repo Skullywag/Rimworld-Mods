@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GameData>
+
+	<ThoughtDef>
+		<defName>RadiationPoisoning</defName>
+		<label>Exposed to Radiation</label>
+		<description>My insides want to be outsides.</description>
+		<baseMoodEffect>-15</baseMoodEffect>
+		<duration>40000</duration>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stackLimit>10</stackLimit>
+	</ThoughtDef>
+
+</GameData>

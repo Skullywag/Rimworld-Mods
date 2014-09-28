@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DamageTypes>
+
+  <!-- External violence -->
+
+  <DamageTypeDef>
+    <defName>Radiation</defName>
+    <incapChanceMultiplier>1</incapChanceMultiplier>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <interruptJobs>false</interruptJobs>
+    <makesBlood>false</makesBlood>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} died of radiation poisoning.</deathMessage>
+	<injury>Radiation</injury>
+	<skinInjury>Radiation</skinInjury>
+	<solidInjury>Radiation</solidInjury>
+  </DamageTypeDef>
+
+
+</DamageTypes>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Research>
+
+
+  
+	<ResearchProjectDef>
+		<defName>SimpleBlastingCharges</defName>
+		<label>Improved blasting charges</label>
+		<description>With your basic knowledge of blasting charges you feel you can improve on the design.</description>
+		<totalCost>70000</totalCost>
+		<prerequisites></prerequisites>
+	</ResearchProjectDef>
+  
+  <ResearchProjectDef>
+		<defName>AdvancedBlastingCharges</defName>
+		<label>Advanced blasting charges</label>
+		<description>Now you have a solid understanding of all things that go BOOM, lets see if we cant make those BOOMS bigger.</description>
+		<totalCost>120000</totalCost>
+		<prerequisites><li>SimpleBlastingCharges</li></prerequisites>
+	</ResearchProjectDef>
+  
+  <ResearchProjectDef>
+		<defName>NuclearBlastingCharges</defName>
+		<label>Nuclear blasting charges</label>
+		<description>Now I am become Death, the destroyer of worlds.</description>
+		<totalCost>200000</totalCost>
+		<prerequisites><li>AdvancedBlastingCharges</li></prerequisites>
+	</ResearchProjectDef>
+
+
+
+</Research>
