@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>CeilingLamp</defName>
+		<eType>BuildingComplex</eType>
+		<label>Ceiling light</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/LampCeiling</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<maxHealth>50</maxHealth>
+		<flammability>1.0</flammability>
+		<selectable>true</selectable>
+		<description>Ceiling light that lights an area.</description>
+		<size>(1,1)</size>
+		<workToBuild>115</workToBuild>
+		<costList>
+			<li>
+				<thingDef>Metal</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>12</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+		</comps>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.2</tallness>
+			<offset>(0,0,-0.1)</offset>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+    <designationHotKey>L</designationHotKey>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+		<defName>PathLamp</defName>
+		<eType>BuildingComplex</eType>
+		<label>Path light</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/LampPath</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<maxHealth>10</maxHealth>
+		<flammability>1.0</flammability>
+		<selectable>true</selectable>
+		<description>Small light with built in solar panel that lights an area.</description>
+		<size>(1,1)</size>
+		<workToBuild>50</workToBuild>
+		<costList>
+			<li>
+				<thingDef>Metal</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li>
+				<compClass>CompGlowerX</compClass>
+				<glowRadius>5</glowRadius>
+				<glowColor>(123,104,238,0)</glowColor>
+			</li>
+		</comps>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.1</basewidth>
+			<baseHeight>0.1</baseHeight>
+			<tallness>0.3</tallness>
+			<offset>(0,0,-0.1)</offset>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+    <designationHotKey>L</designationHotKey>
+  </ThingDef>
+
+
+</Buildings>
