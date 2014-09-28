@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>TrayRack</defName>
+    <eType>BuildingComplex</eType>
+    <label>Tray rack</label>
+    <thingClass>Building_Storage</thingClass>
+    <texturePath>Things/Building/Furniture/TrayRack</texturePath>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <maxHealth>100</maxHealth>
+    <flammability>1.0</flammability>
+    <description>Haulers carry trays here for storage.</description>
+    <size>(2,1)</size>
+    <workToBuild>580</workToBuild>
+    <costList>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>30</count>
+      </li>
+    </costList>
+    <overdraw>true</overdraw>
+    <killedLeavings>
+      <li>
+        <thingDef>ChunkSlag</thingDef>
+        <count>1</count>
+      </li>
+    </killedLeavings>
+    <filthLeavings>
+      <li>
+        <thingDef>SlagRubble</thingDef>
+        <count>2</count>
+      </li>
+    </filthLeavings>
+    <building>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <allowances>
+          <categories>
+            <li>FoodMeals</li>
+          </categories>
+        </allowances>
+      </fixedStorageSettings> 
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationCategory>Furniture</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <itemSurface>true</itemSurface>
+    <designationHotKey>I</designationHotKey>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Basket</defName>
+    <eType>BuildingComplex</eType>
+    <label>Food Basket</label>
+    <thingClass>Building_Storage</thingClass>
+    <texturePath>Things/Building/Furniture/Basket</texturePath>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <maxHealth>100</maxHealth>
+    <flammability>1.0</flammability>
+    <description>Haulers carry raw food here for storage.</description>
+    <size>(2,1)</size>
+    <workToBuild>580</workToBuild>
+    <costList>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>30</count>
+      </li>
+    </costList>
+    <overdraw>true</overdraw>
+    <killedLeavings>
+      <li>
+        <thingDef>ChunkSlag</thingDef>
+        <count>1</count>
+      </li>
+    </killedLeavings>
+    <filthLeavings>
+      <li>
+        <thingDef>SlagRubble</thingDef>
+        <count>2</count>
+      </li>
+    </filthLeavings>
+    <building>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <allowances>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </allowances>
+      </fixedStorageSettings> 
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationCategory>Furniture</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <itemSurface>true</itemSurface>
+    <designationHotKey>I</designationHotKey>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MedicineCabinet</defName>
+    <eType>BuildingComplex</eType>
+    <label>Medicine Cabinet</label>
+    <thingClass>Building_Storage</thingClass>
+    <texturePath>Things/Building/Furniture/MedCab</texturePath>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <maxHealth>100</maxHealth>
+    <flammability>1.0</flammability>
+    <description>Haulers carry medicine here for storage.</description>
+    <size>(2,1)</size>
+    <workToBuild>580</workToBuild>
+    <costList>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>30</count>
+      </li>
+    </costList>
+    <overdraw>true</overdraw>
+    <killedLeavings>
+      <li>
+        <thingDef>ChunkSlag</thingDef>
+        <count>1</count>
+      </li>
+    </killedLeavings>
+    <filthLeavings>
+      <li>
+        <thingDef>SlagRubble</thingDef>
+        <count>2</count>
+      </li>
+    </filthLeavings>
+    <building>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <allowances>
+         <categories>
+           <li>Medical</li>
+         </categories>
+        </allowances>
+      </fixedStorageSettings> 
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationCategory>Furniture</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <itemSurface>true</itemSurface>
+    <designationHotKey>I</designationHotKey>
+  </ThingDef>
+
+
+
+
+
+
+
+</Buildings>
