@@ -5,11 +5,11 @@
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
     <thingClass>Building</thingClass>
-    <soundBulletHit>BulletImpactMetal</soundBulletHit>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<surfaceNeeded>Light</surfaceNeeded>
-		<constructionEffect>ConstructMetal</constructionEffect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<constructEffect>ConstructMetal</constructEffect>
 		<repairEffect>Repair</repairEffect>
 	</ThingDef>
 
@@ -18,33 +18,27 @@
     <eType>BuildingComplex</eType>
     <label>Tray rack</label>
     <thingClass>Building_Storage</thingClass>
-    <texturePath>Things/Building/Furniture/TrayRack</texturePath>
+    <graphicPathSingle>Things/Building/Furniture/TrayRack</graphicPathSingle>
     <altitudeLayer>Waist</altitudeLayer>
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
-    <maxHealth>100</maxHealth>
-    <flammability>1.0</flammability>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>580</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
     <description>Haulers carry trays here for storage.</description>
     <size>(2,1)</size>
-    <workToBuild>580</workToBuild>
     <costList>
-      <li>
-        <thingDef>Metal</thingDef>
-        <count>30</count>
-      </li>
+      <Metal>30</Metal>
     </costList>
     <overdraw>true</overdraw>
     <killedLeavings>
-      <li>
-        <thingDef>ChunkSlag</thingDef>
-        <count>1</count>
-      </li>
+      <ChunkSlag>1</ChunkSlag>
     </killedLeavings>
     <filthLeavings>
-      <li>
-        <thingDef>SlagRubble</thingDef>
-        <count>2</count>
-      </li>
+      <SlagRubble>2</SlagRubble>
     </filthLeavings>
     <building>
       <fixedStorageSettings>
@@ -70,33 +64,27 @@
     <eType>BuildingComplex</eType>
     <label>Food Basket</label>
     <thingClass>Building_Storage</thingClass>
-    <texturePath>Things/Building/Furniture/Basket</texturePath>
+    <graphicPathSingle>Things/Building/Furniture/Basket</graphicPathSingle>
     <altitudeLayer>Waist</altitudeLayer>
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
-    <maxHealth>100</maxHealth>
-    <flammability>1.0</flammability>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>580</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
     <description>Haulers carry raw food here for storage.</description>
     <size>(2,1)</size>
-    <workToBuild>580</workToBuild>
     <costList>
-      <li>
-        <thingDef>Metal</thingDef>
-        <count>30</count>
-      </li>
+      <Metal>30</Metal>
     </costList>
     <overdraw>true</overdraw>
     <killedLeavings>
-      <li>
-        <thingDef>ChunkSlag</thingDef>
-        <count>1</count>
-      </li>
+      <ChunkSlag>1</ChunkSlag>
     </killedLeavings>
     <filthLeavings>
-      <li>
-        <thingDef>SlagRubble</thingDef>
-        <count>2</count>
-      </li>
+      <SlagRubble>2</SlagRubble>
     </filthLeavings>
     <building>
       <fixedStorageSettings>
@@ -122,33 +110,27 @@
     <eType>BuildingComplex</eType>
     <label>Medicine Cabinet</label>
     <thingClass>Building_Storage</thingClass>
-    <texturePath>Things/Building/Furniture/MedCab</texturePath>
+    <graphicPathSingle>Things/Building/Furniture/MedCab</graphicPathSingle>
     <altitudeLayer>Waist</altitudeLayer>
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
-    <maxHealth>100</maxHealth>
-    <flammability>1.0</flammability>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>580</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
     <description>Haulers carry medicine here for storage.</description>
     <size>(2,1)</size>
-    <workToBuild>580</workToBuild>
-    <costList>
-      <li>
-        <thingDef>Metal</thingDef>
-        <count>30</count>
-      </li>
+     <costList>
+      <Metal>30</Metal>
     </costList>
     <overdraw>true</overdraw>
-    <killedLeavings>
-      <li>
-        <thingDef>ChunkSlag</thingDef>
-        <count>1</count>
-      </li>
+   <killedLeavings>
+      <ChunkSlag>1</ChunkSlag>
     </killedLeavings>
     <filthLeavings>
-      <li>
-        <thingDef>SlagRubble</thingDef>
-        <count>2</count>
-      </li>
+      <SlagRubble>2</SlagRubble>
     </filthLeavings>
     <building>
       <fixedStorageSettings>

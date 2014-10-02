@@ -3,36 +3,39 @@
 
 
 	<ThingDef Name="ResourceBase" Abstract="True">
-		<thingClass>ThingWithComponents</thingClass>
-		<label>Unspecified resource</label>
-		<category>Item</category>
-		<eType>Item</eType>
-		<resourceReadoutPriority>Middle</resourceReadoutPriority>
-		<useStandardHealth>true</useStandardHealth>
-		<selectable>true</selectable>
-		<maxHealth>100</maxHealth>
-		<altitudeLayer>Item</altitudeLayer>
-		<stackLimit>75</stackLimit>
-		<tradersCarry>true</tradersCarry>
-		<comps>
-			<li><compClass>CompForbiddable</compClass></li>
-		</comps>
-		<beauty>Ugly</beauty>
-		<alwaysHaulable>true</alwaysHaulable>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
-	</ThingDef>
-
+    <thingClass>ThingWithComponents</thingClass>
+    <label>unspecified resource</label>
+    <category>Item</category>
+    <eType>Item</eType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useStandardHealth>true</useStandardHealth>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <tradersCarry>true</tradersCarry>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
     <defName>Medicine</defName>
     <label>Medicine</label>
     <description>Medical staff use these supplies to heal the wounded.</description>
-    <texturePath>Things/Item/Resource/Medicine</texturePath>
+    <thingClass>Medicine</thingClass>
+    <graphicPathSingle>Things/Item/Resource/Medicine</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
-    <basePrice>25</basePrice>
+    <baseMarketValue>25</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
     <storeCategories>
       <li>Medical</li>
     </storeCategories>
