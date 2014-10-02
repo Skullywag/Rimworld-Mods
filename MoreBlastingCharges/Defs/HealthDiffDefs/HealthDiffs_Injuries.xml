@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HealthDiffDefs>
+
+	<!-- Injuries -->
+
+<HealthDiffDef>
+    <defName>Radiation</defName>
+    <label>radiation</label>
+    <naturallyHealed>true</naturallyHealed>
+  	<injury>
+  		<painPerDamage>1</painPerDamage>
+  		<oldLabel>contaminated</oldLabel>
+  		<oldPainPerDamage>0.2</oldPainPerDamage>
+  		<bleeding>0</bleeding>
+  		<becomeOldChance>1</becomeOldChance>
+  		<combine>true</combine>
+  		<destroyedLabel>Molten</destroyedLabel>
+  		<treatedWellLabel>cured</treatedWellLabel>
+  		<treatedLabel>poorly cured</treatedLabel>
+  		<innerTreatedWellLabel>cured</innerTreatedWellLabel>
+  		<innerTreatedLabel>poorly cured</innerTreatedLabel>
+  		<solidTreatedWellLabel>cured</solidTreatedWellLabel>
+  		<solidTreatedLabel>poorly cured</solidTreatedLabel>
+  	</injury>
+  </HealthDiffDef>
+
+
+</HealthDiffDefs>

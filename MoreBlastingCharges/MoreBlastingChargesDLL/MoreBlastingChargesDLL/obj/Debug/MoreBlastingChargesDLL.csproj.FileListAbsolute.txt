@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\MoreBlastingChargesDLL\MoreBlastingChargesDLL\obj\Debug\MoreBlastingChargesDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\MoreBlastingChargesDLL\MoreBlastingChargesDLL\bin\Debug\RimWorld_ExampleProjectDLL.dll
+C:\Users\mjsku_000\Desktop\MoreBlastingChargesDLL\MoreBlastingChargesDLL\bin\Debug\RimWorld_ExampleProjectDLL.pdb
+C:\Users\mjsku_000\Desktop\MoreBlastingChargesDLL\MoreBlastingChargesDLL\obj\Debug\RimWorld_ExampleProjectDLL.dll
+C:\Users\mjsku_000\Desktop\MoreBlastingChargesDLL\MoreBlastingChargesDLL\obj\Debug\RimWorld_ExampleProjectDLL.pdb
