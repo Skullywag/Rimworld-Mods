@@ -5,11 +5,11 @@
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
     <thingClass>Building</thingClass>
-    <soundBulletHit>BulletImpactMetal</soundBulletHit>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<surfaceNeeded>Light</surfaceNeeded>
-		<constructionEffect>ConstructMetal</constructionEffect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<constructEffect>ConstructMetal</constructEffect>
 		<repairEffect>Repair</repairEffect>
 	</ThingDef>
 
@@ -19,22 +19,22 @@
 		<label>Ceiling light</label>
 		<thingClass>Building</thingClass>
 		<category>Building</category>
-		<texturePath>Things/Building/LampCeiling</texturePath>
+		<graphicPathSingle>Things/Building/LampCeiling</graphicPathSingle>
 		<altitudeLayer>BuildingTall</altitudeLayer>
 		<passability>PassThroughOnly</passability>
-		<maxHealth>50</maxHealth>
-		<flammability>1.0</flammability>
+		<statBases>
+      <MaxHealth>50</MaxHealth>
+      <WorkToBuild>115</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-5</Beauty>
+    </statBases>
 		<selectable>true</selectable>
 		<description>Ceiling light that lights an area.</description>
 		<size>(1,1)</size>
-		<workToBuild>115</workToBuild>
 		<costList>
-			<li>
-				<thingDef>Metal</thingDef>
-				<count>15</count>
-			</li>
+			<Metal>15</Metal>
 		</costList>
-		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<comps>
 			<li>
@@ -66,22 +66,22 @@
 		<label>Path light</label>
 		<thingClass>Building</thingClass>
 		<category>Building</category>
-		<texturePath>Things/Building/LampPath</texturePath>
+		<graphicPathSingle>Things/Building/LampPath</graphicPathSingle>
 		<altitudeLayer>BuildingTall</altitudeLayer>
 		<passability>PassThroughOnly</passability>
-		<maxHealth>10</maxHealth>
-		<flammability>1.0</flammability>
+		<statBases>
+      <MaxHealth>10</MaxHealth>
+      <WorkToBuild>50</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-5</Beauty>
+    </statBases>
 		<selectable>true</selectable>
 		<description>Small light with built in solar panel that lights an area.</description>
 		<size>(1,1)</size>
-		<workToBuild>50</workToBuild>
 		<costList>
-			<li>
-				<thingDef>Metal</thingDef>
-				<count>10</count>
-			</li>
+			<Metal>10</Metal>
 		</costList>
-		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<comps>
 			<li>
