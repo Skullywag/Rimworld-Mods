@@ -4,11 +4,11 @@
 
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
-		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<surfaceNeeded>Light</surfaceNeeded>
-		<constructionEffect>ConstructMetal</constructionEffect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<constructEffect>ConstructMetal</constructEffect>
 		<repairEffect>Repair</repairEffect>
 	</ThingDef>
 
@@ -18,53 +18,39 @@
     <eType>Building_Turret</eType>
     <label>Pistol Pole</label>
     <thingClass>Building_TurretGun</thingClass>
-    <texturePath>Things/Building/Security/PistolPoleImprovised</texturePath>
+    <graphicPathSingle>Things/Building/Security/PistolPoleImprovised</graphicPathSingle>
     <altitudeLayer>Waist</altitudeLayer>
-    <maxHealth>60</maxHealth>
+    <statBases>
+      <MaxHealth>60</MaxHealth>
+      <Beauty>-10</Beauty>
+      <WorkToBuild>180</WorkToBuild>
+      <Flammability>1</Flammability>
+    </statBases>
     <tickerType>Normal</tickerType>
     <description>A Pistol, a log, some metal and a potato, McGyver would be proud.</description>
-    <flammability>1.0</flammability>
     <size>(1,1)</size>
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.4</fillPercent>
     <costList>
-      <li>
-        <thingDef>Gun_Pistol</thingDef>
-        <count>1</count>
-      </li>
-      <li>
-        <thingDef>Metal</thingDef>
-        <count>20</count>
-      </li>
-      <li>
-        <thingDef>RawPotatoes</thingDef>
-        <count>1</count>
-      </li>
-      <li>
-        <thingDef>WoodLog</thingDef>
-        <count>1</count>
-      </li>
+      <Gun_Pistol>1</Gun_Pistol>
+      <Metal>20</Metal>
+      <RawPotatoes>1</RawPotatoes>
+      <WoodLog>1</WoodLog>
     </costList>
-    <workToBuild>200</workToBuild>
     <overdraw>true</overdraw>
     <combatTargetBuilding>true</combatTargetBuilding>
-    <beauty>Ugly</beauty>
     <filthLeavings>
-      <li>
-        <thingDef>SlagRubble</thingDef>
-        <count>1</count>
-      </li>
+      <SandbagRubble>1</SandbagRubble>
     </filthLeavings>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <surfaceNeeded>Light</surfaceNeeded>
     <designationCategory>Security</designationCategory>
     <researchPrerequisite>SimpleDefences</researchPrerequisite>
     <specialDisplayRadius>23.9</specialDisplayRadius>
     <building>
       <turretGunDef>Gun_PistolPole</turretGunDef>
       <turretburstCooldownTicks>160</turretburstCooldownTicks>
-      <turretTopTexturePath>Things/Building/Security/TurretImprovised_Top</turretTopTexturePath>
+      <turretTopgraphicPathSingle>Things/Building/Security/TurretImprovised_Top</turretTopgraphicPathSingle>
     </building>
     <designationHotKey>U</designationHotKey>
   </ThingDef>
@@ -74,52 +60,46 @@
     <eType>Building_Turret</eType>
     <label>FlameThrower Turret</label>
     <thingClass>Building_TurretGun</thingClass>
-    <texturePath>Things/Building/Security/FlameTurret</texturePath>
+    <graphicPathSingle>Things/Building/Security/FlameTurret</graphicPathSingle>
     <altitudeLayer>Waist</altitudeLayer>
-    <maxHealth>150</maxHealth>
+    <statBases>
+      <MaxHealth>150</MaxHealth>
+      <Beauty>-10</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
     <tickerType>Normal</tickerType>
     <description>BBQ squirrel anyone?.</description>
     <comps>
-			<li><compClass>CompForbiddable</compClass></li>
+			<li>
+        <compClass>CompForbiddable</compClass>
+      </li>
 			<li>
 				<compClass>CompPowerTrader</compClass>
 				<basePowerConsumption>300</basePowerConsumption>
 			</li>
 		</comps>
-    <flammability>1.0</flammability>
     <size>(2,2)</size>
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.4</fillPercent>
     <costList>
-      <li>
-        <thingDef>Gun_FlameThrower</thingDef>
-        <count>1</count>
-      </li>
-      <li>
-        <thingDef>Metal</thingDef>
-        <count>200</count>
-      </li>
+      <Gun_FlameThrower>1</Gun_FlameThrower>
+      <Metal>200</Metal>
     </costList>
-    <workToBuild>800</workToBuild>
     <overdraw>true</overdraw>
     <combatTargetBuilding>true</combatTargetBuilding>
-    <beauty>Ugly</beauty>
     <filthLeavings>
-      <li>
-        <thingDef>SlagRubble</thingDef>
-        <count>4</count>
-      </li>
+      <SlagRubble>4</SlagRubble>
     </filthLeavings>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <researchPrerequisite>AdvancedDefences</researchPrerequisite>
-    <surfaceNeeded>Light</surfaceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>14.9</specialDisplayRadius>
     <building>
       <turretGunDef>Gun_FlameThrower</turretGunDef>
       <turretburstCooldownTicks>180</turretburstCooldownTicks>
-      <turretTopTexturePath>Things/Building/Security/TurretFlameThrower_Top</turretTopTexturePath>
+      <turretTopgraphicPathSingle>Things/Building/Security/TurretFlameThrower_Top</turretTopgraphicPathSingle>
     </building>
     <designationHotKey>U</designationHotKey>
   </ThingDef>
