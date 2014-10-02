@@ -11,7 +11,7 @@
   		<painPerDamage>1</painPerDamage>
   		<oldLabel>contaminated</oldLabel>
   		<oldPainPerDamage>0.2</oldPainPerDamage>
-  		<bleeding>0</bleeding>
+  		<bleeding>1</bleeding>
   		<becomeOldChance>1</becomeOldChance>
   		<combine>true</combine>
   		<destroyedLabel>Molten</destroyedLabel>

@@ -1,20 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <DamageTypes>
 
-  <!-- External violence -->
-
-  <DamageTypeDef>
-    <defName>Radiation</defName>
-    <incapChanceMultiplier>1</incapChanceMultiplier>
-    <hasForcefulImpact>false</hasForcefulImpact>
-    <interruptJobs>false</interruptJobs>
-    <makesBlood>false</makesBlood>
-    <externalViolence>true</externalViolence>
-    <deathMessage>{0} died of radiation poisoning.</deathMessage>
-	<injury>Radiation</injury>
-	<skinInjury>Radiation</skinInjury>
-	<solidInjury>Radiation</solidInjury>
+  <DamageTypeDef Name="LocalInjuryBase" Abstract="True">
+    <workerClass>DamageType_AddLocalInjury</workerClass>
   </DamageTypeDef>
 
+  <DamageTypeDef ParentName="LocalInjuryBase">
+    <defName>Radiation</defName>
+    <label>radiation poisoning</label>
+    <incapChanceMultiplier>1</incapChanceMultiplier>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} died of radiation poisoning.</deathMessage>
+    <healthDiff>Radiation</healthDiff>
+    <healthDiffSkin>Radiation</healthDiffSkin>
+    <healthDiffSolid>Radiation</healthDiffSolid>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <armorCategory>Heat</armorCategory>
+  </DamageTypeDef>  
 
 </DamageTypes>

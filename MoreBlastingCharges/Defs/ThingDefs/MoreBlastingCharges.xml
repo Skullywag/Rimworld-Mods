@@ -4,12 +4,48 @@
 
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
-		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<surfaceNeeded>Light</surfaceNeeded>
-		<constructionEffect>ConstructMetal</constructionEffect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<constructEffect>ConstructMetal</constructEffect>
 		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+		<defName>BlastingCharge</defName>
+		<eType>BuildingComplex</eType>
+		<label>Blasting Charge</label>
+		<thingClass>Building_BlastingCharge</thingClass>
+		<graphicPathSingle>Things/Building/BlastingCharge</graphicPathSingle>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<useStandardHealth>true</useStandardHealth>
+		<statBases>
+      <MaxHealth>40</MaxHealth>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<description>A simple blasting charge.</description>
+		<comps>
+			<li>
+				<compClass>CompExplosive</compClass>
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+			</li>
+		</comps>
+		<specialDisplayRadius>3.9</specialDisplayRadius>
+		<size>(1,1)</size>
+    <costList>
+      <Metal>35</Metal>
+    </costList>
+		<researchPrerequisite>SimpleBlastingCharges</researchPrerequisite>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
 	</ThingDef>
 
 
@@ -18,52 +54,53 @@
 		<eType>BuildingComplex</eType>
 		<label>IED</label>
 		<thingClass>Building_BlastingCharge</thingClass>
-		<texturePath>Things/Building/ShellBlastingCharge</texturePath>
+		<graphicPathSingle>Things/Building/ShellBlastingCharge</graphicPathSingle>
 		<altitudeLayer>Waist</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<useStandardHealth>true</useStandardHealth>
-		<maxHealth>60</maxHealth>
-		<flammability>1.0</flammability>
+		<statBases>
+      <MaxHealth>60</MaxHealth>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
 		<selectable>true</selectable>
 		<tickerType>Normal</tickerType>
 		<description>By strapping a shell to a blasting charge you have turned a mining tool into a weapon. Desperate times call for desperate measures.</description>
 		<comps>
 			<li>
 				<compClass>CompExplosive</compClass>
-				<explosiveRadius>4.9</explosiveRadius>
+				<explosiveRadius>5.9</explosiveRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 			</li>
 		</comps>
-		<specialDisplayRadius>4.9</specialDisplayRadius>
+		<specialDisplayRadius>5.9</specialDisplayRadius>
 		<size>(1,1)</size>
-		<workToBuild>100</workToBuild>
-		<costList>
-			<li>
-				<thingDef>Metal</thingDef>
-				<count>35</count>
-			</li>
-      <li>
-				<thingDef>Shells</thingDef>
-				<count>1</count>
-			</li>
-		</costList>
-		<researchPrerequisite>SimpleBlastingCharges</researchPrerequisite>
-		<surfaceNeeded>Light</surfaceNeeded>
+    <costList>
+      <Metal>35</Metal>
+      <Shells>1</Shells>
+    </costList>
+		<researchPrerequisite>AdvancedBlastingCharges</researchPrerequisite>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Security</designationCategory>
-    <ConstructionEffect>ConstructMetal</ConstructionEffect>
+    <constructEffect>ConstructMetal</constructEffect>
 	</ThingDef>
   
-  <ThingDef ParentName="BuildingBase">
+  <!--<ThingDef ParentName="BuildingBase">
 		<defName>MissileBlastingCharge</defName>
 		<eType>BuildingComplex</eType>
 		<label>Sophisticated IED</label>
 		<thingClass>Building_BlastingCharge</thingClass>
-		<texturePath>Things/Building/MissileBlastingCharge</texturePath>
+		<graphicPathSingle>Things/Building/MissileBlastingCharge</graphicPathSingle>
 		<altitudeLayer>Waist</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<useStandardHealth>true</useStandardHealth>
-		<maxHealth>70</maxHealth>
-		<flammability>1.0</flammability>
+		<statBases>
+      <MaxHealth>70</MaxHealth>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
 		<selectable>true</selectable>
 		<tickerType>Normal</tickerType>
 		<description>The shell based bomb worked great, wonder how a bigger explosive would fare.</description>
@@ -81,34 +118,31 @@
 		</comps>
 		<specialDisplayRadius>6.9</specialDisplayRadius>
 		<size>(1,1)</size>
-		<workToBuild>100</workToBuild>
 		<costList>
-			<li>
-				<thingDef>Metal</thingDef>
-				<count>35</count>
-			</li>
-      <li>
-				<thingDef>Missiles</thingDef>
-				<count>1</count>
-			</li>
-		</costList>
+      <Metal>35</Metal>
+      <Missiles>1</Missiles>
+    </costList>
 		<researchPrerequisite>AdvancedBlastingCharges</researchPrerequisite>
-		<surfaceNeeded>Light</surfaceNeeded>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Security</designationCategory>
-    <ConstructionEffect>ConstructMetal</ConstructionEffect>
-	</ThingDef>
+    <constructEffect>ConstructMetal</constructEffect>
+	</ThingDef>  -->
   
   <ThingDef ParentName="BuildingBase">
 		<defName>BoomRatBlastingCharge</defName>
 		<eType>BuildingComplex</eType>
 		<label>The BRB</label>
 		<thingClass>Building_BlastingCharge</thingClass>
-		<texturePath>Things/Building/BoomRatBlastingCharge</texturePath>
+		<graphicPathSingle>Things/Building/BoomRatBlastingCharge</graphicPathSingle>
 		<altitudeLayer>Waist</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<useStandardHealth>true</useStandardHealth>
-		<maxHealth>50</maxHealth>
-		<flammability>1.0</flammability>
+		<statBases>
+      <MaxHealth>60</MaxHealth>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
 		<selectable>true</selectable>
 		<tickerType>Normal</tickerType>
 		<description>Seeing as these little critters explode into a ball of flames, makes sense to utilise this trait.</description>
@@ -126,21 +160,14 @@
 		</comps>
 		<specialDisplayRadius>4.9</specialDisplayRadius>
 		<size>(1,1)</size>
-		<workToBuild>100</workToBuild>
-		<costList>
-			<li>
-				<thingDef>Metal</thingDef>
-				<count>35</count>
-			</li>
-      <li>
-				<thingDef>Boomrat_Meat</thingDef>
-				<count>5</count>
-			</li>
-		</costList>
+    <costList>
+      <Metal>35</Metal>
+      <Boomrat_Meat>1</Boomrat_Meat>
+    </costList>
 		<researchPrerequisite>AdvancedBlastingCharges</researchPrerequisite>
-		<surfaceNeeded>Light</surfaceNeeded>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Security</designationCategory>
-    <ConstructionEffect>ConstructMetal</ConstructionEffect>
+    <constructEffect>ConstructMetal</constructEffect>
 	</ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -149,12 +176,16 @@
 		<label>Mini Nuke</label>
 		<thingClass>Building_BlastingCharge</thingClass>
     <castEdgeShadows>False</castEdgeShadows>
-		<texturePath>Things/Building/UraniumBlastingCharge</texturePath>
+		<graphicPathSingle>Things/Building/UraniumBlastingCharge</graphicPathSingle>
 		<altitudeLayer>Waist</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<useStandardHealth>true</useStandardHealth>
-		<maxHealth>100</maxHealth>
-		<flammability>1.0</flammability>
+		<statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
 		<selectable>true</selectable>
 		<tickerType>Normal</tickerType>
 		<description>Uranium + Bomb. You do the math.</description>
@@ -163,7 +194,7 @@
 				<compClass>CompGlowerX</compClass>
 				<glowRadius>6</glowRadius>
 				<glowColor>(0,370,0,0)</glowColor>
-			</li>
+			</li> 
       <li>
 				<compClass>CompExplosive</compClass>
 				<explosiveRadius>8.9</explosiveRadius>
@@ -187,21 +218,14 @@
 		</comps>
 		<specialDisplayRadius>8.9</specialDisplayRadius>
 		<size>(1,1)</size>
-		<workToBuild>200</workToBuild>
-		<costList>
-			<li>
-				<thingDef>Metal</thingDef>
-				<count>35</count>
-			</li>
-      <li>
-				<thingDef>Uranium</thingDef>
-				<count>2</count>
-			</li>
-		</costList>
+    <costList>
+      <Metal>35</Metal>
+      <Uranium>2</Uranium>
+    </costList>
 		<researchPrerequisite>NuclearBlastingCharges</researchPrerequisite>
-		<surfaceNeeded>Light</surfaceNeeded>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Security</designationCategory>
-    <ConstructionEffect>ConstructMetal</ConstructionEffect>
+    <constructEffect>ConstructMetal</constructEffect>
 	</ThingDef>
 
 
