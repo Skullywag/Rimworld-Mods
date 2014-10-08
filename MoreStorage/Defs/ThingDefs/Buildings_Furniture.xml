@@ -197,7 +197,51 @@
     <designationHotKey>I</designationHotKey>
   </ThingDef>
 
-
+  <ThingDef ParentName="BuildingBase">
+    <defName>GunRack</defName>
+    <eType>BuildingComplex</eType>
+    <label>Gun rack</label>
+    <thingClass>Building_Storage</thingClass>
+    <graphicPathSingle>Things/Building/Furniture/GunRack</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>580</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>15</Beauty>
+    </statBases>
+    <description>Haulers carry weapons here for storage.</description>
+    <size>(2,1)</size>
+    <costList>
+      <Metal>15</Metal>
+    </costList>
+    <overdraw>true</overdraw>
+    <killedLeavings>
+      <ChunkSlag>1</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>2</SlagRubble>
+    </filthLeavings>
+    <building>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <allowances>
+          <categories>
+            <li>Weapons</li>
+          </categories>
+        </allowances>
+      </fixedStorageSettings> 
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationCategory>Furniture</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <itemSurface>true</itemSurface>
+    <designationHotKey>I</designationHotKey>
+  </ThingDef>
 
 
 
