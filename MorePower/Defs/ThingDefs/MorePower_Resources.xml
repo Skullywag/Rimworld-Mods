@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+
+	<ThingDef Name="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComponents</thingClass>
+    <label>unspecified resource</label>
+    <category>Item</category>
+    <eType>Item</eType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useStandardHealth>true</useStandardHealth>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <tradersCarry>true</tradersCarry>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+  
+  <ThingDef Name="GasBase" Abstract="True">
+		<thingClass>ThingWithComponents</thingClass>
+		<label>Unspecified resource</label>
+		<category>Item</category>
+		<eType>Item</eType>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useStandardHealth>true</useStandardHealth>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>1</stackLimit>
+		<tradersCarry>true</tradersCarry>
+		<comps>
+			<li><compClass>CompForbiddable</compClass></li>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+
+	<ThingDef ParentName="GasBase">
+		<defName>Syngas</defName>
+		<label>Syngas Cannister</label>
+		<description>A cannister of synthetic gas, used in a Gas Engine as fuel.</description>
+		<graphicPathSingle>Things/Resources/GasCan</graphicPathSingle>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+		<baseMarketValue>2</baseMarketValue>
+    <tradersCarry>false</tradersCarry>
+		<useStandardHealth>true</useStandardHealth>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+		
+</Resources>

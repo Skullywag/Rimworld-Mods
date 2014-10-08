@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<constructEffect>ConstructMetal</constructEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BuildingBase">
+    <defName>WoodGasGenerator</defName>
+    <eType>BuildingComplex</eType>
+    <label>Wood Gas Generator</label>
+    <thingClass>MorePower.Building_WoodGasGenerator</thingClass>
+    <graphicPathSingle>Things/Building/WoodGen</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHealth>150</MaxHealth>
+      <WorkToBuild>1000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Heats logs to produce syngas (synthetic gas) which is a fuel that can be burned at higher temperatures than wood, so is therefore a renewable energy source.</description>
+    <size>(1,2)</size>
+    <building>
+      <ignoreNeedsPower>false</ignoreNeedsPower>
+      <wantsHopperAdjacent>true</wantsHopperAdjacent>
+    </building>
+    <costList>
+      <Metal>50</Metal>
+    </costList>
+    <overdraw>false</overdraw>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlag>5</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>1</SlagRubble>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.10</staticSunShadowHeight>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>GasEngine</defName>
+    <eType>BuildingComplex</eType>
+    <label>Gas Engine</label>
+    <thingClass>MorePower.Building_GasEngine</thingClass>
+    <graphicPathSingle>Things/Building/GasEngine</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHealth>200</MaxHealth>
+      <WorkToBuild>1250</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Produces electricity from syngas</description>
+    <size>(2,2)</size>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <wantsHopperAdjacent>true</wantsHopperAdjacent>
+    </building>
+    <costList>
+      <Metal>60</Metal>
+    </costList>
+    <overdraw>false</overdraw>
+    <comps>
+      <li>
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>-200</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlag>4</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>2</SlagRubble>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>SmallSolarGenerator</defName>
+    <eType>BuildingComplex</eType>
+    <label>Small Solar generator</label>
+    <thingClass>MorePower.Building_SmallPowerPlantSolar</thingClass>
+    <graphicPathSingle>Things/Building/SolarCollector</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHealth>250</MaxHealth>
+      <WorkToBuild>1250</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Produces electricity from sunlight. Does not work in the dark.</description>
+    <size>(3,3)</size>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <costList>
+      <Metal>45</Metal>
+    </costList>
+    <overdraw>false</overdraw>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>-1</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlag>3</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>2</SlagRubble>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>MicroSolarGenerator</defName>
+    <eType>BuildingComplex</eType>
+    <label>Micro Solar generator</label>
+    <thingClass>MorePower.Building_MicroPowerPlantSolar</thingClass>
+    <graphicPathSingle>Things/Building/SolarCollector</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHealth>200</MaxHealth>
+      <WorkToBuild>750</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Produces electricity from sunlight. Does not work in the dark.</description>
+    <size>(2,2)</size>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <costList>
+      <Metal>20</Metal>
+    </costList>
+    <overdraw>false</overdraw>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>-1</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlag>2</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>2</SlagRubble>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>SingleSolarGenerator</defName>
+    <eType>BuildingComplex</eType>
+    <label>Single Solar generator</label>
+    <thingClass>MorePower.Building_SinglePowerPlantSolar</thingClass>
+    <graphicPathSingle>Things/Building/SolarCollector</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHealth>150</MaxHealth>
+      <WorkToBuild>550</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Produces electricity from sunlight. Does not work in the dark.</description>
+    <size>(1,1)</size>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <costList>
+      <Metal>5</Metal>
+    </costList>
+    <overdraw>false</overdraw>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>-1</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlag>1</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>1</SlagRubble>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>WindTurbine</defName>
+    <eType>BuildingComplex</eType>
+    <label>Small Wind Turbine</label>
+    <thingClass>MorePower.Building_SmallWindTurbine</thingClass>
+    <graphicPathSingle>Things/Building/WindTurbine/wind turbine_frame1</graphicPathSingle>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>1</fillPercent>
+    <castEdgeShadows>false</castEdgeShadows>
+    <statBases>
+      <MaxHealth>250</MaxHealth>
+      <WorkToBuild>1250</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>Produces electricity from wind. Works better during storms but can take damage.</description>
+    <size>(4,2)</size>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+    </building>
+    <costList>
+      <Metal>100</Metal>
+    </costList>
+    <overdraw>false</overdraw>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>-1</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlag>3</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>2</SlagRubble>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <sunShadowInfo>
+			<baseWidth>0.4</baseWidth>
+			<baseHeight>0.8</baseHeight>
+			<tallness>1</tallness>
+			<offset>(0,0,-0.4)</offset>
+		</sunShadowInfo>
+  </ThingDef>
+
+
+</Buildings>

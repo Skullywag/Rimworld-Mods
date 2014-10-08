@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\MorePower\MorePowerDLL\MorePower\MorePower\obj\Debug\MorePower.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\MorePower\MorePowerDLL\MorePower\MorePower\bin\Debug\MorePower.dll
+C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\MorePower\MorePowerDLL\MorePower\MorePower\bin\Debug\MorePower.pdb
+C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\MorePower\MorePowerDLL\MorePower\MorePower\obj\Debug\MorePower.dll
+C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\MorePower\MorePowerDLL\MorePower\MorePower\obj\Debug\MorePower.pdb
