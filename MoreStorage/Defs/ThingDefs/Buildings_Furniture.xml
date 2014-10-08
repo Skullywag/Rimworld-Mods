@@ -26,12 +26,12 @@
       <MaxHealth>100</MaxHealth>
       <WorkToBuild>580</WorkToBuild>
       <Flammability>1.0</Flammability>
-      <Beauty>1</Beauty>
+      <Beauty>15</Beauty>
     </statBases>
     <description>Haulers carry trays here for storage.</description>
     <size>(2,1)</size>
     <costList>
-      <Metal>30</Metal>
+      <Metal>15</Metal>
     </costList>
     <overdraw>true</overdraw>
     <killedLeavings>
@@ -72,12 +72,12 @@
       <MaxHealth>100</MaxHealth>
       <WorkToBuild>580</WorkToBuild>
       <Flammability>1.0</Flammability>
-      <Beauty>1</Beauty>
+      <Beauty>15</Beauty>
     </statBases>
     <description>Haulers carry raw food here for storage.</description>
     <size>(2,1)</size>
     <costList>
-      <Metal>30</Metal>
+      <WoodLog>15</WoodLog>
     </costList>
     <overdraw>true</overdraw>
     <killedLeavings>
@@ -118,12 +118,12 @@
       <MaxHealth>100</MaxHealth>
       <WorkToBuild>580</WorkToBuild>
       <Flammability>1.0</Flammability>
-      <Beauty>1</Beauty>
+      <Beauty>15</Beauty>
     </statBases>
     <description>Haulers carry medicine here for storage.</description>
     <size>(2,1)</size>
      <costList>
-      <Metal>30</Metal>
+      <Metal>15</Metal>
     </costList>
     <overdraw>true</overdraw>
    <killedLeavings>
@@ -151,7 +151,51 @@
     <designationHotKey>I</designationHotKey>
   </ThingDef>
 
-
+  <ThingDef ParentName="BuildingBase">
+    <defName>Skip</defName>
+    <eType>BuildingComplex</eType>
+    <label>Skip</label>
+    <thingClass>Building_Storage</thingClass>
+    <graphicPathSingle>Things/Building/Furniture/Skip</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>780</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <description>Haulers carry materials here for storage.</description>
+    <size>(3,2)</size>
+    <costList>
+      <Metal>50</Metal>
+    </costList>
+    <overdraw>false</overdraw>
+    <killedLeavings>
+      <ChunkSlag>3</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>4</SlagRubble>
+    </filthLeavings>
+    <building>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <allowances>
+          <categories>
+            <li>ResourcesRaw</li>
+          </categories>
+        </allowances>
+      </fixedStorageSettings> 
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationCategory>Furniture</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <itemSurface>true</itemSurface>
+    <designationHotKey>I</designationHotKey>
+  </ThingDef>
 
 
 
