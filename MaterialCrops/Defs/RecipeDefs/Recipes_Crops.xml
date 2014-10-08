@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+
+  <RecipeDef>
+		<defName>PressCropMeadowSweet</defName>
+		<label>Press MeadowSweet</label>
+		<description>Presses MeadowSweet to extract its resource solution.</description>
+		<jobString>Pressing MeadowSweet.</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MeadowSweetCrop</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<products>
+      <MeadowSweetSolution>1</MeadowSweetSolution>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MeadowSweetCrop</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Cooking</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
+		<defName>PressCropRubberFig</defName>
+		<label>Press Rubber Fig</label>
+		<description>Presses Rubber Fig to extract its resource solution.</description>
+		<jobString>Pressing Rubber Fig.</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RubberFigCrop</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<products>
+      <RubberFigSolution>1</RubberFigSolution>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RubberFigCrop</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Cooking</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+	<RecipeDef>
+		<defName>PressCropMetal</defName>
+		<label>Press Iron Weed</label>
+		<description>Presses Iron Weed to extract its resource solution.</description>
+		<jobString>Pressing Iron Weed.</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IronWeedCrop</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<products>
+      <IronWeedSolution>1</IronWeedSolution>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IronWeedCrop</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Cooking</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
+		<defName>PressCropGold</defName>
+		<label>Press Gold Root</label>
+		<description>Presses Gold Root to extract its resource solution.</description>
+		<jobString>Pressing Gold Root.</jobString>
+		<workAmount>240</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GoldRootCrop</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<products>
+      <GoldRootSolution>1</GoldRootSolution>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GoldRootCrop</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Cooking</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
+		<defName>PressCropSilver</defName>
+		<label>Press Silver Leaf</label>
+		<description>Presses Silver Leaf to extract its resource solution.</description>
+		<jobString>Pressing Silver Leaf.</jobString>
+		<workAmount>240</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+						<li>SilverLeafCrop</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<products>
+      <SilverLeafSolution>1</SilverLeafSolution>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SilverLeafCrop</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Cooking</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef> 
+  
+  <RecipeDef>
+		<defName>CentrifugeMetalSolution</defName>
+		<label>Centrifuge Metal Solution</label>
+		<description>Seperates materials from a suspended solution.</description>
+		<jobString>Centrifuging Metal Solution</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IronWeedSolution</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+      <Metal>1</Metal>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IronWeedSolution</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Medicine</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
+		<defName>CentrifugeGoldSolution</defName>
+		<label>Centrifuge Gold Solution</label>
+		<description>Seperates materials from a suspended solution.</description>
+		<jobString>Centrifuging Gold Solution</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GoldRootSolution</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+      <Gold>1</Gold>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GoldRootSolution</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Medicine</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
+		<defName>CentrifugeSilverSolution</defName>
+		<label>Centrifuge Silver Solution</label>
+		<description>Seperates materials from a suspended solution.</description>
+		<jobString>Centrifuging Silver Solution</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SilverLeafSolution</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+      <Silver>1</Silver>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SilverLeafSolution</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Medicine</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
+		<defName>CreateMedicalSupplies</defName>
+		<label>Create Medical Supplies</label>
+		<description>Creates medical Supplies.</description>
+		<jobString>Creating medical supplies</jobString>
+		<workAmount>250</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <sustainerSoundDef>Recipe_MakeClothes</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MeadowSweetSolution</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+      <li>
+        <filter>
+          <categories>
+            <li>Fabric</li>
+          </categories>
+        </filter>
+        <count>20</count>
+      </li>
+		</ingredients>
+		<products>
+      <Medicine>1</Medicine>
+		</products>
+		<fixedIngredientFilter>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+			<thingDefs>
+				<li>MeadowSweetSolution</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Medicine</skill>
+				<xp>60</xp>
+			</li>
+      <li>
+				<skill>Crafting</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
+		<defName>CreatePlasteel</defName>
+		<label>Create Plasteel</label>
+		<description>Creates Plasteel.</description>
+		<jobString>Creating Plasteel</jobString>
+		<workAmount>250</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeClothes</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RubberFigSolution</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+      <li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+      <li>
+        <filter>
+          <categories>
+            <li>Fabric</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+		</ingredients>
+		<products>
+      <Plasteel>1</Plasteel>
+		</products>
+		<fixedIngredientFilter>
+      <categories>
+        <li>Fabric</li> 
+      </categories>
+			<thingDefs>
+				<li>RubberFigSolution</li>
+        <li>Metal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>60</xp>
+			</li>
+      <li>
+				<skill>Construction</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+</RecipeDefs>

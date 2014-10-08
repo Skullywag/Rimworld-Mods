@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>CropPressing</defName>
+		<label>Crop Pressing</label>
+		<description>Allows you to build a press to extract resource solutions from some crops.</description>
+		<totalCost>500</totalCost>
+	</ResearchProjectDef>
+  
+  <ResearchProjectDef>
+		<defName>Centrifuge</defName>
+		<label>Centrifuge</label>
+		<description>Allows you to build a Centrifuge to extract materials from suspended solutions.</description>
+		<totalCost>700</totalCost>
+    <prerequisites>
+      <li>CropPressing</li>
+    </prerequisites>
+	</ResearchProjectDef>
+  
+  <ResearchProjectDef>
+		<defName>Chemistry</defName>
+		<label>Chemistry</label>
+		<description>We cant depend on traders for certain supplies, we must find a way of producing our own.</description>
+		<totalCost>900</totalCost>  
+    <prerequisites>
+      <li>CropPressing</li>
+    </prerequisites>
+	</ResearchProjectDef>
+
+
+</ResearchProjectDefs>

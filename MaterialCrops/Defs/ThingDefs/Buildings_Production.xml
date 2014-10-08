@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <DefName>CropPress</DefName>
+    <EType>Building_WorkTable</EType>
+    <label>Press</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A machine to press resource crops and extract their resource solution.</Description>
+    <graphicPathSingle>Things/Building/CropPress</graphicPathSingle>
+    <CostList>
+      <Metal>200</Metal>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <UseStandardHealth>True</UseStandardHealth>
+    <statBases>
+      <WorkToBuild>1300</WorkToBuild>
+      <MaxHealth>180</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(1,1)</Size>
+    <Overdraw>False</Overdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      <li>PressCropMetal</li>
+      <li>PressCropGold</li>
+      <li>PressCropSilver</li>
+      <li>PressCropMeadowSweet</li>
+      <li>PressCropRubberFig</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>350</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisite>CropPressing</researchPrerequisite>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <DefName>Centrifuge</DefName>
+    <EType>Building_WorkTable</EType>
+    <label>Centrifuge</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A machine to seperate solids from a suspended solution.</Description>
+    <graphicPathSingle>Things/Building/Centrifuge</graphicPathSingle>
+    <CostList>
+      <Metal>400</Metal>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <UseStandardHealth>True</UseStandardHealth>
+    <statBases>
+      <WorkToBuild>2600</WorkToBuild>
+      <MaxHealth>200</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(3,1)</Size>
+    <Overdraw>False</Overdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      <li>CentrifugeMetalSolution</li>
+      <li>CentrifugeGoldSolution</li>
+      <li>CentrifugeSilverSolution</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>550</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisite>Centrifuge</researchPrerequisite>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <DefName>ChemistryBench</DefName>
+    <EType>Building_WorkTable</EType>
+    <label>Chemistry Bench</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A work area for the preperation of medical supplies.</Description>
+    <graphicPathSingle>Things/Building/ChemistryBench</graphicPathSingle>
+    <CostList>
+      <Metal>150</Metal>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <UseStandardHealth>True</UseStandardHealth>
+    <statBases>
+      <WorkToBuild>1300</WorkToBuild>
+      <MaxHealth>200</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(3,1)</Size>
+    <Overdraw>False</Overdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      <li>CreateMedicalSupplies</li>
+      <li>CreatePlasteel</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>550</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisite>Chemistry</researchPrerequisite>
+  </ThingDef>
+
+</ThingDefs>

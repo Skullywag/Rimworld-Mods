@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Plants>
+
+
+	<ThingDef Name="PlantBase" Abstract="True">
+    <eType>Plant</eType>
+    <category>Plant</category>
+    <thingClass>Plant</thingClass>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <useStandardHealth>True</useStandardHealth>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <selectable>False</selectable>
+    <neverMultiSelect>True</neverMultiSelect>
+    <drawerType>MapMeshOnly</drawerType>
+    <shaderType>CutoutPlant</shaderType>
+    <plant>
+      <harvestDestroys>true</harvestDestroys>
+      <harvestingSound>Harvest_Standard</harvestingSound>
+      <harvestFinishSound>Harvest_Standard_Finish</harvestFinishSound>
+      <sowWork>150</sowWork>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
+      <topWindExposure>0.1</topWindExposure>
+      <growthPer20kTicks>0.48</growthPer20kTicks>
+      <growMinGlow>Overlit</growMinGlow>
+      <lifeSpan>200000</lifeSpan>
+      <seedShootMinGrowthPercent>0.6</seedShootMinGrowthPercent>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.00</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>  
+	
+	
+	<!--=========================== Crops ==============================-->
+
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>MeadowSweet</defName>
+    <label>Meadow Sweet</label>
+    <statBases>
+      <MaxHealth>85</MaxHealth>
+      <Beauty>12</Beauty>
+    </statBases>
+    <description>A plant with medicinal properties.</description>
+    <graphicPathFolderRandom>Plant/MeadowSweet</graphicPathFolderRandom>
+    <selectable>true</selectable>
+    <pathCost>10</pathCost>
+    <plant>
+      <shootsSeeds>false</shootsSeeds>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>MeadowSweetCrop</harvestedThingDef>
+      <harvestDestroys>true</harvestDestroys>
+      <harvestYieldRange>
+        <min>1</min>
+        <max>1</max>
+      </harvestYieldRange>
+      <sowableGround>true</sowableGround>
+      <sowableHydroponic>true</sowableHydroponic>
+      <topWindExposure>0.1</topWindExposure>
+      <growthPer20kTicks>0.48</growthPer20kTicks>
+      <lifeSpan>200000</lifeSpan>
+      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.05</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>RubberFig</defName>
+    <label>Rubber Fig</label>
+    <statBases>
+      <MaxHealth>85</MaxHealth>
+      <Beauty>12</Beauty>
+    </statBases>
+    <description>A plant with elastic properties.</description>
+    <graphicPathFolderRandom>Plant/RubberFig</graphicPathFolderRandom>
+    <selectable>true</selectable>
+    <pathCost>10</pathCost>
+    <plant>
+      <shootsSeeds>false</shootsSeeds>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RubberFigCrop</harvestedThingDef>
+      <harvestDestroys>true</harvestDestroys>
+      <harvestYieldRange>
+        <min>1</min>
+        <max>1</max>
+      </harvestYieldRange>
+      <sowableGround>true</sowableGround>
+      <sowableHydroponic>true</sowableHydroponic>
+      <topWindExposure>0.1</topWindExposure>
+      <growthPer20kTicks>0.48</growthPer20kTicks>
+      <lifeSpan>200000</lifeSpan>
+      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.05</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>IronWeed</defName>
+    <label>Iron Weed</label>
+    <statBases>
+      <MaxHealth>85</MaxHealth>
+      <Beauty>12</Beauty>
+    </statBases>
+    <description>A Strange root that when fully grown has metalic properties, can be pressed to extract a metal solution.</description>
+    <graphicPathFolderRandom>Plant/IronWeed</graphicPathFolderRandom>
+    <selectable>true</selectable>
+    <pathCost>10</pathCost>
+    <plant>
+      <shootsSeeds>false</shootsSeeds>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>IronWeedCrop</harvestedThingDef>
+      <harvestDestroys>true</harvestDestroys>
+      <harvestYieldRange>
+        <min>1</min>
+        <max>1</max>
+      </harvestYieldRange>
+      <sowableGround>true</sowableGround>
+      <sowableHydroponic>true</sowableHydroponic>
+      <topWindExposure>0.1</topWindExposure>
+      <growthPer20kTicks>0.48</growthPer20kTicks>
+      <lifeSpan>200000</lifeSpan>
+      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.05</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>GoldRoot</defName>
+    <label>Gold Root</label>
+    <statBases>
+      <MaxHealth>85</MaxHealth>
+      <Beauty>12</Beauty>
+    </statBases>
+    <description>A Strange leafy plant that when fully grown has metalic properties, can be pressed to extract a gold solution.</description>
+    <graphicPathFolderRandom>Plant/GoldRoot</graphicPathFolderRandom>
+    <selectable>true</selectable>
+    <pathCost>10</pathCost>
+    <plant>
+      <shootsSeeds>false</shootsSeeds>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>GoldRootCrop</harvestedThingDef>
+      <harvestDestroys>true</harvestDestroys>
+      <harvestYieldRange>
+        <min>1</min>
+        <max>1</max>
+      </harvestYieldRange>
+      <sowableGround>true</sowableGround>
+      <sowableHydroponic>true</sowableHydroponic>
+      <topWindExposure>0.1</topWindExposure>
+      <growthPer20kTicks>0.48</growthPer20kTicks>
+      <lifeSpan>200000</lifeSpan>
+      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.05</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>SilverLeaf</defName>
+    <label>Silver Leaf</label>
+    <statBases>
+      <MaxHealth>85</MaxHealth>
+      <Beauty>12</Beauty>
+    </statBases>
+    <description>A Strange weed that when fully grown has metalic properties, can be pressed to extract a silver solution.</description>
+    <graphicPathFolderRandom>Plant/SilverLeaf</graphicPathFolderRandom>
+    <selectable>true</selectable>
+    <pathCost>10</pathCost>
+    <plant>
+      <shootsSeeds>false</shootsSeeds>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SilverLeafCrop</harvestedThingDef>
+      <harvestDestroys>true</harvestDestroys>
+      <harvestYieldRange>
+        <min>1</min>
+        <max>1</max>
+      </harvestYieldRange>
+      <sowableGround>true</sowableGround>
+      <sowableHydroponic>true</sowableHydroponic>
+      <topWindExposure>0.1</topWindExposure>
+      <growthPer20kTicks>0.48</growthPer20kTicks>
+      <lifeSpan>200000</lifeSpan>
+      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.05</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+	
+</Plants>
+

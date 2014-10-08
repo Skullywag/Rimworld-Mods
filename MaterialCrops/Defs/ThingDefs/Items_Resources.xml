@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+
+
+  <ThingDef Name="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComponents</thingClass>
+    <label>unspecified resource</label>
+    <category>Item</category>
+    <eType>Item</eType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useStandardHealth>true</useStandardHealth>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <tradersCarry>true</tradersCarry>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+  <ThingDef Name="ResourceVerbBase" ParentName="ResourceBase" Abstract="True">
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>MeadowSweetCrop</defName>
+    <label>Meadow Sweet</label>
+    <description>A MeadowSweet crop.</description>
+    <graphicPathSingle>Plant/MeadowSweet</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>1</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>ResourcesRaw</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>RubberFigCrop</defName>
+    <label>Rubber Fig</label>
+    <description>A Rubber Fig crop.</description>
+    <graphicPathSingle>Plant/RubberFig</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>1</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>ResourcesRaw</li>
+    </storeCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>IronWeedCrop</defName>
+    <label>Iron Weed</label>
+    <description>An Iron Weed crop.</description>
+    <graphicPathSingle>Plant/IronWeed</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>1</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>ResourcesRaw</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>GoldRootCrop</defName>
+    <label>Gold Root</label>
+    <description>A Gold Root crop.</description>
+    <graphicPathSingle>Plant/GoldRoot</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>1</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>ResourcesRaw</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>SilverLeafCrop</defName>
+    <label>Silver Leaf</label>
+    <description>A Silver Leaf crop.</description>
+    <graphicPathSingle>Plant/SilverLeaf</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>1</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>ResourcesRaw</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>MeadowSweetSolution</defName>
+    <label>MeadowSweet Solution</label>
+    <description>MeadowSweet solution from MeadowSweet crop.</description>
+    <graphicPathSingle>Things/Resources/MeadowSweetSolution</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>2</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>Manufactured</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>RubberFigSolution</defName>
+    <label>Rubber Fig Solution</label>
+    <description>Rubber solution from Rubber Fig crop.</description>
+    <graphicPathSingle>Things/Resources/RubberFigSolution</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>2</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>Manufactured</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>IronWeedSolution</defName>
+    <label>Iron Solution</label>
+    <description>Metal solution from Iron Weed crop.</description>
+    <graphicPathSingle>Things/Resources/IronWeedSolution</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>2</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>Manufactured</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>GoldRootSolution</defName>
+    <label>Gold Solution</label>
+    <description>Gold solution from Gold Root crop.</description>
+    <graphicPathSingle>Things/Resources/GoldRootSolution</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>2</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>Manufactured</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>SilverLeafSolution</defName>
+    <label>Silver Solution</label>
+    <description>Silver solution from Silver Leaf crop.</description>
+    <graphicPathSingle>Things/Resources/SilverLeafSolution</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>2</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>Manufactured</li>
+    </storeCategories>
+  </ThingDef>
+  
+ 
+
+
+</Resources>
