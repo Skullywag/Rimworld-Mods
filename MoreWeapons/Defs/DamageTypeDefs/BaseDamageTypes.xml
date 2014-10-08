@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <DamageTypes>
 
-  <!-- External violence -->
+  <DamageTypeDef Name="LocalInjuryBase" Abstract="True">
+    <workerClass>DamageType_AddLocalInjury</workerClass>
+  </DamageTypeDef>
 
-  <DamageTypeDef>
+  <DamageTypeDef ParentName="LocalInjuryBase">
     <defName>Spasm</defName>
-    <incapChanceMultiplier>1</incapChanceMultiplier>
-    <hasForcefulImpact>false</hasForcefulImpact>
+    <label>Spasm</label>
+    <harmsHealth>false</harmsHealth>
+    <incapChanceMultiplier>10</incapChanceMultiplier>
+    <hasForcefulImpact>False</hasForcefulImpact>
     <interruptJobs>true</interruptJobs>
     <makesBlood>false</makesBlood>
     <externalViolence>false</externalViolence>
     <deathMessage>{0} died from nerve damage.</deathMessage>
-  	<injury>Spasm</injury>
-  	<skinInjury>Spasm</skinInjury>
-  	<solidInjury>Spasm</solidInjury>
+  	<healthDiff>Spasm</healthDiff>
+    <healthDiffSkin>Spasm</healthDiffSkin>
+    <healthDiffSolid>Spasm</healthDiffSolid>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
   </DamageTypeDef>
 
 
