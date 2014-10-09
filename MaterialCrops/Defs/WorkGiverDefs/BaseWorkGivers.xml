@@ -42,7 +42,7 @@
   <WorkGiverDef>
     <defName>DoBillsCreatePlasteel</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Doctor</workType>
+    <workType>Crafting</workType>
     <priorityInType>100</priorityInType>
     <billGiverDef>ChemistryBench</billGiverDef>
     <verb>Create Plasteel</verb>
