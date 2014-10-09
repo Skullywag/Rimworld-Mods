@@ -94,13 +94,14 @@
 		<verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass> 
+        <cooldownTicks>600</cooldownTicks>
   			<projectileDef>Bullet_StunGun</projectileDef>
         <hasStandardCommand>true</hasStandardCommand>
-        <accuracyTouch>0.85</accuracyTouch>
-        <accuracyShort>0.70</accuracyShort>
+        <accuracyTouch>0.95</accuracyTouch>
+        <accuracyShort>0.80</accuracyShort>
         <accuracyMedium>0.60</accuracyMedium>
         <accuracyLong>0.50</accuracyLong>
-  			<warmupTicks>600</warmupTicks>
+  			<warmupTicks>40</warmupTicks>
   			<range>18</range>
   			<fireSound>StunGun</fireSound>
       </li>
