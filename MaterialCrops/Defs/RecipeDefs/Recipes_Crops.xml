@@ -179,6 +179,76 @@
 	</RecipeDef> 
   
   <RecipeDef>
+		<defName>CentrifugeMeadowSweetSolution</defName>
+		<label>Centrifuge MeadowSweet Solution</label>
+		<description>Seperates materials from a suspended solution.</description>
+		<jobString>Centrifuging MeadowSweet Solution</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MeadowSweetSolution</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+      <Aspirin>1</Aspirin>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MeadowSweetSolution</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Medicine</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
+		<defName>CentrifugeRubberFigSolution</defName>
+		<label>Centrifuge RubberFig Solution</label>
+		<description>Seperates materials from a suspended solution.</description>
+		<jobString>Centrifuging RubberFig Solution</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workEffect>Cook</workEffect>
+    <sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RubberFigSolution</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+      <Resin>1</Resin>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RubberFigSolution</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Medicine</skill>
+				<xp>60</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  <RecipeDef>
 		<defName>CentrifugeMetalSolution</defName>
 		<label>Centrifuge Metal Solution</label>
 		<description>Seperates materials from a suspended solution.</description>
@@ -295,7 +365,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>MeadowSweetSolution</li>
+						<li>Aspirin</li>
 					</thingDefs>
 				</filter>
 				<count>3</count>
@@ -317,7 +387,7 @@
         <li>Fabric</li>
       </categories>
 			<thingDefs>
-				<li>MeadowSweetSolution</li>
+				<li>Aspirin</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<skillGains>
@@ -345,7 +415,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>RubberFigSolution</li>
+						<li>Resin</li>
 					</thingDefs>
 				</filter>
 				<count>2</count>
@@ -375,7 +445,7 @@
         <li>Fabric</li> 
       </categories>
 			<thingDefs>
-				<li>RubberFigSolution</li>
+				<li>Resin</li>
         <li>Metal</li>
 			</thingDefs>
 		</fixedIngredientFilter>

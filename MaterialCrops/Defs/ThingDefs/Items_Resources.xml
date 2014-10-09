@@ -38,9 +38,9 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>MeadowSweetCrop</defName>
-    <label>Meadow Sweet</label>
+    <label>MeadowSweet Head</label>
     <description>A MeadowSweet crop.</description>
-    <graphicPathSingle>Plant/MeadowSweet</graphicPathSingle>
+    <graphicPathSingle>Things/Resources/MeadowSweetCrop</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <baseMarketValue>1</baseMarketValue>
@@ -54,9 +54,9 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>RubberFigCrop</defName>
-    <label>Rubber Fig</label>
+    <label>RubberFig</label>
     <description>A Rubber Fig crop.</description>
-    <graphicPathSingle>Plant/RubberFig</graphicPathSingle>
+    <graphicPathSingle>Things/Resources/RubberFigCrop</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <baseMarketValue>1</baseMarketValue>
@@ -70,9 +70,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>IronWeedCrop</defName>
-    <label>Iron Weed</label>
-    <description>An Iron Weed crop.</description>
-    <graphicPathSingle>Plant/IronWeed</graphicPathSingle>
+    <label>IronWeed heart</label>
+    <description>An IronWeed heart.</description>
+    <graphicPathSingle>Things/Resources/IronWeedCrop</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <baseMarketValue>1</baseMarketValue>
@@ -86,9 +86,9 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>GoldRootCrop</defName>
-    <label>Gold Root</label>
-    <description>A Gold Root crop.</description>
-    <graphicPathSingle>Plant/GoldRoot</graphicPathSingle>
+    <label>GoldRoot tuber</label>
+    <description>A GoldRoot tuber.</description>
+    <graphicPathSingle>Things/Resources/GoldRootCrop</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <baseMarketValue>1</baseMarketValue>
@@ -102,9 +102,9 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>SilverLeafCrop</defName>
-    <label>Silver Leaf</label>
-    <description>A Silver Leaf crop.</description>
-    <graphicPathSingle>Plant/SilverLeaf</graphicPathSingle>
+    <label>SilverLeaf Crown</label>
+    <description>A SilverLeaf crown.</description>
+    <graphicPathSingle>Things/Resources/SilverLeafCrop</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <baseMarketValue>1</baseMarketValue>
@@ -119,7 +119,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>MeadowSweetSolution</defName>
     <label>MeadowSweet Solution</label>
-    <description>MeadowSweet solution from MeadowSweet crop.</description>
+    <description>Solution from MeadowSweet crop.</description>
     <graphicPathSingle>Things/Resources/MeadowSweetSolution</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
@@ -134,8 +134,8 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>RubberFigSolution</defName>
-    <label>Rubber Fig Solution</label>
-    <description>Rubber solution from Rubber Fig crop.</description>
+    <label>RubberFig Solution</label>
+    <description>Solution from Rubber Fig crop.</description>
     <graphicPathSingle>Things/Resources/RubberFigSolution</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
@@ -150,7 +150,7 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>IronWeedSolution</defName>
-    <label>Iron Solution</label>
+    <label>IronWeed Solution</label>
     <description>Metal solution from Iron Weed crop.</description>
     <graphicPathSingle>Things/Resources/IronWeedSolution</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
@@ -166,7 +166,7 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>GoldRootSolution</defName>
-    <label>Gold Solution</label>
+    <label>GoldRoot Solution</label>
     <description>Gold solution from Gold Root crop.</description>
     <graphicPathSingle>Things/Resources/GoldRootSolution</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
@@ -182,12 +182,44 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>SilverLeafSolution</defName>
-    <label>Silver Solution</label>
+    <label>SilverLeaf Solution</label>
     <description>Silver solution from Silver Leaf crop.</description>
     <graphicPathSingle>Things/Resources/SilverLeafSolution</graphicPathSingle>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <baseMarketValue>2</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>Manufactured</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>Aspirin</defName>
+    <label>Aspirin</label>
+    <description>Aspirin.</description>
+    <graphicPathSingle>Things/Resources/Aspirin</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>5</baseMarketValue>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <storeCategories>
+      <li>Manufactured</li>
+    </storeCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>Resin</defName>
+    <label>Resin</label>
+    <description>Resin.</description>
+    <graphicPathSingle>Things/Resources/Resin</graphicPathSingle>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <baseMarketValue>3</baseMarketValue>
     <statBases>
       <Flammability>1.0</Flammability>
     </statBases>

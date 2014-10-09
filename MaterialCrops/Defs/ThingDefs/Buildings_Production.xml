@@ -89,6 +89,8 @@
       <li>CentrifugeMetalSolution</li>
       <li>CentrifugeGoldSolution</li>
       <li>CentrifugeSilverSolution</li>
+      <li>CentrifugeMeadowSweetSolution</li>
+      <li>CentrifugeRubberFigSolution</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
