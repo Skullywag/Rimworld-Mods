@@ -24,7 +24,7 @@
 		<description>We cant depend on traders for certain supplies, we must find a way of producing our own.</description>
 		<totalCost>900</totalCost>  
     <prerequisites>
-      <li>CropPressing</li>
+      <li>Centrifuge</li>
     </prerequisites>
 	</ResearchProjectDef>
 
