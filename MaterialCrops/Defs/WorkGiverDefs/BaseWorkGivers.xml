@@ -3,7 +3,7 @@
   <WorkGiverDef>
     <defName>DoBillsPressCrops</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Cooking</workType>
+    <workType>Crafting</workType>
     <priorityInType>100</priorityInType>
     <billGiverDef>CropPress</billGiverDef>
     <verb>Press Crops</verb>
@@ -16,10 +16,10 @@
   <WorkGiverDef>
     <defName>DoBillsCentrifugeSolution</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Doctor</workType>
+    <workType>Crafting</workType>
     <priorityInType>100</priorityInType>
     <billGiverDef>Centrifuge</billGiverDef>
-    <verb>Centrifuge Solution</verb>
+    <verb>Centrifuge solution</verb>
     <gerund>Centrifuging solution</gerund>
 	<requiredActivities>
 		<li>Manipulation</li>
@@ -29,7 +29,7 @@
   <WorkGiverDef>
     <defName>DoBillsCreateMedicalSupplies</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Doctor</workType>
+    <workType>Crafting</workType>
     <priorityInType>100</priorityInType>
     <billGiverDef>ChemistryBench</billGiverDef>
     <verb>Create medical supplies</verb>
