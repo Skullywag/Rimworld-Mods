@@ -21,6 +21,24 @@
     <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
     <impactSoundType>Blunt</impactSoundType>
   </DamageTypeDef>
+  
+  <DamageTypeDef ParentName="LocalInjuryBase">
+    <defName>Vaporized</defName>
+    <label>Vaporized</label>
+    <harmsHealth>true</harmsHealth>
+    <incapChanceMultiplier>100</incapChanceMultiplier>
+    <hasForcefulImpact>True</hasForcefulImpact>
+    <interruptJobs>true</interruptJobs>
+    <makesBlood>true</makesBlood>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was vaporized.</deathMessage>
+  	<healthDiff>Gunshot</healthDiff>
+    <healthDiffSkin>Gunshot</healthDiffSkin>
+    <healthDiffSolid>Shredded</healthDiffSolid>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Piercing</armorCategory>
+  </DamageTypeDef>
 
 
 </DamageTypes>

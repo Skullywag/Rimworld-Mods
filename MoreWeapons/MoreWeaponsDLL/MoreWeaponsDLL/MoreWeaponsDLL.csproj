@@ -47,8 +47,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Projectile_RailGunBullet.cs" />
     <Compile Include="Projectile_StunGunBullet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Source-DLLs\Assembly-CSharp.dll" />
+    <Content Include="Source-DLLs\Assembly-CSharp.dll.txt" />
+    <Content Include="Source-DLLs\UnityEngine.dll" />
+    <Content Include="Source-DLLs\UnityEngine.dll.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

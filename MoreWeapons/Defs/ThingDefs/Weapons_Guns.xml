@@ -57,6 +57,17 @@
 		<shaderType>Transparent</shaderType>
 	</ThingDef>
   
+  <ThingDef Name="RailGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>MoreWeapons.Projectile_RailGunBullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
   <ThingDef Name="FlameThrowerBullet" Abstract="True">
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
@@ -104,6 +115,45 @@
   			<warmupTicks>40</warmupTicks>
   			<range>18</range>
   			<fireSound>StunGun</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="RailGunBullet">
+		<defName>Bullet_RailGun</defName>
+		<label>RailGun bullet</label>
+    <shaderType>MotePostLight</shaderType>
+		<graphicPathSingle>Things/Projectile/Charge_Small</graphicPathSingle>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+			<DamageAmountBase>27</DamageAmountBase>
+			<Speed>120</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_RailGun</defName>
+		<label>RailGun</label>
+		<description>A electrically powered electromagnetic projectile launcher.</description>
+		<graphicPathSingle>Things/Weapons/RailGun</graphicPathSingle>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>5000</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <cooldownTicks>600</cooldownTicks>
+  			<projectileDef>Bullet_RailGun</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <accuracyTouch>0.99</accuracyTouch>
+        <accuracyShort>0.90</accuracyShort>
+        <accuracyMedium>0.80</accuracyMedium>
+        <accuracyLong>0.70</accuracyLong>
+  			<warmupTicks>120</warmupTicks>
+  			<range>37</range>
+  			<fireSound>ChargeLance_Fire</fireSound>
       </li>
 		</verbs>
 	</ThingDef>
