@@ -9,7 +9,7 @@
     <defName>Spasm</defName>
     <label>Spasm</label>
     <harmsHealth>false</harmsHealth>
-    <incapChanceMultiplier>10</incapChanceMultiplier>
+    <incapChanceMultiplier>100</incapChanceMultiplier>
     <hasForcefulImpact>False</hasForcefulImpact>
     <interruptJobs>true</interruptJobs>
     <makesBlood>false</makesBlood>
@@ -19,7 +19,7 @@
     <healthDiffSkin>Spasm</healthDiffSkin>
     <healthDiffSolid>Spasm</healthDiffSolid>
     <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
-    <impactSoundType>Blunt</impactSoundType>
+    <impactSoundType>Electric</impactSoundType>
   </DamageTypeDef>
   
   <DamageTypeDef ParentName="LocalInjuryBase">
