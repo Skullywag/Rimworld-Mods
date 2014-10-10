@@ -37,7 +37,7 @@ namespace MoreWeapons
                     {
                         Messages.Message(pawn.Name.first + " " + " " + pawn.Name.last + " was vaporized.", MessageSound.Negative);
                     }
-                    pawn.Destroy();
+                    pawn.DeSpawn();
                 }
             }
             else
