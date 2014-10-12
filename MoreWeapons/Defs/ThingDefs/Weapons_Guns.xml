@@ -57,6 +57,17 @@
 		<shaderType>Transparent</shaderType>
 	</ThingDef>
   
+  <ThingDef Name="RpgGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>MoreWeapons.Projectile_RpgGunBullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
   <ThingDef Name="RailGunBullet" Abstract="True">
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
@@ -136,7 +147,7 @@
 	<ThingDef ParentName="BaseHumanGun">
 		<defName>Gun_RailGun</defName>
 		<label>RailGun</label>
-		<description>A electrically powered electromagnetic projectile launcher.</description>
+		<description>An electrically powered electromagnetic projectile launcher.</description>
 		<graphicPathSingle>Things/Weapons/RailGun</graphicPathSingle>
 		<soundInteract>InteractRifle</soundInteract>
 		<tradersCarry>True</tradersCarry>
@@ -154,6 +165,48 @@
   			<warmupTicks>120</warmupTicks>
   			<range>37</range>
   			<fireSound>ChargeLance_Fire</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="RpgGunBullet">
+		<defName>Bullet_RpgGun</defName>
+		<label>Rpg Rocket</label>
+    <shaderType>MotePostLight</shaderType>
+		<graphicPathSingle>Things/Projectile/Rpg</graphicPathSingle>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Bomb</damageDef>
+			<DamageAmountBase>22</DamageAmountBase>
+      <explosionDelay>0</explosionDelay>
+      <explosionRadius >1.9</explosionRadius >
+      <soundExplode>Explosion_Bomb</soundExplode>
+			<Speed>30</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_RpgGun</defName>
+		<label>RPG</label>
+		<description>A shoulder fired, anti armour rocket propelled grenade launcher.</description>
+		<graphicPathSingle>Things/Weapons/Rpg</graphicPathSingle>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>1000</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <cooldownTicks>400</cooldownTicks>
+  			<projectileDef>Bullet_RpgGun</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <accuracyTouch>0.30</accuracyTouch>
+        <accuracyShort>0.40</accuracyShort>
+        <accuracyMedium>0.60</accuracyMedium>
+        <accuracyLong>0.70</accuracyLong>
+  			<warmupTicks>120</warmupTicks>
+  			<range>20</range>
+  			<fireSound>ShotT9Launcher</fireSound>
       </li>
 		</verbs>
 	</ThingDef>
