@@ -55,7 +55,7 @@
 	<ThingDef ParentName="BaseGrenade">
 		<defName>Proj_GrenadeStun</defName>
 		<label>Stun grenade</label>
-		<thingClass>Projectile_Explosive</thingClass>
+		<thingClass>Projectile_StunGrenade</thingClass>
 		<graphicPathSingle>Things/Weapons/StunGrenade</graphicPathSingle>
 		<projectile>
 			<explosionRadius>3.5</explosionRadius>
@@ -100,4 +100,4 @@
 		</verbs>
 	</ThingDef>
 
-</ThingDefs>
+</ThingDefs>  

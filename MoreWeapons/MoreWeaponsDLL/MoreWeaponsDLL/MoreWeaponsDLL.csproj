@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Projectile_StunGrenade.cs" />
     <Compile Include="Projectile_RpgGunBullet.cs" />
     <Compile Include="Projectile_RailGunBullet.cs" />
     <Compile Include="Projectile_StunGunBullet.cs" />
