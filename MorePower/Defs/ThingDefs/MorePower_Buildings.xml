@@ -13,7 +13,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BuildingBase">
+	<!--<ThingDef ParentName="BuildingBase">
     <defName>WoodGasGenerator</defName>
     <eType>BuildingComplex</eType>
     <label>Wood Gas Generator</label>
@@ -106,7 +106,7 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Power</designationCategory>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
-  </ThingDef>
+  </ThingDef>   -->
 
   <ThingDef ParentName="BuildingBase">
     <defName>SmallSolarGenerator</defName>
