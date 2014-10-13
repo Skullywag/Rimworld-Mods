@@ -197,7 +197,7 @@
 		<verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass> 
-        <cooldownTicks>400</cooldownTicks>
+        <cooldownTicks>600</cooldownTicks>
   			<projectileDef>Bullet_RpgGun</projectileDef>
         <hasStandardCommand>true</hasStandardCommand>
         <accuracyTouch>0.30</accuracyTouch>

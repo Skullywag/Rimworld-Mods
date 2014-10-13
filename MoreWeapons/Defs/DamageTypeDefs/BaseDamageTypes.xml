@@ -39,6 +39,23 @@
     <impactSoundType>Bullet</impactSoundType>
     <armorCategory>Piercing</armorCategory>
   </DamageTypeDef>
+  
+  <DamageTypeDef ParentName="LocalInjuryBase">
+    <defName>Blinded</defName>
+    <label>Blinded</label>
+    <harmsHealth>false</harmsHealth>
+    <incapChanceMultiplier>0</incapChanceMultiplier>
+    <hasForcefulImpact>False</hasForcefulImpact>
+    <interruptJobs>true</interruptJobs>
+    <makesBlood>false</makesBlood>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} was blinded and died.</deathMessage>
+  	<healthDiff>Blinded</healthDiff>
+    <healthDiffSkin>Blinded</healthDiffSkin>
+    <healthDiffSolid>Blinded</healthDiffSolid>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Electric</impactSoundType>
+  </DamageTypeDef>
 
 
 </DamageTypes>
