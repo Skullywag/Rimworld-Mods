@@ -167,6 +167,45 @@
 		</verbs>
 	</ThingDef>
   
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Mp5</defName>
+    <label>pistol bullet</label>
+    <graphicPathSingle>Things/Projectile/Bullet_Small</graphicPathSingle>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>5</DamageAmountBase>
+      <Speed>70</Speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_Mp5Gun</defName>
+		<label>MP5</label>
+		<description>A 9mm submachine gun.</description>
+		<graphicPathSingle>Things/Weapons/Mp5</graphicPathSingle>
+		<soundInteract>InteractAssaultRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>300</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <cooldownTicks>100</cooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Mp5</projectileDef>
+        <warmupTicks>80</warmupTicks>
+        <range>29</range>
+        <accuracyTouch>0.92</accuracyTouch>
+        <accuracyShort>0.83</accuracyShort>
+        <accuracyMedium>0.72</accuracyMedium>
+        <accuracyLong>0.60</accuracyLong>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <fireSound>Mp5Shot</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
   <ThingDef ParentName="RailGunBullet">
 		<defName>Bullet_RailGun</defName>
 		<label>RailGun bullet</label>
