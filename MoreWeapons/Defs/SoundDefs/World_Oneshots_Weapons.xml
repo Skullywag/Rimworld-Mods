@@ -44,6 +44,44 @@
       </li>
     </subSounds>
   </SoundDef>
+  
+  <SoundDef>
+    <defName>RevolverReload</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interface/WeaponHandling/HandleWeapon_SmallA</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>RevolverShot</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Guns/GunShotA</clipPath>
+          </li>
+        </grains>   
+        <volumeRange>
+          <min>90.09319</min>        
+          <max>95.58423</max>
+        </volumeRange>    
+        <pitchRange>
+          <min>0.536413</min>        
+          <max>0.742391</max>
+        </pitchRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
 
 
 </DefPackage-SoundDef>

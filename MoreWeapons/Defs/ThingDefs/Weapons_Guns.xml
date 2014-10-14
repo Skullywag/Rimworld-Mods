@@ -130,6 +130,43 @@
 		</verbs>
 	</ThingDef>
   
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Revolver</defName>
+    <label>pistol bullet</label>
+    <graphicPathSingle>Things/Projectile/Bullet_Small</graphicPathSingle>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>17</DamageAmountBase>
+      <Speed>40</Speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_RevolverGun</defName>
+		<label>Revolver</label>
+		<description>A sidearm with a rotating cylindercontaining 6 chambers for high caliber bullets.</description>
+		<graphicPathSingle>Things/Weapons/Revolver</graphicPathSingle>
+		<soundInteract>RevolverReload</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>450</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <cooldownTicks>120</cooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pistol</projectileDef>
+        <accuracyTouch>0.87</accuracyTouch>
+        <accuracyShort>0.70</accuracyShort>
+        <accuracyMedium>0.53</accuracyMedium>
+        <accuracyLong>0.46</accuracyLong>
+        <warmupTicks>60</warmupTicks>
+        <range>22</range>
+        <fireSound>RevolverShot</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
   <ThingDef ParentName="RailGunBullet">
 		<defName>Bullet_RailGun</defName>
 		<label>RailGun bullet</label>
