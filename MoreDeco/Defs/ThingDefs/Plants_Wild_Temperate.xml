@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="PlantBase" Abstract="True">
+    <eType>Plant</eType>
+    <category>Plant</category>
+    <thingClass>Plant</thingClass>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <useStandardHealth>True</useStandardHealth>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <selectable>False</selectable>
+    <neverMultiSelect>True</neverMultiSelect>
+    <drawerType>MapMeshOnly</drawerType>
+    <shaderType>CutoutPlant</shaderType>
+    <plant>
+      <harvestDestroys>true</harvestDestroys>
+      <harvestingSound>Harvest_Standard</harvestingSound>
+      <harvestFinishSound>Harvest_Standard_Finish</harvestFinishSound>
+      <sowWork>150</sowWork>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
+      <topWindExposure>0.1</topWindExposure>
+      <growthPer20kTicks>0.48</growthPer20kTicks>
+      <lifeSpan>200000</lifeSpan>
+      <growMinGlow>Overlit</growMinGlow>
+      <seedShootMinGrowthPercent>0.6</seedShootMinGrowthPercent>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.00</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+  
+  <!--======================= Wild plants - carpets ========================-->
+
+  <ThingDef ParentName="PlantBase">
+    <defName>PlantGrass</defName>
+    <label>grass</label>
+    <statBases>
+      <MaxHealth>85</MaxHealth>
+    <Beauty>2</Beauty>
+    </statBases>
+    <description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
+    <graphicPathFolderRandom>Things/Plant/Grass</graphicPathFolderRandom>
+    <food>
+      <quality>Plant</quality>
+      <nutrition>30</nutrition>
+    </food>
+    <plant>
+      <harvestWork>60</harvestWork>
+      <fertilityMin>0.05</fertilityMin>
+      <maxMeshCount>9</maxMeshCount>
+      <visualSizeRange>
+        <min>0.4</min>
+        <max>0.6</max>
+      </visualSizeRange>
+      <growthPer20kTicks>0.65</growthPer20kTicks>
+      <topWindExposure>0.4</topWindExposure>
+      <sowableGround>true</sowableGround>
+      <seedShootRadius>10</seedShootRadius>
+      <lifeSpan>300000</lifeSpan>
+      <fertilityFactorGrowthRate>0.90</fertilityFactorGrowthRate>
+      <fertilityFactorPlantChance>0.90</fertilityFactorPlantChance>
+    </plant>
+  </ThingDef>
+  
+</Defs>
