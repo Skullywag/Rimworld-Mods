@@ -1,7 +1,8 @@
-﻿using RimWorld;
+﻿using MoreWeapons;
 using System;
 using UnityEngine;
 using Verse;
+using RimWorld;
 namespace MoreWeapons
 {
     public class Projectile_StunGunBullet : Bullet

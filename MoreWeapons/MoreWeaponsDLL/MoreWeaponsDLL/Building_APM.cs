@@ -4,7 +4,8 @@ using System.Diagnostics;
 using Verse;
 using Verse.AI;
 using VerseBase;
-namespace RimWorld
+using RimWorld;
+namespace MoreWeapons
 {
 	public class Building_APM : Building
 	{

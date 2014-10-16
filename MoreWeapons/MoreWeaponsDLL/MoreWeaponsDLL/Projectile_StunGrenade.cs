@@ -1,4 +1,5 @@
 ﻿using System;
+using MoreWeapons;
 using RimWorld;
 namespace Verse
 {

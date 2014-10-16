@@ -1,8 +1,9 @@
-﻿using RimWorld;
+﻿using MoreWeapons;
 using System;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
+using RimWorld;
 namespace MoreWeapons
 {
     public class Projectile_RpgGunBullet : Bullet
