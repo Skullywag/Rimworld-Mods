@@ -13,7 +13,7 @@
 	</ThingDef>
   
   <ThingDef ParentName="BuildingBase">
-    <defName>GeothermalGeneratorMK2</defName>
+    <defName>GeothermalGeneratorImp</defName>
     <eType>Building_PowerPlantGeothermal</eType>
     <label>Geothermal generator MK2</label>
     <thingClass>Building_PowerPlantSteam</thingClass>
