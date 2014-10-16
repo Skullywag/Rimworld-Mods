@@ -8,7 +8,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
-  </ThingDef>
+  </ThingDef>  
 
   <ThingDef ParentName="BuildingBase">
 		<defName>AnitPersonnelMine</defName>
