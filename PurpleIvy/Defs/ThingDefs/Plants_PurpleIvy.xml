@@ -39,7 +39,6 @@
   <ThingDef ParentName="PlantBase">
     <defName>PurpleIvy</defName>
     <label>Purple Ivy</label>
-    <drawerType>MapMeshAndRealTime</drawerType>
     <statBases>
       <MaxHealth>50</MaxHealth>
     </statBases>  
