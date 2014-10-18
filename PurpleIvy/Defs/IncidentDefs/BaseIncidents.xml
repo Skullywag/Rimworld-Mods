@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<IncidentDefs>
+
+	<IncidentDef>
+		<defName>MeteorImpact</defName>
+		<WorkerClass>IncidentWorker_MeteorImpact</WorkerClass>
+		<chance>0.5</chance>
+		<favorability>Bad</favorability>
+    <category>ThreatSmall</category>
+	</IncidentDef>
+
+</IncidentDefs>
