@@ -143,7 +143,7 @@
 		</skillGains>
 	</RecipeDef>
   
-  <RecipeDef>
+  <!--<RecipeDef>
 		<defName>PressCropSilver</defName>
 		<label>Press Silver Leaf</label>
 		<description>Presses Silver Leaf to extract its resource solution.</description>
@@ -176,7 +176,7 @@
 				<xp>60</xp>
 			</li>
 		</skillGains>
-	</RecipeDef> 
+	</RecipeDef>   -->
   
   <RecipeDef>
 		<defName>CentrifugeMeadowSweetSolution</defName>
@@ -233,7 +233,7 @@
 			</li>
 		</ingredients>
 		<products>
-      <Resin>1</Resin>
+      <Resin>4</Resin>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -268,7 +268,7 @@
 			</li>
 		</ingredients>
 		<products>
-      <Metal>1</Metal>
+      <Metal>30</Metal>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -303,7 +303,7 @@
 			</li>
 		</ingredients>
 		<products>
-      <Gold>1</Gold>
+      <Gold>8</Gold>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -318,7 +318,7 @@
 		</skillGains>
 	</RecipeDef>
   
-  <RecipeDef>
+  <!--<RecipeDef>
 		<defName>CentrifugeSilverSolution</defName>
 		<label>Centrifuge Silver Solution</label>
 		<description>Seperates materials from a suspended solution.</description>
@@ -338,7 +338,7 @@
 			</li>
 		</ingredients>
 		<products>
-      <Silver>1</Silver>
+      <Silver>72</Silver>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -351,7 +351,7 @@
 				<xp>60</xp>
 			</li>
 		</skillGains>
-	</RecipeDef>
+	</RecipeDef>  -->
   
   <RecipeDef>
 		<defName>CreateMedicalSupplies</defName>

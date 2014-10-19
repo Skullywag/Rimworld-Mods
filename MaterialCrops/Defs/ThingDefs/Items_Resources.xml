@@ -100,7 +100,7 @@
     </storeCategories>
   </ThingDef>
   
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>SilverLeafCrop</defName>
     <label>SilverLeaf Crown</label>
     <description>A SilverLeaf crown.</description>
@@ -114,7 +114,7 @@
     <storeCategories>
       <li>ResourcesRaw</li>
     </storeCategories>
-  </ThingDef>
+  </ThingDef>  -->
   
   <ThingDef ParentName="ResourceBase">
     <defName>MeadowSweetSolution</defName>
@@ -180,7 +180,7 @@
     </storeCategories>
   </ThingDef>
   
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>SilverLeafSolution</defName>
     <label>SilverLeaf Solution</label>
     <description>Silver solution from Silver Leaf crop.</description>
@@ -194,7 +194,7 @@
     <storeCategories>
       <li>Manufactured</li>
     </storeCategories>
-  </ThingDef>
+  </ThingDef>   -->
   
   <ThingDef ParentName="ResourceBase">
     <defName>Aspirin</defName>

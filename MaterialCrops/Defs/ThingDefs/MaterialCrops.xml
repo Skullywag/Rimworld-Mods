@@ -63,7 +63,7 @@
       <sowableHydroponic>true</sowableHydroponic>
       <topWindExposure>0.1</topWindExposure>
       <growthPer20kTicks>0.48</growthPer20kTicks>
-      <lifeSpan>200000</lifeSpan>
+      <lifeSpan>800000</lifeSpan>
       <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
       <visualSizeRange>
         <min>0.3</min>
@@ -96,7 +96,7 @@
       <sowableHydroponic>true</sowableHydroponic>
       <topWindExposure>0.1</topWindExposure>
       <growthPer20kTicks>0.48</growthPer20kTicks>
-      <lifeSpan>200000</lifeSpan>
+      <lifeSpan>800000</lifeSpan>
       <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
       <visualSizeRange>
         <min>0.3</min>
@@ -129,7 +129,7 @@
       <sowableHydroponic>true</sowableHydroponic>
       <topWindExposure>0.1</topWindExposure>
       <growthPer20kTicks>0.48</growthPer20kTicks>
-      <lifeSpan>200000</lifeSpan>
+      <lifeSpan>800000</lifeSpan>
       <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
       <visualSizeRange>
         <min>0.3</min>
@@ -162,7 +162,7 @@
       <sowableHydroponic>true</sowableHydroponic>
       <topWindExposure>0.1</topWindExposure>
       <growthPer20kTicks>0.48</growthPer20kTicks>
-      <lifeSpan>200000</lifeSpan>
+      <lifeSpan>800000</lifeSpan>
       <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
       <visualSizeRange>
         <min>0.3</min>
@@ -171,7 +171,7 @@
     </plant>
   </ThingDef>
   
-  <ThingDef ParentName="PlantBase">
+  <!--<ThingDef ParentName="PlantBase">
     <defName>SilverLeaf</defName>
     <label>Silver Leaf</label>
     <statBases>
@@ -195,14 +195,14 @@
       <sowableHydroponic>true</sowableHydroponic>
       <topWindExposure>0.1</topWindExposure>
       <growthPer20kTicks>0.48</growthPer20kTicks>
-      <lifeSpan>200000</lifeSpan>
+      <lifeSpan>800000</lifeSpan>
       <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  </ThingDef>
+  </ThingDef>       -->
 	
 </Plants>
 

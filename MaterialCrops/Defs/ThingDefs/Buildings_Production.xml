@@ -39,7 +39,7 @@
     <recipes>
       <li>PressCropMetal</li>
       <li>PressCropGold</li>
-      <li>PressCropSilver</li>
+      <!--<li>PressCropSilver</li>-->
       <li>PressCropMeadowSweet</li>
       <li>PressCropRubberFig</li>
     </recipes>
@@ -88,7 +88,7 @@
     <recipes>
       <li>CentrifugeMetalSolution</li>
       <li>CentrifugeGoldSolution</li>
-      <li>CentrifugeSilverSolution</li>
+      <!--<li>CentrifugeSilverSolution</li>-->
       <li>CentrifugeMeadowSweetSolution</li>
       <li>CentrifugeRubberFigSolution</li>
     </recipes>
