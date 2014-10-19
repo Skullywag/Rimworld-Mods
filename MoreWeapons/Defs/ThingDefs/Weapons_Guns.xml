@@ -245,7 +245,9 @@
   			<projectileDef>Bullet_FlareGun</projectileDef>
         <ai_IsIncendiary>true</ai_IsIncendiary>
         <hasStandardCommand>true</hasStandardCommand>
-        <canTargetLocations>true</canTargetLocations>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
         <accuracyTouch>0.85</accuracyTouch>
         <accuracyShort>0.70</accuracyShort>
         <accuracyMedium>0.65</accuracyMedium>
@@ -327,7 +329,9 @@
         <cooldownTicks>600</cooldownTicks>
   			<projectileDef>Bullet_RpgGun</projectileDef>
         <hasStandardCommand>true</hasStandardCommand>
-        <canTargetLocations>true</canTargetLocations>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
         <accuracyTouch>0.30</accuracyTouch>
         <accuracyShort>0.40</accuracyShort>
         <accuracyMedium>0.60</accuracyMedium>
@@ -367,7 +371,9 @@
         <cooldownTicks>40</cooldownTicks>
   			<projectileDef>Bullet_FlameThrower</projectileDef>
         <hasStandardCommand>true</hasStandardCommand>
-        <canTargetLocations>true</canTargetLocations>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
         <ai_IsIncendiary>true</ai_IsIncendiary>
         <accuracyTouch>0.71</accuracyTouch>
         <accuracyShort>0.51</accuracyShort>

@@ -50,6 +50,7 @@
     <Compile Include="Building_Flare.cs" />
     <Compile Include="Building_APM.cs" />
     <Compile Include="Building_PestZapper.cs" />
+    <Compile Include="CompGlowerNoPower.cs" />
     <Compile Include="Projectile_FlareGunBullet.cs" />
     <Compile Include="Projectile_StunGrenade.cs" />
     <Compile Include="Projectile_RpgGunBullet.cs" />
