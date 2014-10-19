@@ -7,7 +7,7 @@
 		<defName>SimpleBlastingCharges</defName>
 		<label>Improved blasting charges</label>
 		<description>We need a way to speed up mining, could also be used to set up small traps for raiders.</description>
-		<totalCost>7000</totalCost>
+		<totalCost>700</totalCost>
 		<prerequisites></prerequisites>
 	</ResearchProjectDef>
   
@@ -15,7 +15,7 @@
 		<defName>AdvancedBlastingCharges</defName>
 		<label>Advanced blasting charges</label>
 		<description>Now you have a solid understanding of all things that go BOOM, lets see if we cant make those BOOMS bigger.</description>
-		<totalCost>12000</totalCost>
+		<totalCost>1200</totalCost>
 		<prerequisites><li>SimpleBlastingCharges</li></prerequisites>
 	</ResearchProjectDef>
   
@@ -23,7 +23,7 @@
 		<defName>NuclearBlastingCharges</defName>
 		<label>Nuclear blasting charges</label>
 		<description>Now I am become Death, the destroyer of worlds.</description>
-		<totalCost>20000</totalCost>
+		<totalCost>2000</totalCost>
 		<prerequisites><li>AdvancedBlastingCharges</li></prerequisites>
 	</ResearchProjectDef>
 
