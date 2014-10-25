@@ -73,4 +73,27 @@
     </sunShadowInfo>
   </ThingDef>
   
+  <ThingDef ParentName="BuildingBase">
+    <defName>EggSack</defName>
+    <label>Egg Sack</label>
+    <eType>BuildingComplex</eType>
+    <thingClass>Building_EggSack</thingClass>
+    <tickerType>Rare</tickerType>
+    <graphicPathSingle>Things/EggSackA</graphicPathSingle>
+    <overdraw>false</overdraw>
+    <passability>Impassable</passability>
+    <altitudeLayer>Waist</altitudeLayer>
+    <useStandardHealth>true</useStandardHealth>
+    <statBases>
+      <MaxHealth>200</MaxHealth>
+      <Flammability>3.0</Flammability>
+      <Beauty>-50</Beauty>     
+    </statBases>
+    <sunShadowInfo>
+      <baseWidth>0.3</baseWidth>
+      <baseHeight>0.3</baseHeight>
+      <tallness>0.3</tallness>
+    </sunShadowInfo>
+  </ThingDef>
+  
 </Buildings>

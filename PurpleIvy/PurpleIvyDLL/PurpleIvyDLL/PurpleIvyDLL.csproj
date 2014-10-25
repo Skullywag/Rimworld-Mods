@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building_EggSack.cs" />
     <Compile Include="Meteor.cs" />
     <Compile Include="MeteorIncoming.cs" />
     <Compile Include="MeteorInfo.cs" />

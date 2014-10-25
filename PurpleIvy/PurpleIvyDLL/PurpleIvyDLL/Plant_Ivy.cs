@@ -1,19 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UnityEngine;
 using Verse;
 using Verse.Sound;
 namespace RimWorld
 {
     public class Plant_Ivy : Plant
     {
-        private int reproduceticks = 30;
+        private int SpreadTick;
+        private int OrigSpreadTick;
+        private int EggSackRate;
+        private bool EggTry;
+
+        public override void SpawnSetup()
+        {
+            base.SpawnSetup();
+            Random random = new Random();
+            SpreadTick = random.Next(25, 35);
+            OrigSpreadTick = SpreadTick;
+            EggTry = true;
+        }
+        
         public override void TickRare()
         {
             base.TickRare();
-            reproduceticks--;
-            if (reproduceticks == 0)
+            if(this.growthPercent >= 1)
+            {
+                if (EggTry == true)
+                {
+                    Random random = new Random();
+                    EggSackRate = random.Next(1, 20);
+                    if (EggSackRate == 5)
+                    {
+                        Building_EggSack EggSack = (Building_EggSack)ThingMaker.MakeThing(ThingDef.Named("EggSack"));
+                        GenSpawn.Spawn(EggSack, Position);
+                    }
+                    else
+                    {
+                        EggTry = false;
+                    }
+                }
+            }
+            SpreadTick--;
+            if (SpreadTick == 0)
             {
                 foreach (IntVec3 current in GenAdj.AdjacentSquaresCardinal(this))
                 {
@@ -36,9 +65,8 @@ namespace RimWorld
                         }
                     }
                 }
-                reproduceticks = 30;
-            }
-
+                SpreadTick = OrigSpreadTick;
+            } 
         }
     }
 }
