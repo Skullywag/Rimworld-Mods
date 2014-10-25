@@ -64,5 +64,63 @@
     </filthLeavings>
     <designationHotKey>B</designationHotKey>
   </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Fence</defName>
+    <eType>BuildingInert</eType>
+    <label>Fence</label>
+    <thingClass>Building</thingClass>
+    <linkDrawerType>Basic</linkDrawerType>
+    <category>Building</category>
+    <description>An impassable fencel. Good for keeping things out.</description>
+    <graphicPathSingle>Things/Building/Linked/Fence_Atlas</graphicPathSingle>
+    <uiIconPath>Things/Building/Linked/Fence</uiIconPath>
+    <blueprintgraphicPathSingle>Things/Building/Linked/Fence_Blueprint</blueprintgraphicPathSingle>
+    <statBases>
+      <MaxHealth>50</MaxHealth>
+      <WorkToBuild>50</WorkToBuild>
+      <Flammability>2.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>False</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <holdsRoof>false</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <blockLight>false</blockLight>
+    <madeFromStuff>false</madeFromStuff>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>3</multiplier>
+      </li>
+      <li>
+        <damageDef>Flame</damageDef>
+        <multiplier>5</multiplier>
+      </li>
+    </damageMultipliers>
+    <linkFlags>
+      <li>Wall</li>
+      <li>Rock</li>
+    </linkFlags>
+    <filthLeavings>
+      <SlagRubble>2</SlagRubble>
+    </filthLeavings>
+    <designationHotKey>F</designationHotKey>
+  </ThingDef>
 
 </Buildings>
