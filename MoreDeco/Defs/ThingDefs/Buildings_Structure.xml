@@ -65,6 +65,26 @@
     <designationHotKey>B</designationHotKey>
   </ThingDef>
   
+  <ThingDef ParentName="Wall">
+    <defName>WallConduit</defName>
+    <eType>Wall</eType>
+    <label>conduit wall</label>
+    <description>A wall with a built-in power conduit.</description>
+    <CostList>
+      <Metal>2</Metal>
+    </CostList>
+    <Comps>
+      <li>
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </Comps>
+    <linkFlags>
+      <li>Wall</li>
+      <li>Rock</li>
+    </linkFlags>
+  </ThingDef>
+  
   <ThingDef ParentName="BuildingBase">
     <defName>Fence</defName>
     <eType>BuildingInert</eType>
