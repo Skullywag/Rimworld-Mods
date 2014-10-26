@@ -58,6 +58,11 @@
     <linkFlags>
       <li>Wall</li>
       <li>Rock</li>
+      <li>Sandstone</li>
+      <li>Limestone</li>
+      <li>Granite</li>
+      <li>Slate</li>
+      <li>Marble</li>
     </linkFlags>
     <filthLeavings>
       <SlagRubble>2</SlagRubble>
