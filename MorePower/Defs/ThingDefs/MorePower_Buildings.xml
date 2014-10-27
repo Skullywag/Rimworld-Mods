@@ -13,6 +13,54 @@
 	</ThingDef>
   
   <ThingDef ParentName="BuildingBase">
+    <defName>BatteryImp</defName>
+    <eType>Building_Battery</eType>
+    <label>Battery Mk2</label>
+    <thingClass>Building_BatteryMk2</thingClass>
+    <graphicPathSingle>Things/Building/BatteryMk2</graphicPathSingle>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <WorkToBuild>650</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-6</Beauty>
+    </statBases>
+    <description>Stores electricity when there is excess power and yields it when there is not. Warning - charged batteries tend to explode when heated or wet.</description>
+    <size>(1,2)</size>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <costList>
+      <Plasteel>50</Plasteel>
+    </costList>
+    <overdraw>false</overdraw>
+    <comps>
+      <li>
+        <compClass>CompPowerBattery</compClass>
+        <storedEnergyMax>2000</storedEnergyMax>
+        <efficiency>0.75</efficiency>
+        <startElectricalFires>true</startElectricalFires>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlag>1</ChunkSlag>
+    </killedLeavings>
+    <filthLeavings>
+      <SlagRubble>2</SlagRubble> 
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
     <defName>GeothermalGeneratorImp</defName>
     <eType>Building_PowerPlantGeothermal</eType>
     <label>Geothermal generator MK2</label>

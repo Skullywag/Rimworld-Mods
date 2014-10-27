@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building_BatteryMk2.cs" />
     <Compile Include="Building_GasEngine.cs" />
     <Compile Include="Building_MicroPowerPlantSolar.cs" />
     <Compile Include="Building_SinglePowerPlantSolar.cs" />
