@@ -47,12 +47,19 @@ namespace MoreDeco
             explosionInfo.dinfo = new DamageInfo(dmgdef, 100, this, new BodyPartDamageInfo?(value), null);
             explosionInfo.dinfo = new DamageInfo(dmgdef, 100, this, new BodyPartDamageInfo?(value), null);
             MoteMaker.TryThrowMicroSparks(Position.ToVector3Shifted());
-            if (Position.GetRoof() != null)
+            foreach (IntVec3 current in GenAdj.AdjacentSquares8Way(this))
             {
-                if (Find.RoofGrid.RoofDefAt(Position).isThickRoof == true)
+                if (current.GetRoof() != null)
                 {
-                    RoofDef roofType = DefDatabase<RoofDef>.GetNamed("RoofRockThin");
-                    Find.RoofGrid.SetRoof(Position, roofType);
+                    if (Find.RoofGrid.RoofDefAt(current).isThickRoof == true)
+                    {
+                        RoofDef roofType = DefDatabase<RoofDef>.GetNamed("RoofRockThin");
+                        Find.RoofGrid.SetRoof(Position, roofType);
+                    }
+                    else
+                    {
+                        Find.RoofGrid.SetRoof(Position, null);
+                    }
                 }
             }
         }
