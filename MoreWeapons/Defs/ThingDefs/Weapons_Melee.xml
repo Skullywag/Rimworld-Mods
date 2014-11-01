@@ -53,7 +53,7 @@
         <verbClass>Verb_MeleeAttack</verbClass>
         <cooldownTicks>60</cooldownTicks>
         <hasStandardCommand>true</hasStandardCommand>
-        <meleeDamageAmount>10</meleeDamageAmount>
+        <meleeDamageAmount>1</meleeDamageAmount>
         <meleeDamageDef>Spasm</meleeDamageDef>
       </li>
     </verbs>
