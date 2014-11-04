@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PowerConduitHidden</defName>
+    <eType>Building_PowerConduit</eType>
+    <label>Hidden power conduit</label>
+    <thingClass>Building</thingClass>
+    <linkDrawerType>Transmitter</linkDrawerType>
+    <linkFlags>
+      <li>PowerConduit</li>
+    </linkFlags>
+    <category>Building</category>
+    <graphicPathSingle>Things/Building/PowerConduitHidden_Atlas</graphicPathSingle>
+    <blueprintgraphicPathSingle>Things/Building/Linked/PowerConduit_Blueprint_Atlas</blueprintgraphicPathSingle>
+    <uiIconPath>Things/Building/PowerConduitHidden_MenuIcon</uiIconPath>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <statBases>
+      <MaxHealth>80</MaxHealth>
+      <WorkToBuild>35</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <description>A set of electrical cables for moving power around.</description>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <costList>
+      <Metal>1</Metal>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationHotKey>U</designationHotKey>
+  </ThingDef>
+
+</Buildings>

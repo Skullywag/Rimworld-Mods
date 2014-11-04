@@ -31,11 +31,11 @@
 		<comps>
 			<li>
 				<compClass>CompExplosive</compClass>
-				<explosiveRadius>0.9</explosiveRadius>
+				<explosiveRadius>1.9</explosiveRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 			</li>
 		</comps>
-		<specialDisplayRadius>0.9</specialDisplayRadius>
+		<specialDisplayRadius>1.9</specialDisplayRadius>
 		<size>(1,1)</size>
     <costList>
       <Metal>50</Metal>
