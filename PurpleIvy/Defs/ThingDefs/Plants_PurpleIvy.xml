@@ -16,7 +16,8 @@
     <drawerType>MapMeshOnly</drawerType>
     <shaderType>CutoutPlant</shaderType>
     <plant>
-      <harvestDestroys>true</harvestDestroys>
+      <harvestWork>9000f</harvestWork>
+      <harvestDestroys>false</harvestDestroys>
       <harvestingSound>Harvest_Standard</harvestingSound>
       <harvestFinishSound>Harvest_Standard_Finish</harvestFinishSound>
       <sowWork>150</sowWork>
@@ -24,7 +25,7 @@
       <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
       <topWindExposure>0.1</topWindExposure>
       <growthPer20kTicks>0.48</growthPer20kTicks>
-      <lifeSpan>200000</lifeSpan>
+      <lifeSpan>90000000000</lifeSpan>
       <growMinGlow>Overlit</growMinGlow>
       <seedShootMinGrowthPercent>0.6</seedShootMinGrowthPercent>
       <visualSizeRange>

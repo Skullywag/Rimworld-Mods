@@ -87,7 +87,7 @@
     <altitudeLayer>Waist</altitudeLayer>
     <useStandardHealth>true</useStandardHealth>
     <combatTargetBuilding>true</combatTargetBuilding>
-    <selectable>true</selectable>
+    <selectable>false</selectable>
     <statBases>
       <MaxHealth>200</MaxHealth>
       <Flammability>3.0</Flammability>
@@ -112,7 +112,7 @@
     <altitudeLayer>Waist</altitudeLayer>
     <useStandardHealth>true</useStandardHealth>
     <combatTargetBuilding>true</combatTargetBuilding>
-    <selectable>true</selectable>
+    <selectable>false</selectable>
     <statBases>
       <MaxHealth>200</MaxHealth>
       <Flammability>3.0</Flammability>
