@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FactionDefs>
+  
+  <!-- Special non-humanoid factions -->
+
+  <FactionDef>
+    <defName>Genny</defName>
+    <label>Genetically modified creatures</label>
+    <description>A science experiment gone wrong.</description>
+    <pawnsPlural>Gennies</pawnsPlural>
+    <canMakeRandomly>false</canMakeRandomly>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <fixedName>Genetially modified creatures</fixedName>
+    <raidCommonality>0</raidCommonality>
+    <humanoidFaction>false</humanoidFaction>
+    <hidden>true</hidden>
+    <canFlee>false</canFlee>
+    <techLevel>Ultra</techLevel>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </startingGoodwill>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </naturalColonyGoodwill>
+    <spawnGroups>
+      <li>
+        <selectionWeight>100</selectionWeight>
+        <kinds>
+          <li>Genny_Centipede</li>
+        </kinds>
+      </li>
+    </spawnGroups>
+    <homeIconPath>World/FactionHomes/DefaultHome</homeIconPath>
+    <homeIconColor>(150,150,150)</homeIconColor>
+  </FactionDef>   
+
+</FactionDefs>

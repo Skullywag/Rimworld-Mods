@@ -9,9 +9,11 @@ namespace RimWorld
     public class Building_Meteorite : Building
     {
         private int spawnticks = 1200;
+        Faction factionDirect = Find.FactionManager.FirstFactionOfDef(DefDatabase<FactionDef>.GetNamed("Genny", true));
         public override void SpawnSetup()
         {
             base.SpawnSetup();
+            this.SetFactionDirect(factionDirect);
         }
 
         public override void Tick()

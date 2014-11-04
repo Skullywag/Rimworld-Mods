@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<BodyPartDefs>
+
+  <BodyPartDef>
+    <defName>SmellReceptor</defName>
+    <label>Smell Receptor</label>
+	<health>10</health>
+	<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+	<skinCovered>true</skinCovered>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>LeftEyeCluster</defName>
+    <label>Left Ocelli cluster</label>
+	<health>10</health>
+	<oldInjuryBaseChance>1</oldInjuryBaseChance>
+	<skinCovered>false</skinCovered>
+	<useDestroyedOutLabel>true</useDestroyedOutLabel>
+	<activities>
+		<li>Sight_source</li>
+	</activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>RightEyeCluster</defName>
+    <label>Right Ocelli cluster</label>
+	<health>10</health>
+	<oldInjuryBaseChance>1</oldInjuryBaseChance>
+	<skinCovered>false</skinCovered>
+	<useDestroyedOutLabel>true</useDestroyedOutLabel>
+	<activities>
+		<li>Sight_source</li>
+	</activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>LeftAntennae</defName>
+    <label>Left Antennae</label>
+	<health>10</health>
+	<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+	<skinCovered>true</skinCovered>
+	<activities>
+		<li>Hearing_source</li>
+	</activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>RightAntennae</defName>
+    <label>Right Antennae</label>
+	<health>10</health>
+	<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+	<skinCovered>true</skinCovered>
+	<activities>
+		<li>Hearing_source</li>
+	</activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+	<defName>CentipedeBodyFirstRing</defName>
+	<label>first body segment</label>
+	<health>100</health>
+	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<skinCovered>false</skinCovered>
+	<isSolid>true</isSolid>
+	<activities>
+		<li>Moving_tool</li>
+		<li>Manipulation_tool</li>
+	</activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+	<defName>CentipedeBodySecondRing</defName>
+	<label>second body segment</label>
+	<health>85</health>
+	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<skinCovered>false</skinCovered>
+	<isSolid>true</isSolid>
+	<activities>
+		<li>Moving_tool</li>
+		<li>Manipulation_tool</li>
+	</activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+	<defName>CentipedeBodyThirdRing</defName>
+	<label>third body segment</label>
+	<health>70</health>
+	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<skinCovered>false</skinCovered>
+	<isSolid>true</isSolid>
+	<activities>
+		<li>Moving_tool</li>
+		<li>Manipulation_tool</li>
+	</activities>
+  </BodyPartDef>
+
+</BodyPartDefs>

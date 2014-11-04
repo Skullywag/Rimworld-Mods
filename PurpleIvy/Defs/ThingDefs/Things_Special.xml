@@ -39,7 +39,7 @@
       <Flammability>0</Flammability>
       <Beauty>-1</Beauty>
     </statBases>
-    <selectable>true</selectable>
+    <selectable>false</selectable>
     <sunShadowInfo>
       <baseWidth>0.8</baseWidth>
       <baseHeight>0.8</baseHeight>
@@ -58,6 +58,8 @@
     <passability>Impassable</passability>
     <altitudeLayer>Waist</altitudeLayer>
     <useStandardHealth>true</useStandardHealth>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <selectable>false</selectable>
     <statBases>
       <MaxHealth>500</MaxHealth>
       <Flammability>5.0</Flammability>
@@ -74,16 +76,43 @@
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
-    <defName>EggSack</defName>
-    <label>Egg Sack</label>
+    <defName>EggSac</defName>
+    <label>Egg Sac</label>
     <eType>BuildingComplex</eType>
-    <thingClass>Building_EggSack</thingClass>
+    <thingClass>Building_EggSac</thingClass>
     <tickerType>Rare</tickerType>
-    <graphicPathSingle>Things/EggSackA</graphicPathSingle>
+    <graphicPathSingle>Things/EggSac</graphicPathSingle>
     <overdraw>false</overdraw>
     <passability>Impassable</passability>
     <altitudeLayer>Waist</altitudeLayer>
     <useStandardHealth>true</useStandardHealth>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHealth>200</MaxHealth>
+      <Flammability>3.0</Flammability>
+      <Beauty>-50</Beauty>     
+    </statBases>
+    <sunShadowInfo>
+      <baseWidth>0.3</baseWidth>
+      <baseHeight>0.3</baseHeight>
+      <tallness>0.3</tallness>
+    </sunShadowInfo>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>GasPump</defName>
+    <label>Gaseous Pustule</label>
+    <eType>BuildingComplex</eType>
+    <thingClass>Building_GasPump</thingClass>
+    <tickerType>Rare</tickerType>
+    <graphicPathSingle>Things/GasPump</graphicPathSingle>
+    <overdraw>false</overdraw>
+    <passability>Impassable</passability>
+    <altitudeLayer>Waist</altitudeLayer>
+    <useStandardHealth>true</useStandardHealth>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <selectable>true</selectable>
     <statBases>
       <MaxHealth>200</MaxHealth>
       <Flammability>3.0</Flammability>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThinkTrees>
+
+
+  <!--============= AI Duty ============-->
+  <ThinkTreeDef>
+    <defName>GennyDuty</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalHasSquadBrain">
+          <subNodes>
+            <li Class="ThinkNode_Duty">
+              <dutyNodes>
+
+                <!-- Hunt enemies individual -->
+                <li>
+                  <key>HuntEnemiesIndividual</key>
+                  <value Class="ThinkNode_Priority">
+                    <subNodes>
+                      <li Class="Decorator_UpdateEnemyTarget">
+                        <targetAcquireRadius>9999</targetAcquireRadius>
+                        <targetKeepRadius>9999</targetKeepRadius>
+                      </li>
+                      <li Class="JobGiver_AIAttackTarget" />
+                      <li Class="JobGiver_AITrashCloseBuildings" />
+                      <li Class="JobGiver_AITrashBuildings" />
+                    </subNodes>
+                  </value>
+                </li> 
+              
+              </dutyNodes>
+            </li>
+
+            <!-- If no duty issued a job -->
+            <!-- Wander at fallback -->
+            <li Class="ThinkNode_ConditionalHasFallbackLocation" >
+              <subNodes>
+                <li Class="JobGiver_WanderNearFallbackLocation" />
+              </subNodes>
+            </li>
+
+            <li Class="JobGiver_WanderCurrentRoom" />
+            <li Class="JobGiver_IdleError" />
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+
+
+
+
+</ThinkTrees>
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<ThinkTrees>
+
+  <ThinkTreeDef>
+    <defName>Genny</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        
+        <li Class="JobGiver_Psychotic" />
+        
+        <li Class="JobGiver_WanderCurrentRoom"/>
+        <li Class="JobGiver_IdleError"/>
+        
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</ThinkTrees>

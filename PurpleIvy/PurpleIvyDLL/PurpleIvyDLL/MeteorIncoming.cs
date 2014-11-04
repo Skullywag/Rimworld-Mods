@@ -14,6 +14,7 @@ namespace RimWorld
         protected int ticksToImpact = 120;
         private bool soundPlayed;
         private static readonly SoundDef LandSound = SoundDef.Named("DropPodFall");
+        private static readonly SoundDef ExplodeSound = SoundDef.Named("Explosion_Bomb");
         private static readonly Material ShadowMat = MaterialPool.MatFrom("Things/Special/DropPodShadow", ShaderDatabase.Transparent);
         public override Vector3 DrawPos
         {
@@ -72,6 +73,9 @@ namespace RimWorld
                 MoteMaker.ThrowDustPuff(spawnLoc, 1.2f);
             }
             MoteMaker.ThrowLightningGlow(base.Position.ToVector3Shifted(), 2f);
+            MoteMaker.TryThrowSmoke(base.Position.ToVector3Shifted(), 2f);
+            MoteMaker.ThrowExplosionCell(base.Position);
+            MeteorIncoming.ExplodeSound.PlayOneShot(base.Position);
             Meteor meteor = (Meteor)ThingMaker.MakeThing(ThingDef.Named("Meteor"));
             meteor.info = this.contents;
             GenSpawn.Spawn(meteor, base.Position, base.Rotation);

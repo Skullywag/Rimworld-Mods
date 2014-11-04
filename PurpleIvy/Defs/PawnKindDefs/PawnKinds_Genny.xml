@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PawnKindDefs>
+
+	<PawnKindDef>
+		<defName>Genny_Centipede</defName>
+    <label>Centipede hatchling</label>
+    <race>Genny_Centipede</race>
+    <pointsCost>100</pointsCost>
+		<defaultFactionType>Genny</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+    <isFighter>true</isFighter>
+    <standardBodyGraphicPathMulti>Things/Pawn/Genny/GCentipede</standardBodyGraphicPathMulti>         
+  </PawnKindDef> 
+
+</PawnKindDefs>     

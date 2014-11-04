@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<BodyDefs>
+  
+  <BodyDef>
+		<defName>CentipedeHatchling</defName>
+		<label>Centipede Hatchling</label>
+		<corePart>
+			<def>CentipedeBodyFirstRing</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>CoveredByNaturalArmor</li>
+			</groups>
+			<parts>
+				<li>
+					<def>Head</def>
+					<coverage>0.08</coverage>
+					<height>Top</height>
+					<groups>
+						<li>HeadAttackTool</li>
+						<li>CoveredByNaturalArmor</li>
+					</groups>
+					<parts>
+						<li>
+							<def>Brain</def>
+							<coverage>0.2</coverage>
+							<depth>Inside</depth>
+							<groups>
+								<li>CoveredByNaturalArmor</li>
+							</groups>
+						</li>
+						<li>
+							<def>LeftEyeCluster</def>
+							<coverage>0.15</coverage>
+						</li>
+						<li>
+							<def>RightEyeCluster</def>
+							<coverage>0.15</coverage>
+						</li>
+						<li>
+							<def>LeftAntennae</def>
+							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>RightAntennae</def>
+							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>SmellReceptor</def>
+							<coverage>0.1</coverage>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>CentipedeBodySecondRing</def>
+					<coverage>0.75</coverage>
+					<groups>
+						<li>CoveredByNaturalArmor</li>
+					</groups>
+					<parts>
+						<li>
+							<def>CentipedeBodyThirdRing</def>
+							<coverage>0.8</coverage>
+							<groups>
+								<li>CoveredByNaturalArmor</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+	
+</BodyDefs>
