@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+  </ThingDef>
+  
+  <ThingDef>
+    <defName>MeteorIncoming</defName>
+    <eType>ItemSkyFalling</eType>
+    <label>Meteor (incoming)</label>
+    <thingClass>MeteorIncoming</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <graphicPathSingle>Things/Meteor</graphicPathSingle>
+    <overdraw>false</overdraw>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <useStandardHealth>false</useStandardHealth>
+    <shaderType>CutoutFlying</shaderType>
+  </ThingDef>
+
+
+  <ThingDef>
+    <defName>Meteor</defName>
+    <label>Meteor</label>
+    <category>Building</category>
+    <eType>DropPod</eType>
+    <thingClass>Meteor</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicPathSingle>Things/Meteor</graphicPathSingle>
+    <overdraw>false</overdraw>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <useStandardHealth>true</useStandardHealth>
+    <statBases>
+      <MaxHealth>500</MaxHealth>
+      <Flammability>0</Flammability>
+      <Beauty>-1</Beauty>
+    </statBases>
+    <selectable>false</selectable>
+    <sunShadowInfo>
+      <baseWidth>0.8</baseWidth>
+      <baseHeight>0.8</baseHeight>
+      <tallness>0.6</tallness>
+    </sunShadowInfo>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Meteorite</defName>
+    <label>Meteorite</label>
+    <eType>BuildingComplex</eType>
+    <thingClass>Building_Meteorite</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicPathSingle>Things/Meteor</graphicPathSingle>
+    <overdraw>false</overdraw>
+    <passability>Impassable</passability>
+    <altitudeLayer>Waist</altitudeLayer>
+    <useStandardHealth>true</useStandardHealth>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <selectable>false</selectable>
+    <statBases>
+      <MaxHealth>500</MaxHealth>
+      <Flammability>5.0</Flammability>
+      <Beauty>-30</Beauty>     
+    </statBases>
+    <killedLeavings>
+      <Metal>300</Metal>
+    </killedLeavings>
+    <sunShadowInfo>
+      <baseWidth>0.8</baseWidth>
+      <baseHeight>0.8</baseHeight>
+      <tallness>0.6</tallness>
+    </sunShadowInfo>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>EggSac</defName>
+    <label>Egg Sac</label>
+    <eType>BuildingComplex</eType>
+    <thingClass>Building_EggSac</thingClass>
+    <tickerType>Rare</tickerType>
+    <graphicPathSingle>Things/EggSac</graphicPathSingle>
+    <overdraw>false</overdraw>
+    <passability>Impassable</passability>
+    <altitudeLayer>Waist</altitudeLayer>
+    <useStandardHealth>true</useStandardHealth>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <selectable>false</selectable>
+    <statBases>
+      <MaxHealth>200</MaxHealth>
+      <Flammability>3.0</Flammability>
+      <Beauty>-50</Beauty>     
+    </statBases>
+    <sunShadowInfo>
+      <baseWidth>0.3</baseWidth>
+      <baseHeight>0.3</baseHeight>
+      <tallness>0.3</tallness>
+    </sunShadowInfo>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>GasPump</defName>
+    <label>Gaseous Pustule</label>
+    <eType>BuildingComplex</eType>
+    <thingClass>Building_GasPump</thingClass>
+    <tickerType>Rare</tickerType>
+    <graphicPathSingle>Things/GasPump</graphicPathSingle>
+    <overdraw>false</overdraw>
+    <passability>Impassable</passability>
+    <altitudeLayer>Waist</altitudeLayer>
+    <useStandardHealth>true</useStandardHealth>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <selectable>false</selectable>
+    <statBases>
+      <MaxHealth>200</MaxHealth>
+      <Flammability>3.0</Flammability>
+      <Beauty>-50</Beauty>     
+    </statBases>
+    <sunShadowInfo>
+      <baseWidth>0.3</baseWidth>
+      <baseHeight>0.3</baseHeight>
+      <tallness>0.3</tallness>
+    </sunShadowInfo>
+  </ThingDef>
+  
+</Buildings>

@@ -8,27 +8,23 @@ namespace RimWorld
 {
     public class Building_EggSac : Building
     {
-        private int Spawnrate;
-        private int Origspawnrate;
         Faction factionDirect = Find.FactionManager.FirstFactionOfDef(DefDatabase<FactionDef>.GetNamed("Genny", true));
         public override void SpawnSetup()
         {
             base.SpawnSetup();
-            Random random = new Random();
-            Spawnrate = random.Next(30, 50);
-            Origspawnrate = Spawnrate;
             this.SetFactionDirect(factionDirect);
         }
 
         public override void TickRare()
         {
             base.TickRare();
-            Spawnrate--;
             if (EcosystemFull()) 
             {
                 return;
             }
-            if (Spawnrate == 0)
+            Random random = new Random();
+            int Spawnrate = random.Next(1, 50);
+            if (Spawnrate == 5)
             {
                 PawnKindDef pawnKindDef = PawnKindDef.Named("Genny_Centipede");
                 Pawn NewPawn = PawnGenerator.GeneratePawn(pawnKindDef, null);
@@ -36,7 +32,6 @@ namespace RimWorld
                 NewPawn.SetFactionDirect(factionDirect);
                 NewPawn.thinker = new Pawn_Thinker(NewPawn);
                 GenSpawn.Spawn(NewPawn, Position);
-                Spawnrate = Origspawnrate;
             }
             
         }

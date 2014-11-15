@@ -76,6 +76,10 @@ namespace RimWorld
             MoteMaker.TryThrowSmoke(base.Position.ToVector3Shifted(), 2f);
             MoteMaker.ThrowExplosionCell(base.Position);
             MeteorIncoming.ExplodeSound.PlayOneShot(base.Position);
+            foreach (IntVec3 current in GenAdj.AdjacentSquares8Way(this))
+            {
+                MoteMaker.ThrowAirPuffUp(base.Position.ToVector3Shifted(), AltitudeLayer.Floor);
+            }
             Meteor meteor = (Meteor)ThingMaker.MakeThing(ThingDef.Named("Meteor"));
             meteor.info = this.contents;
             GenSpawn.Spawn(meteor, base.Position, base.Rotation);

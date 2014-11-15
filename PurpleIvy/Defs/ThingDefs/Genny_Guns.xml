@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <storeCategories>
+      <li>Weapons</li>
+    </storeCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <useStandardHealth>False</useStandardHealth>
+    <neverMultiSelect>True</neverMultiSelect>
+    <shaderType>Transparent</shaderType>
+  </ThingDef>
+
+  <!-- ================ Improvised turret gun ============== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GenTurret</defName>
+    <label>Mucilage</label>
+    <graphicPathSingle>Things/Bullet_Slime</graphicPathSingle>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>32</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>GunTurretGun</defName>
+    <label>Corchorus</label>
+    <menuHidden>true</menuHidden>
+    <description>A genetically modified Chorchorus plant species, its able to fire its Mucilage slime at will.</description>
+    <graphicPathSingle>Things/GenTurretGun</graphicPathSingle>
+    <soundInteract>InteractRifle</soundInteract>
+    <canBeSpawningInventory>false</canBeSpawningInventory>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <cooldownTicks>40</cooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_GenTurret</projectileDef>
+        <warmupTicks>108</warmupTicks>
+        <range>20.9</range>
+        <accuracyTouch>0.89</accuracyTouch>
+        <accuracyShort>0.74</accuracyShort>
+        <accuracyMedium>0.51</accuracyMedium>
+        <accuracyLong>0.32</accuracyLong>
+        <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <fireSound>GenTurretFire</fireSound>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</ThingDefs>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <label>gun</label>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <storeCategories>
+      <li>Weapons</li>
+    </storeCategories>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <useStandardHealth>False</useStandardHealth>
+    <neverMultiSelect>True</neverMultiSelect>
+    <shaderType>Transparent</shaderType>
+  </ThingDef>
+
+
+
+
+  <!-- ================== Seed mortar ================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GenMortar</defName>
+    <label>Oxalis Seed</label>
+    <graphicPathSingle>Things/OxalisSeed</graphicPathSingle>
+    <shaderType>MotePostLight</shaderType>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>32</speed>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseGun">
+    <defName>Artillery_MortarGenny</defName>
+    <label>Oxalis</label>
+    <description>A genetically modified Oxalis plant species, its able to fire its seeds huge distances.</description>
+    <menuHidden>True</menuHidden>
+    <destroyOnDrop>True</destroyOnDrop>
+    <weaponTags>
+      <li>Artillery</li>
+      <li>Artillery_BaseDestroyer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_GenMortar</projectileDef>
+        <forcedMissRadius>10</forcedMissRadius>
+        <ai_IsIncendiary>false</ai_IsIncendiary>
+        <warmupTicks>300</warmupTicks>
+        <cooldownTicks>3000</cooldownTicks>
+        <minRange>20</minRange>
+        <range>200</range>
+        <accuracyTouch>0.79</accuracyTouch>
+        <accuracyShort>0.42</accuracyShort>
+        <accuracyMedium>0.18</accuracyMedium>
+        <accuracyLong>0.06</accuracyLong>
+        <burstShotCount>1</burstShotCount>
+        <fireSound>GenMortarFire</fireSound>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</ThingDefs>

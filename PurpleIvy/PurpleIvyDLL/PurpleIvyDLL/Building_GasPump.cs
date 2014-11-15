@@ -8,7 +8,7 @@ namespace RimWorld
 {
     public class Building_GasPump : Building
     {
-        int pumpfreq = 10;
+        private int pumpfreq = 10;
         Faction factionDirect = Find.FactionManager.FirstFactionOfDef(DefDatabase<FactionDef>.GetNamed("Genny", true));
         public override void SpawnSetup()
         {

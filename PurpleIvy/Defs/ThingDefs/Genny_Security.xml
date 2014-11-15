@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>GenTurretBase</defName>
+    <eType>Building_Turret</eType>
+    <label>Chorcorus</label>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicPathSingle>Things/GenTurretBase</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <statBases>
+      <MaxHealth>50</MaxHealth>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>0</WorkToBuild>
+      <Beauty>-60</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>A genetically modified Chorchorus plant species, its able to fire its Mucilage slime at will.</description>
+    <size>(1,1)</size>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.4</fillPercent>
+    <overdraw>true</overdraw>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <turretGunDef>GunTurretGun</turretGunDef>
+      <turretburstCooldownTicks>200</turretburstCooldownTicks>
+      <turretTopgraphicPathSingle>Things/GenTurretGun</turretTopgraphicPathSingle>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Turret_GenMortarSeed</defName>
+    <eType>Building_Turret</eType>
+    <label>Oxalis Seedpod</label>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicPathSingle>Things/GenMortarBase</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <statBases>
+      <MaxHealth>50</MaxHealth>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>0</WorkToBuild>
+      <Beauty>-60</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>A genetically modified Oxalis plant species, its able to fire its seeds huge distances.</description>
+    <size>(2,2)</size>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.4</fillPercent>
+    <overdraw>true</overdraw>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <turretGunDef>Artillery_MortarGenny</turretGunDef>
+      <turretBurstWarmupTicks>300</turretBurstWarmupTicks>
+      <turretburstCooldownTicks>3000</turretburstCooldownTicks>
+      <turretTopgraphicPathSingle>Things/GenMortarGun</turretTopgraphicPathSingle>
+      <buildingTags>
+        <li>Artillery</li>
+        <li>Artillery_BaseDestroyer</li>
+      </buildingTags>
+    </building>
+    <placementRestricters>
+      <li>PlacementRestricter_NotUnderRoof</li>
+    </placementRestricters>
+  </ThingDef>
+
+</ThingDefs>
