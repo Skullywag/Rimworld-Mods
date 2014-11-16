@@ -41,17 +41,17 @@
     <label>Purple Ivy</label>
     <statBases>
       <Flammability>2.0</Flammability>
+      <MaxHealth>50</MaxHealth>
     </statBases>  
     <thingClass>Plant_Ivy</thingClass>    
     <description>A genetically modified version of the Earth plant species "Glechoma hederacea".</description>
     <graphicPathFolderRandom>Things/Plant/PurpleIvy</graphicPathFolderRandom>
-    <selectable>true</selectable>
+    <selectable>False</selectable>
     <sunShadowInfo>
       <baseWidth>0.2</baseWidth>
       <baseHeight>0.2</baseHeight>
       <tallness>0.2</tallness>
     </sunShadowInfo>
-    <fillPercent>0.25</fillPercent>
     <pathCost>90</pathCost>
     <plant>
       <shootsSeeds>false</shootsSeeds>
