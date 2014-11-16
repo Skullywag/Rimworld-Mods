@@ -26,7 +26,9 @@ namespace RimWorld
                 {
                     if (current.GetPlant() == null)
                     {
-                        //not a plant, move on
+                        //not a plant, spawn ivy
+                        Plant newivy = (Plant)ThingMaker.MakeThing(ThingDef.Named("PurpleIvy"));
+                        GenSpawn.Spawn(newivy, current);
                     }
                     else
                     {

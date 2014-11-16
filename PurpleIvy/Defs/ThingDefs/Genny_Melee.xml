@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+
+  <ThingDef Name="BaseGenMeleeWeapon" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Spacer</techLevel>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseGenMeleeWeapon">
+    <defName>MeleeWeapon_GenTurretTentacle</defName>
+    <label>Chorcorus Tendril</label>
+    <description>Reliable and deadly in melee combat.</description>
+    <graphicPathSingle>Things/Tendril_Chorcorus</graphicPathSingle>
+    <soundInteract>InteractPistol</soundInteract>
+    <tradersCarry>True</tradersCarry>
+    <baseMarketValue>100</baseMarketValue>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <cooldownTicks>100</cooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageAmount>12</meleeDamageAmount>
+        <meleeDamageDef>Stab</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGenMeleeWeapon">
+    <defName>MeleeWeapon_GenMortarTentacle</defName>
+    <label>Oxalis Tendril</label>
+    <description>A spiney tendril from the genetically modified Oxalis plant.</description>
+    <graphicPathSingle>Things/Tendril_Oxalis</graphicPathSingle>
+    <soundInteract>InteractPistol</soundInteract>
+    <tradersCarry>False</tradersCarry>
+    <baseMarketValue>100</baseMarketValue>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <cooldownTicks>140</cooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageAmount>19</meleeDamageAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</ThingDefs>

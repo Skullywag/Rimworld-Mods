@@ -14,7 +14,7 @@
     <defName>GenTurretBase</defName>
     <eType>Building_Turret</eType>
     <label>Chorcorus</label>
-    <thingClass>Building_TurretGun</thingClass>
+    <thingClass>Building_GenMortarGun</thingClass>
     <graphicPathSingle>Things/GenTurretBase</graphicPathSingle>
     <altitudeLayer>Waist</altitudeLayer>
     <statBases>
@@ -44,7 +44,7 @@
     <defName>Turret_GenMortarSeed</defName>
     <eType>Building_Turret</eType>
     <label>Oxalis Seedpod</label>
-    <thingClass>Building_TurretGun</thingClass>
+    <thingClass>Building_GenTurretGun</thingClass>
     <graphicPathSingle>Things/GenMortarBase</graphicPathSingle>
     <altitudeLayer>Waist</altitudeLayer>
     <hasInteractionSquare>True</hasInteractionSquare>

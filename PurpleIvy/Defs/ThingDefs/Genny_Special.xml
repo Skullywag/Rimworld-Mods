@@ -113,6 +113,13 @@
     <useStandardHealth>true</useStandardHealth>
     <combatTargetBuilding>true</combatTargetBuilding>
     <selectable>false</selectable>
+    <comps>
+			<li>
+				<compClass>CompGlowerX</compClass>
+				<glowRadius>3</glowRadius>
+				<glowColor>(150,255,255,0)</glowColor>
+			</li>
+		</comps>
     <statBases>
       <MaxHealth>200</MaxHealth>
       <Flammability>3.0</Flammability>

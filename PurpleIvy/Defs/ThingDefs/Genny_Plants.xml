@@ -24,7 +24,7 @@
       <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
       <topWindExposure>0.1</topWindExposure>
       <growthPer20kTicks>0.48</growthPer20kTicks>
-      <lifeSpan>90000000000</lifeSpan>
+      <lifeSpan>200000</lifeSpan>
       <growMinGlow>Overlit</growMinGlow>
       <seedShootMinGrowthPercent>0.6</seedShootMinGrowthPercent>
       <visualSizeRange>
@@ -40,7 +40,7 @@
     <defName>PurpleIvy</defName>
     <label>Purple Ivy</label>
     <statBases>
-      <MaxHealth>50</MaxHealth>
+      <Flammability>2.0</Flammability>
     </statBases>  
     <thingClass>Plant_Ivy</thingClass>    
     <description>A genetically modified version of the Earth plant species "Glechoma hederacea".</description>
@@ -65,7 +65,7 @@
       <topWindExposure>0.6</topWindExposure>
       <sowableGround>false</sowableGround>
       <seedShootRadius>15</seedShootRadius>
-      <lifeSpan>600000</lifeSpan>
+      <lifeSpan>900000</lifeSpan>
       <fertilityFactorGrowthRate>1.5</fertilityFactorGrowthRate>
       <fertilityFactorPlantChance>1.5</fertilityFactorPlantChance>
     </plant>
