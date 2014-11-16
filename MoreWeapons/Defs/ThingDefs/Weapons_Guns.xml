@@ -90,6 +90,17 @@
 		<shaderType>Transparent</shaderType>
 	</ThingDef>
   
+  <ThingDef Name="FireExtinguisherBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>MoreWeapons.Projectile_FireExtinguisher</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
   <ThingDef Name="FlareGunBullet" Abstract="True">
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
@@ -384,6 +395,49 @@
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
   			<range>15</range>
   			<fireSound>FlameThrower</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="FireExtinguisherBullet">
+		<defName>Bullet_FireExtinguisher</defName>
+		<label>Foam</label>
+		<graphicPathSingle>Things/Projectile/Foam</graphicPathSingle>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+			<DamageAmountBase>0</DamageAmountBase>
+			<Speed>10</Speed>
+		</projectile>
+	</ThingDef>
+  
+  <ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_FireExtinguisher</defName>
+		<label>Fire Extinguisher</label>
+		<description>Puts out fires.</description>
+		<graphicPathSingle>Things/Weapons/FireExtinguisher</graphicPathSingle>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>False</tradersCarry>
+		<baseMarketValue>99999999999</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <cooldownTicks>40</cooldownTicks>
+  			<projectileDef>Bullet_FireExtinguisher</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ai_IsIncendiary>false</ai_IsIncendiary>
+        <accuracyTouch>0.9</accuracyTouch>
+        <accuracyShort>0.8</accuracyShort>
+        <accuracyMedium>0.7</accuracyMedium>
+        <accuracyLong>0.6</accuracyLong>
+  			<warmupTicks>30</warmupTicks>
+        <burstShotCount>20</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+  			<range>5</range>
+  			<fireSound>FireExtinguisher</fireSound>
       </li>
 		</verbs>
 	</ThingDef>

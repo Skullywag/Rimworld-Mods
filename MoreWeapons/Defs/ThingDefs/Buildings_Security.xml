@@ -47,7 +47,7 @@
 	</ThingDef>
   
   <!--=============== Pest Zapper ===============-->
-  <ThingDef ParentName="BuildingBase">
+  <!--<ThingDef ParentName="BuildingBase">
     <defName>PestZapper</defName>
     <eType>Building_Turret</eType>
     <label>Pest Zapper 9001</label>
@@ -99,7 +99,7 @@
       <turretTopgraphicPathSingle>Things/Building/PestZapper_Top</turretTopgraphicPathSingle>
     </building>
     <designationHotKey>U</designationHotKey>
-  </ThingDef>
+  </ThingDef> -->
   
   <ThingDef ParentName="BuildingBase">
 		<defName>FlareDeployed</defName>

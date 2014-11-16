@@ -16,6 +16,9 @@ namespace MoreWeapons
 			base.TickRare();
             IEnumerable<Pawn> targets = FindAllAnimals(Position, 20);
             for (int i = targets.Count() - 1; i >= 0; i--)
+            {
+
+            }
 
 		}
         public static IEnumerable<Pawn> FindAllAnimals(IntVec3 position, float distance)
