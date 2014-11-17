@@ -2,7 +2,7 @@
 <ThingDefs>
 
 
-  <ThingDef Name="BaseGun" Abstract="True">
+  <ThingDef Name="BaseGenGun" Abstract="True">
     <category>Item</category>
     <eType>Equipment</eType>
     <thingClass>Equipment</thingClass>
@@ -18,13 +18,7 @@
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
-    <techLevel>Midworld</techLevel>
-    <storeCategories>
-      <li>Weapons</li>
-    </storeCategories>
-    <weaponTags>
-      <li>Gun</li>
-    </weaponTags>
+    <techLevel>Spacer</techLevel>
     <comps>
       <li>
         <compClass>CompForbiddable</compClass>
