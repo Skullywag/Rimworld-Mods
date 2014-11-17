@@ -56,7 +56,7 @@
     </projectile>
   </ThingDef>
   
-  <ThingDef ParentName="BaseGun">
+  <ThingDef ParentName="BaseGenGun">
     <defName>Artillery_MortarGenny</defName>
     <label>Oxalis</label>
     <description>A genetically modified Oxalis plant species, its able to fire its seeds huge distances.</description>

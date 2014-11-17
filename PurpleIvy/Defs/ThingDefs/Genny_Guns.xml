@@ -50,7 +50,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseHumanGun">
+  <ThingDef ParentName="BaseGenGun">
     <defName>GunTurretGun</defName>
     <label>Corchorus</label>
     <menuHidden>true</menuHidden>
