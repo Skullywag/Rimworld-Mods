@@ -411,14 +411,14 @@
 		</projectile>
 	</ThingDef>
   
-  <ThingDef ParentName="BaseHumanGun">
+  <ThingDef ParentName="BaseGun">
 		<defName>Gun_FireExtinguisher</defName>
 		<label>Fire Extinguisher</label>
 		<description>Puts out fires.</description>
 		<graphicPathSingle>Things/Weapons/FireExtinguisher</graphicPathSingle>
 		<soundInteract>InteractRifle</soundInteract>
-		<tradersCarry>False</tradersCarry>
-		<baseMarketValue>99999999999</baseMarketValue>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>500</baseMarketValue>
 		<verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
