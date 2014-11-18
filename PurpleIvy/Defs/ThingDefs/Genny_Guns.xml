@@ -2,7 +2,7 @@
 <ThingDefs>
 
 
-  <ThingDef Name="BaseGun" Abstract="True">
+  <ThingDef Name="BaseGenGun" Abstract="True">
     <category>Item</category>
     <eType>Equipment</eType>
     <thingClass>Equipment</thingClass>
@@ -18,24 +18,13 @@
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
-    <techLevel>Midworld</techLevel>
-    <storeCategories>
-      <li>Weapons</li>
-    </storeCategories>
+    <techLevel>Spacer</techLevel>
     <comps>
       <li>
         <compClass>CompForbiddable</compClass>
       </li>
     </comps>
   </ThingDef>
-  
-  
-  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
-    <weaponTags>
-      <li>Gun</li>
-    </weaponTags>
-  </ThingDef>
-
 
   <ThingDef Name="BaseBullet" Abstract="True">
     <category>Projectile</category>
@@ -61,7 +50,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseHumanGun">
+  <ThingDef ParentName="BaseGenGun">
     <defName>GunTurretGun</defName>
     <label>Corchorus</label>
     <menuHidden>true</menuHidden>
