@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+  <ThingDef Name="FlareGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Projectile_FlareGunBullet</thingClass>
+		<label>Flare</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="FlareGunBullet">
+		<defName>Bullet_FlareGun</defName>
+		<label>Flare</label>
+		<graphicPath>Things/Projectile/Spark</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Flame</damageDef>
+			<DamageAmountBase>5</DamageAmountBase>
+			<Speed>10</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_FlareGun</defName>
+		<label>FlareGun</label>
+		<description>A typical flare gun, fires a pyrotechnic used to illuminate an area or as a signal.</description>
+		<graphicPath>Things/Weapons/FlareGun</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<soundInteract>InteractPistol</soundInteract>   
+		<tradersCarry>True</tradersCarry>
+		<statBases>
+      <MarketValue>500</MarketValue>
+    </statBases>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <baseCooldownTicks>60</baseCooldownTicks>
+  			<projectileDef>Bullet_FlareGun</projectileDef>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <accuracyTouch>0.85</accuracyTouch>
+        <accuracyShort>0.70</accuracyShort>
+        <accuracyMedium>0.65</accuracyMedium>
+        <accuracyLong>0.60</accuracyLong>
+  			<warmupTicks>600</warmupTicks>
+  			<range>24</range>
+  			<soundCast>FlareGun</soundCast>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+</ThingDefs>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+    
+  <ThingDef Name="FlameThrowerBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>FlameThrower Jet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+
+  <!-- ============================================================== -->
+  
+  <ThingDef ParentName="FlameThrowerBullet">
+		<defName>Bullet_FlameThrower</defName>
+		<label>FlameThrower Jet</label>
+		<graphicPath>Things/Projectile/Jet</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <thingClass>BulletIncendiary</thingClass>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Flame</damageDef>
+			<DamageAmountBase>2</DamageAmountBase>
+			<Speed>10</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_FlameThrower</defName>
+		<label>Flame Thrower</label>
+		<description>Probably not for people with Pyrophobia...Pyromaniacs though....*evil grin*</description>
+		<graphicPath>Things/Weapons/FlameThrower</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<statBases>
+      <MarketValue>500</MarketValue>
+    </statBases>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <baseCooldownTicks>40</baseCooldownTicks>
+  			<projectileDef>Bullet_FlameThrower</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <accuracyTouch>0.71</accuracyTouch>
+        <accuracyShort>0.51</accuracyShort>
+        <accuracyMedium>0.25</accuracyMedium>
+        <accuracyLong>0.11</accuracyLong>
+  			<warmupTicks>180</warmupTicks>
+        <burstShotCount>20</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+  			<range>15</range>
+  			<soundCast>FlameThrower</soundCast>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+</ThingDefs>

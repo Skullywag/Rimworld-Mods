@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FireExtinguisher\FireExtinguisherDLL\FireExtinguisherDLL\bin\Debug\FireExtinguisher.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FireExtinguisher\FireExtinguisherDLL\FireExtinguisherDLL\bin\Debug\FireExtinguisher.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FireExtinguisher\FireExtinguisherDLL\FireExtinguisherDLL\obj\Debug\FireExtinguisherDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FireExtinguisher\FireExtinguisherDLL\FireExtinguisherDLL\obj\Debug\FireExtinguisher.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FireExtinguisher\FireExtinguisherDLL\FireExtinguisherDLL\obj\Debug\FireExtinguisher.pdb

@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FlareGun\FlareGunDLL\FlareGunDLL\bin\Debug\FlareGun.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FlareGun\FlareGunDLL\FlareGunDLL\bin\Debug\FlareGun.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FlareGun\FlareGunDLL\FlareGunDLL\obj\Debug\FlareGunDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FlareGun\FlareGunDLL\FlareGunDLL\obj\Debug\FlareGun.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\FlareGun\FlareGunDLL\FlareGunDLL\obj\Debug\FlareGun.pdb

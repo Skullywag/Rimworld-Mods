@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+    
+  <ThingDef Name="StunGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+
+  <!-- ============================================================== -->
+
+	<ThingDef ParentName="StunGunBullet">
+		<defName>Bullet_StunGun</defName>
+		<label>StunGun bullet</label>
+		<graphicPath>Things/Projectile/Spark</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Spasm</damageDef>
+			<DamageAmountBase>10</DamageAmountBase>
+			<Speed>20</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_StunGun</defName>
+		<label>StunGun</label>
+		<description>A typical stun gun, used to incapacitate.</description>
+		<graphicPath>Things/Weapons/StunGun</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<soundInteract>InteractPistol</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<statBases>
+      <MarketValue>250</MarketValue>
+    </statBases>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <baseCooldownTicks>40</baseCooldownTicks>
+  			<projectileDef>Bullet_StunGun</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <accuracyTouch>0.95</accuracyTouch>
+        <accuracyShort>0.80</accuracyShort>
+        <accuracyMedium>0.60</accuracyMedium>
+        <accuracyLong>0.50</accuracyLong>
+  			<warmupTicks>600</warmupTicks>
+  			<range>18</range>
+  			<soundCast>StunGun</soundCast>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+</ThingDefs>

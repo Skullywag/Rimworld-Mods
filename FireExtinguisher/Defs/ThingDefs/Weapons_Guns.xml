@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+  <ThingDef Name="FireExtinguisherBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Projectile_FireExtinguisher</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+
+  <!-- ============================================================== -->
+  
+  <ThingDef ParentName="FireExtinguisherBullet">
+		<defName>Bullet_FireExtinguisher</defName>
+		<label>Foam</label>
+		<graphicPath>Things/Projectile/Foam</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Frostbite</damageDef>
+			<DamageAmountBase>1</DamageAmountBase>
+			<Speed>10</Speed>
+		</projectile>
+	</ThingDef>
+  
+  <ThingDef ParentName="BaseGun">
+		<defName>Gun_FireExtinguisher</defName>
+		<label>Fire Extinguisher</label>
+		<description>Puts out fires.</description>
+		<graphicPath>Things/Weapons/FireExtinguisher</graphicPath>       
+    <graphicClass>Graphic_Single</graphicClass>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<statBases>
+      <MarketValue>500</MarketValue>
+    </statBases>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <baseCooldownTicks>40</baseCooldownTicks>
+  			<projectileDef>Bullet_FireExtinguisher</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ai_IsIncendiary>false</ai_IsIncendiary>
+        <accuracyTouch>0.9</accuracyTouch>
+        <accuracyShort>0.8</accuracyShort>
+        <accuracyMedium>0.7</accuracyMedium>
+        <accuracyLong>0.6</accuracyLong>
+  			<warmupTicks>30</warmupTicks>
+        <burstShotCount>20</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+  			<range>5</range>
+  			<soundCast>FireExtinguisher</soundCast>
+      </li>
+		</verbs>
+	</ThingDef>
+ 
+</ThingDefs>

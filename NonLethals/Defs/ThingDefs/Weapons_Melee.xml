@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+
+  <ThingDef Name="BaseNonLethalMeleeWeapon" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseNonLethalMeleeWeapon">
+    <defName>MeleeWeapon_Tazer</defName>
+    <label>Tazer</label>
+    <description>An up close and personal alternative to the StunGun.</description>
+    <graphicPath>Things/Weapons/Tazer</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <soundInteract>InteractPistol</soundInteract>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>Spacer</li>
+      <li>SpacerMelee</li>
+    </weaponTags>
+    <tradersCarry>true</tradersCarry>
+    <statBases>
+      <WorkToMake>250</WorkToMake>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <baseCooldownTicks>80</baseCooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+        <meleeDamageDef>Spasm</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</ThingDefs>

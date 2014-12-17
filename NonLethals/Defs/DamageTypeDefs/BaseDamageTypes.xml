@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DamageTypes>
+
+  <DamageTypeDef Name="LocalInjuryBase" Abstract="True">
+    <workerClass>DamageType_AddLocalInjury</workerClass>
+  </DamageTypeDef>
+
+  <DamageTypeDef ParentName="LocalInjuryBase">
+    <defName>Spasm</defName>
+    <label>Spasm</label>
+    <harmsHealth>false</harmsHealth>
+    <incapChanceMultiplier>100</incapChanceMultiplier>
+    <hasForcefulImpact>False</hasForcefulImpact>
+    <interruptJobs>true</interruptJobs>
+    <makesBlood>false</makesBlood>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} died from nerve damage.</deathMessage>
+  	<healthDiff>Spasm</healthDiff>
+    <healthDiffSkin>Spasm</healthDiffSkin>
+    <healthDiffSolid>Spasm</healthDiffSolid>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Electric</impactSoundType>
+  </DamageTypeDef>
+
+</DamageTypes>

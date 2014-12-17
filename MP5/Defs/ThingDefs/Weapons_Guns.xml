@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <useStandardHealth>False</useStandardHealth>
+    <neverMultiSelect>True</neverMultiSelect>
+    <shaderType>Transparent</shaderType>
+  </ThingDef>
+    
+  <!-- ============================================================== -->
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Mp</defName>
+    <label>pistol bullet</label>
+    <graphicPath>Things/Projectile/Bullet_Small</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>5</DamageAmountBase>
+      <Speed>70</Speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_Mp5Gun</defName>
+		<label>MP5</label>
+		<description>A 9mm submachine gun.</description>
+		<graphicPath>Things/Weapons/Mp5</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<soundInteract>InteractAssaultRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>300</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <baseCooldownTicks>80</baseCooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Mp</projectileDef>
+        <warmupTicks>100</warmupTicks>
+        <range>29</range>
+        <accuracyTouch>0.92</accuracyTouch>
+        <accuracyShort>0.83</accuracyShort>
+        <accuracyMedium>0.72</accuracyMedium>
+        <accuracyLong>0.60</accuracyLong>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Mp5Shot</soundCast>
+      </li>
+		</verbs>
+	</ThingDef>
+   
+</ThingDefs>

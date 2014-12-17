@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\NonLethals\NonLethalsDLL\NonLethalsDLL\bin\Debug\NonLethals.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\NonLethals\NonLethalsDLL\NonLethalsDLL\bin\Debug\NonLethals.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\NonLethals\NonLethalsDLL\NonLethalsDLL\obj\Debug\NonLethalsDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\NonLethals\NonLethalsDLL\NonLethalsDLL\obj\Debug\NonLethals.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\NonLethals\NonLethalsDLL\NonLethalsDLL\obj\Debug\NonLethals.pdb

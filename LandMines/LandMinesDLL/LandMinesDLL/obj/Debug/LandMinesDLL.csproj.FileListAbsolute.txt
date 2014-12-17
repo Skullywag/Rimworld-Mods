@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\LandMines\LandMinesDLL\LandMinesDLL\bin\Debug\LandMines.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\LandMines\LandMinesDLL\LandMinesDLL\bin\Debug\LandMines.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\LandMines\LandMinesDLL\LandMinesDLL\obj\Debug\LandMinesDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\LandMines\LandMinesDLL\LandMinesDLL\obj\Debug\LandMines.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\LandMines\LandMinesDLL\LandMinesDLL\obj\Debug\LandMines.pdb

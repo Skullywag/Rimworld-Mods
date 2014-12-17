@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-SoundDef>
+
+  <SoundDef>
+    <defName>Mp5Shot</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Guns/GunshotD</clipPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>1.1152173</min>        
+          <max>1.405979</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</DefPackage-SoundDef>

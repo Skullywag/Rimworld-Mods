@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HealthDiffDefs>
+  
+  <HealthDiffDef>
+		<defName>Spasm</defName>
+		<label>Spasm</label>
+    <naturallyHealed>true</naturallyHealed>
+    <injury>
+  		<painPerDamage>5</painPerDamage>
+  		<oldLabel>Nerve Damage</oldLabel>
+  		<bleeding>0</bleeding>
+  		<becomeOldChance>1</becomeOldChance>
+  		<combine>false</combine>
+  		<destroyedLabel>Severed Nerve</destroyedLabel>
+  		<treatedWellLabel>repaired</treatedWellLabel>
+  		<treatedLabel>poorly repaired</treatedLabel>
+  		<innerTreatedWellLabel>repaired</innerTreatedWellLabel>
+  		<innerTreatedLabel>poorly repaired</innerTreatedLabel>
+  		<solidTreatedWellLabel>repaired</solidTreatedWellLabel>
+  		<solidTreatedLabel>poorly repaired</solidTreatedLabel>
+    </injury>
+	</HealthDiffDef>
+
+</HealthDiffDefs>
