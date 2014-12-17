@@ -4,6 +4,7 @@
 
   <ThingDef Name="BuildingBase" Abstract="True">
     <category>Building</category>
+    <thingClass>Building</thingClass>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <selectable>true</selectable>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -21,24 +22,26 @@
       <li>PowerConduit</li>
     </linkFlags>
     <category>Building</category>
-    <graphicPathSingle>Things/Building/PowerConduitHidden_Atlas</graphicPathSingle>
-    <blueprintgraphicPathSingle>Things/Building/Linked/PowerConduit_Blueprint_Atlas</blueprintgraphicPathSingle>
+    <graphicPath>Things/Building/PowerConduitHidden_Atlas</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <blueprintgraphicPath>Things/Building/Linked/PowerConduit_Blueprint_Atlas</blueprintgraphicPath>
     <uiIconPath>Things/Building/PowerConduitHidden_MenuIcon</uiIconPath>
     <building>
       <ignoreNeedsPower>true</ignoreNeedsPower>
+      <isEdifice>false</isEdifice>
     </building>
     <altitudeLayer>FloorEmplacement</altitudeLayer>
     <passability>Standable</passability>
     <statBases>
       <MaxHealth>80</MaxHealth>
-      <WorkToBuild>35</WorkToBuild>
+      <WorkToMake>35</WorkToMake>
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
     <description>A set of electrical cables for moving power around.</description>
     <placingDraggableDimensions>1</placingDraggableDimensions>
     <costList>
-      <Metal>1</Metal>
+      <Steel>1</Steel>
     </costList>
     <comps>
       <li>

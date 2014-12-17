@@ -47,7 +47,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Building_ThermiteBomb.cs" />
     <Compile Include="CompGlowerNoPower.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

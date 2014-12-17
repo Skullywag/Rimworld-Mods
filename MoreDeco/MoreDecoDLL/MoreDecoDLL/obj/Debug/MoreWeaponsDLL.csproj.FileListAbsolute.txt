@@ -18,3 +18,8 @@ C:\Users\mjsku_000\Desktop\Mods\Rimworld-Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\b
 C:\Users\mjsku_000\Desktop\Mods\Rimworld-Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\obj\Debug\MoreWeaponsDLL.csprojResolveAssemblyReference.cache
 C:\Users\mjsku_000\Desktop\Mods\Rimworld-Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\obj\Debug\MoreDeco.dll
 C:\Users\mjsku_000\Desktop\Mods\Rimworld-Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\obj\Debug\MoreDeco.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\bin\Debug\MoreDeco.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\bin\Debug\MoreDeco.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\obj\Debug\MoreWeaponsDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\obj\Debug\MoreDeco.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\MoreDeco\MoreDecoDLL\MoreDecoDLL\obj\Debug\MoreDeco.pdb

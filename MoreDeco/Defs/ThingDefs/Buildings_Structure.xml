@@ -4,85 +4,12 @@
 
   <ThingDef Name="BuildingBase" Abstract="True">
     <category>Building</category>
+    <thingClass>Building</thingClass>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <selectable>true</selectable>
     <drawerType>MapMeshAndRealTime</drawerType>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
-  </ThingDef>
-
-  <!--========================= Walls =============================-->
-
-  <ThingDef ParentName="BuildingBase" Name="Wall">
-    <defName>Wall</defName>
-    <eType>Wall</eType>
-    <label>wall</label>
-    <thingClass>Building</thingClass>
-    <category>Building</category>
-    <description>An impassable wall. Capable of holding up a roof.</description>
-    <graphicPathFolderAppearances>Things/Building/Linked/Wall</graphicPathFolderAppearances>
-    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
-    <blueprintgraphicPathSingle>Things/Building/Linked/Wall_Blueprint_Atlas</blueprintgraphicPathSingle>
-    <statBases>
-      <MaxHealth>225</MaxHealth>
-      <WorkToBuild>100</WorkToBuild>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <costStuffCount>6</costStuffCount>
-    <altitudeLayer>BuildingTall</altitudeLayer>
-    <passability>Impassable</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>1</fillPercent>
-    <coversFloor>true</coversFloor>
-    <placingDraggableDimensions>1</placingDraggableDimensions>
-    <tickerType>Never</tickerType>
-    <rotatable>false</rotatable>
-    <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <holdsRoof>true</holdsRoof>
-    <designationCategory>Structure</designationCategory>
-    <staticSunShadowHeight>1.0</staticSunShadowHeight>
-    <blockLight>true</blockLight>
-    <madeFromStuff>true</madeFromStuff>
-    <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-    </building>
-    <damageMultipliers>
-      <li>
-        <damageDef>Bomb</damageDef>
-        <multiplier>3</multiplier>
-      </li>
-    </damageMultipliers>
-    <linkDrawerType>CornerFiller</linkDrawerType>
-    <linkFlags>
-      <li>Wall</li>
-      <li>Rock</li>
-    </linkFlags>
-    <filthLeavings>
-      <SlagRubble>2</SlagRubble>
-    </filthLeavings>
-    <designationHotKey>B</designationHotKey>
-  </ThingDef>
-  
-  <ThingDef ParentName="Wall">
-    <defName>WallConduit</defName>
-    <eType>Wall</eType>
-    <label>conduit wall</label>
-    <description>A wall with a built-in power conduit.</description>
-    <CostList>
-      <Metal>2</Metal>
-    </CostList>
-    <Comps>
-      <li>
-        <compClass>CompPowerTransmitter</compClass>
-        <transmitsPower>true</transmitsPower>
-      </li>
-    </Comps>
-    <linkFlags>
-      <li>Wall</li>
-      <li>Rock</li>
-    </linkFlags>
   </ThingDef>
   
   <ThingDef ParentName="BuildingBase">
@@ -93,12 +20,13 @@
     <linkDrawerType>Basic</linkDrawerType>
     <category>Building</category>
     <description>An impassable fencel. Good for keeping things out.</description>
-    <graphicPathSingle>Things/Building/Linked/Fence_Atlas</graphicPathSingle>
+    <graphicPath>Things/Building/Linked/Fence_Atlas</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
     <uiIconPath>Things/Building/Linked/Fence</uiIconPath>
-    <blueprintgraphicPathSingle>Things/Building/Linked/Fence_Blueprint</blueprintgraphicPathSingle>
+    <blueprintgraphicPath>Things/Building/Linked/Fence_Blueprint</blueprintgraphicPath>
     <statBases>
       <MaxHealth>50</MaxHealth>
-      <WorkToBuild>50</WorkToBuild>
+      <WorkToMake>50</WorkToMake>
       <Flammability>2.0</Flammability>
     </statBases>
     <costList>
@@ -119,7 +47,6 @@
     <designationCategory>Structure</designationCategory>
     <staticSunShadowHeight>0.5</staticSunShadowHeight>
     <blockLight>false</blockLight>
-    <madeFromStuff>false</madeFromStuff>
     <building>
       <ignoreNeedsPower>true</ignoreNeedsPower>
     </building>
@@ -140,7 +67,6 @@
     <filthLeavings>
       <SlagRubble>2</SlagRubble>
     </filthLeavings>
-    <designationHotKey>F</designationHotKey>
   </ThingDef>
 
 </Buildings>

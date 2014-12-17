@@ -3,15 +3,14 @@
 
 
 	<ThingDef Name="BuildingBase" Abstract="True">
-		<category>Building</category>
+    <category>Building</category>
     <thingClass>Building</thingClass>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-		<selectable>true</selectable>
-		<drawerType>MapMeshAndRealTime</drawerType>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<constructEffect>ConstructMetal</constructEffect>
-		<repairEffect>Repair</repairEffect>
-	</ThingDef>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>CeilingLamp</defName>
@@ -19,12 +18,13 @@
 		<label>Ceiling light</label>
 		<thingClass>Building</thingClass>
 		<category>Building</category>
-		<graphicPathSingle>Things/Building/LampCeiling</graphicPathSingle>
+    <graphicPath>Things/Building/LampCeiling</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
 		<altitudeLayer>BuildingTall</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<statBases>
       <MaxHealth>50</MaxHealth>
-      <WorkToBuild>115</WorkToBuild>
+      <WorkToMake>115</WorkToMake>
       <Flammability>1.0</Flammability>
       <Beauty>-5</Beauty>
     </statBases>
@@ -32,7 +32,7 @@
 		<description>Ceiling light that lights an area.</description>
 		<size>(1,1)</size>
 		<costList>
-			<Metal>15</Metal>
+			<Steel>15</Steel>
 		</costList>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -66,12 +66,13 @@
 		<label>Wall light</label>
 		<thingClass>Building</thingClass>
 		<category>Building</category>
-		<graphicPathSingle>Things/Building/WallLight</graphicPathSingle>
+    <graphicPath>Things/Building/WallLight</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
 		<altitudeLayer>BuildingTall</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<statBases>
       <MaxHealth>100</MaxHealth>
-      <WorkToBuild>150</WorkToBuild>
+      <WorkToMake>150</WorkToMake>
       <Flammability>1.0</Flammability>
       <Beauty>5</Beauty>
     </statBases>
@@ -79,7 +80,7 @@
 		<description>Wall light that lights an area. Must be placed on a wall.</description>
 		<size>(1,1)</size>
 		<costList>
-			<Metal>30</Metal>
+			<Steel>30</Steel>
 		</costList>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -101,7 +102,8 @@
 			<basewidth>0.1</basewidth>
 			<baseHeight>0.1</baseHeight>
 			<tallness>0.5</tallness>
-		</sunShadowInfo>
+      <offset>(0.5,0.5,-0.1)</offset>
+		</sunShadowInfo>           
 		<rotatable>true</rotatable>
   </ThingDef>
   
@@ -111,12 +113,13 @@
 		<label>Path light</label>
 		<thingClass>Building</thingClass>
 		<category>Building</category>
-		<graphicPathSingle>Things/Building/LampPath</graphicPathSingle>
+    <graphicPath>Things/Building/LampPath</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
 		<altitudeLayer>BuildingTall</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<statBases>
       <MaxHealth>10</MaxHealth>
-      <WorkToBuild>50</WorkToBuild>
+      <WorkToMake>50</WorkToMake>
       <Flammability>1.0</Flammability>
       <Beauty>-5</Beauty>
     </statBases>
@@ -124,7 +127,7 @@
 		<description>Small light with built in solar panel that lights an area.</description>
 		<size>(1,1)</size>
 		<costList>
-			<Metal>10</Metal>
+			<Steel>10</Steel>
 		</costList>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -144,6 +147,9 @@
 		</sunShadowInfo>
 		<rotatable>false</rotatable>
     <designationHotKey>L</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
   </ThingDef>
 
 
