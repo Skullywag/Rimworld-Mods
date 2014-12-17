@@ -2,6 +2,6 @@
 <ModMetaData>
 	<name>Simple Torch</name>
 	<author>Skullywag</author>
-	<targetVersion>Alpha 7</targetVersion>
+	<targetVersion>Alpha 8</targetVersion>
 	<description>Adds a torch to the game, temporary lightsource, edit xml "Burntime" ticks for longer/shorter times.</description>
 </ModMetaData>

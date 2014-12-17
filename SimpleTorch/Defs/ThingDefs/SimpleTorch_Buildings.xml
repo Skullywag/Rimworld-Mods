@@ -18,23 +18,24 @@
 		<label>Torch</label>
 		<thingClass>Torch</thingClass>
 		<category>Building</category>
-		<graphicPathSingle>Things/Torch</graphicPathSingle>
+		<graphicPath>Things/Torch</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
 		<altitudeLayer>Waist</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<statBases>
       <MaxHealth>10</MaxHealth>
-      <WorkToBuild>50</WorkToBuild>
+      <WorkToMake>50</WorkToMake>
       <Flammability>1.0</Flammability>
       <Beauty>3</Beauty>
     </statBases>
 		<selectable>true</selectable>
-    <tickerType>Normal</tickerType>
-		<description>Torch that lights an area. Requires fuel.</description>
+    <tickerType>Rare</tickerType>
+		<description>Torch that lights an area. Will burn out over time.</description>
 		<size>(1,1)</size>
 		<costList>
 			<WoodLog>1</WoodLog>
 		</costList>
-		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<soundImpactDefault>BulletImpactWood</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<comps>
 			<li>
@@ -42,8 +43,11 @@
 				<glowRadius>4</glowRadius>
 				<glowColor>(217,217,208,0)</glowColor>
 			</li>
+      <li>
+        <compClass>CompTempControl</compClass>
+        <energyPerSecond>20</energyPerSecond>
+      </li>
 		</comps>
-    <MaxBurnTime>18000</MaxBurnTime>
 		<designationCategory>Furniture</designationCategory>
 		<sunShadowInfo>
 			<basewidth>0.1</basewidth>

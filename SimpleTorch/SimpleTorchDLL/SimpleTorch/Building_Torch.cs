@@ -10,8 +10,10 @@ namespace RimWorld
         public int MaxBurnTime;
     }
 
-    public class Torch : ThingWithComponents
+    public class Torch : Building_TempControl
     {
+        private int ticksSinceRoomHeat;
+        public float fireSize = 0.5f;
         public int BurnTime { get; set; }
         public override void SpawnSetup()
         {

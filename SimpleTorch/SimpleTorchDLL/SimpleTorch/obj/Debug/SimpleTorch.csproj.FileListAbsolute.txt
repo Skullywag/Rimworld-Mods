@@ -3,3 +3,8 @@ C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\SimpleTorch\SimpleTorchDLL\Simple
 C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\SimpleTorch\SimpleTorchDLL\SimpleTorch\obj\Debug\SimpleTorch.csprojResolveAssemblyReference.cache
 C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\SimpleTorch\SimpleTorchDLL\SimpleTorch\obj\Debug\SimpleTorch.dll
 C:\Users\mjsku_000\Desktop\RimWorld581Win\Mods\SimpleTorch\SimpleTorchDLL\SimpleTorch\obj\Debug\SimpleTorch.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\SimpleTorch\SimpleTorchDLL\SimpleTorch\obj\Debug\SimpleTorch.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\SimpleTorch\SimpleTorchDLL\SimpleTorch\obj\Debug\SimpleTorch.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\SimpleTorch\SimpleTorchDLL\SimpleTorch\obj\Debug\SimpleTorch.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\SimpleTorch\SimpleTorchDLL\SimpleTorch\bin\Debug\SimpleTorch.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\SimpleTorch\SimpleTorchDLL\SimpleTorch\bin\Debug\SimpleTorch.pdb
