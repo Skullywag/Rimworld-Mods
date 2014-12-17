@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+  <ThingDef Name="RailGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Projectile_RailGunBullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="RailGunBullet">
+		<defName>Bullet_RailGun</defName>
+		<label>RailGun bullet</label>
+    <shaderType>MotePostLight</shaderType>
+		<graphicPath>Things/Projectile/Charge_Small</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+			<DamageAmountBase>1</DamageAmountBase>
+			<Speed>120</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_RailGun</defName>
+		<label>RailGun</label>
+		<description>An electrically powered electromagnetic projectile launcher.</description>
+		<graphicPath>Things/Weapons/RailGun</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<statBases>
+      <MarketValue>5000</MarketValue>
+    </statBases>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <baseCooldownTicks>120</baseCooldownTicks>
+  			<projectileDef>Bullet_RailGun</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <accuracyTouch>0.99</accuracyTouch>
+        <accuracyShort>0.90</accuracyShort>
+        <accuracyMedium>0.80</accuracyMedium>
+        <accuracyLong>0.70</accuracyLong>
+  			<warmupTicks>600</warmupTicks>
+  			<range>37</range>
+  			<soundCast>ShotChargeBlaster</soundCast>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+</ThingDefs>

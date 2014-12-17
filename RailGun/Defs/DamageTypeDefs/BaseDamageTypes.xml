@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DamageTypes>
+
+  <DamageTypeDef Name="LocalInjuryBase" Abstract="True">
+    <workerClass>DamageType_AddLocalInjury</workerClass>
+  </DamageTypeDef>
+  
+  <DamageTypeDef ParentName="LocalInjuryBase">
+    <defName>Vaporized</defName>
+    <label>Vaporized</label>
+    <harmsHealth>true</harmsHealth>
+    <incapChanceMultiplier>100</incapChanceMultiplier>
+    <hasForcefulImpact>True</hasForcefulImpact>
+    <interruptJobs>true</interruptJobs>
+    <makesBlood>true</makesBlood>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was vaporized.</deathMessage>
+  	<healthDiff>Gunshot</healthDiff>
+    <healthDiffSkin>Gunshot</healthDiffSkin>
+    <healthDiffSolid>Shredded</healthDiffSolid>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageTypeDef>
+
+</DamageTypes>

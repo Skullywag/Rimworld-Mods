@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>  
+
+  <ThingDef ParentName="BuildingBase">
+		<defName>AnitPersonnelMine</defName>
+		<eType>BuildingComplex</eType>
+		<label>Anit Personnel Mine</label>
+		<thingClass>MoreWeapons.Building_APM</thingClass>
+		<graphicPathSingle>Things/Weapons/APM_disarmed</graphicPathSingle>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<useStandardHealth>true</useStandardHealth>
+		<statBases>
+      <MaxHealth>50</MaxHealth>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<description>An explosive which explodes when stepped on.</description>
+		<comps>
+			<li>
+				<compClass>CompExplosive</compClass>
+				<explosiveRadius>1.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+			</li>
+		</comps>
+		<specialDisplayRadius>1.9</specialDisplayRadius>
+		<size>(1,1)</size>
+    <costList>
+      <Plasteel>1</Plasteel>
+      <Shells>1</Shells>
+    </costList>
+		<researchPrerequisite>LandMines</researchPrerequisite>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+	</ThingDef>
+  
+  <!--=============== Pest Zapper ===============-->
+  <!--<ThingDef ParentName="BuildingBase">
+    <defName>PestZapper</defName>
+    <eType>Building_Turret</eType>
+    <label>Pest Zapper 9001</label>
+    <thingClass>MoreWeapons.Building_PestZapper</thingClass>
+    <graphicPathSingle>Things/Building/PestZapper</graphicPathSingle>
+    <altitudeLayer>Waist</altitudeLayer>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>1500</WorkToBuild>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li>
+        <compClass>CompExplosive</compClass>
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+      </li>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+    </comps>
+    <description>A powered, electric discharging turret that has been set to target local fauna.</description>
+    <size>(1,1)</size>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.4</fillPercent>
+    <overdraw>true</overdraw>
+    <costList>
+      <Metal>150</Metal>
+      <Plasteel>10</Plasteel>
+    </costList>
+    <combatTargetBuilding>true</combatTargetBuilding>
+    <filthLeavings>
+      <SlagRubble>1</SlagRubble>
+    </filthLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <specialDisplayRadius>15.9</specialDisplayRadius>
+    <building>
+      <turretGunDef>Gun_TurretImprovised</turretGunDef>
+      <turretburstCooldownTicks>120</turretburstCooldownTicks>
+      <turretTopgraphicPathSingle>Things/Building/PestZapper_Top</turretTopgraphicPathSingle>
+    </building>
+    <designationHotKey>U</designationHotKey>
+  </ThingDef> -->
+  
+  <ThingDef ParentName="BuildingBase">
+		<defName>FlareDeployed</defName>
+		<eType>BuildingComplex</eType>
+		<label>Flare</label>
+		<thingClass>MoreWeapons.Building_Flare</thingClass>
+		<graphicPathSingle>Things/Weapons/Flare</graphicPathSingle>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<useStandardHealth>false</useStandardHealth>
+		<statBases>
+      <MaxHealth>50</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <comps>
+			<li>
+				<compClass>CompGlowerX</compClass>
+				<glowRadius>20</glowRadius>
+				<glowColor>(180,0,0,0)</glowColor>
+			</li>
+		</comps>
+		<selectable>false</selectable>
+		<tickerType>Normal</tickerType>
+		<description>A Flare.</description>
+		<size>(1,1)</size>
+	</ThingDef>
+
+</ThingDefs>

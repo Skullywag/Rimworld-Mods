@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>Equipment</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <storeCategories>
+      <li>Weapons</li>
+    </storeCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <useStandardHealth>False</useStandardHealth>
+    <neverMultiSelect>True</neverMultiSelect>
+    <shaderType>Transparent</shaderType>
+  </ThingDef>
+    
+  <ThingDef Name="StunGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>MoreWeapons.Projectile_StunGunBullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
+  <ThingDef Name="RpgGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>MoreWeapons.Projectile_RpgGunBullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
+  <ThingDef Name="RailGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>MoreWeapons.Projectile_RailGunBullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
+  <ThingDef Name="FlameThrowerBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>FlameThrower Jet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
+  <ThingDef Name="FireExtinguisherBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>MoreWeapons.Projectile_FireExtinguisher</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+  
+  <ThingDef Name="FlareGunBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>MoreWeapons.Projectile_FlareGunBullet</thingClass>
+		<label>Flare</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<shaderType>Transparent</shaderType>
+	</ThingDef>
+
+  <!-- ============================================================== -->
+
+	<ThingDef ParentName="StunGunBullet">
+		<defName>Bullet_StunGun</defName>
+		<label>StunGun bullet</label>
+		<graphicPathSingle>Things/Projectile/Spark</graphicPathSingle>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Spasm</damageDef>
+			<DamageAmountBase>1</DamageAmountBase>
+			<Speed>20</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_StunGun</defName>
+		<label>StunGun</label>
+		<description>A typical stun gun, used to incapacitate.</description>
+		<graphicPathSingle>Things/Weapons/StunGun</graphicPathSingle>
+		<soundInteract>InteractPistol</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>150</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <cooldownTicks>600</cooldownTicks>
+  			<projectileDef>Bullet_StunGun</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <accuracyTouch>0.95</accuracyTouch>
+        <accuracyShort>0.80</accuracyShort>
+        <accuracyMedium>0.60</accuracyMedium>
+        <accuracyLong>0.50</accuracyLong>
+  			<warmupTicks>40</warmupTicks>
+  			<range>18</range>
+  			<fireSound>StunGun</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Revolver</defName>
+    <label>pistol bullet</label>
+    <graphicPathSingle>Things/Projectile/Bullet_Small</graphicPathSingle>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>17</DamageAmountBase>
+      <Speed>40</Speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_RevolverGun</defName>
+		<label>Revolver</label>
+		<description>A sidearm with a rotating cylindercontaining 6 chambers for high caliber bullets.</description>
+		<graphicPathSingle>Things/Weapons/Revolver</graphicPathSingle>
+		<soundInteract>RevolverReload</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>450</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <cooldownTicks>120</cooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pistol</projectileDef>
+        <accuracyTouch>0.87</accuracyTouch>
+        <accuracyShort>0.70</accuracyShort>
+        <accuracyMedium>0.53</accuracyMedium>
+        <accuracyLong>0.46</accuracyLong>
+        <warmupTicks>60</warmupTicks>
+        <range>22</range>
+        <fireSound>RevolverShot</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Mp</defName>
+    <label>pistol bullet</label>
+    <graphicPathSingle>Things/Projectile/Bullet_Small</graphicPathSingle>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>5</DamageAmountBase>
+      <Speed>70</Speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_Mp5Gun</defName>
+		<label>MP5</label>
+		<description>A 9mm submachine gun.</description>
+		<graphicPathSingle>Things/Weapons/Mp5</graphicPathSingle>
+		<soundInteract>InteractAssaultRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>300</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <cooldownTicks>100</cooldownTicks>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Mp</projectileDef>
+        <warmupTicks>80</warmupTicks>
+        <range>29</range>
+        <accuracyTouch>0.92</accuracyTouch>
+        <accuracyShort>0.83</accuracyShort>
+        <accuracyMedium>0.72</accuracyMedium>
+        <accuracyLong>0.60</accuracyLong>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <fireSound>Mp5Shot</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="FlareGunBullet">
+		<defName>Bullet_FlareGun</defName>
+		<label>Flare</label>
+		<graphicPathSingle>Things/Projectile/Spark</graphicPathSingle>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Flame</damageDef>
+			<DamageAmountBase>5</DamageAmountBase>
+			<Speed>10</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_FlareGun</defName>
+		<label>FlareGun</label>
+		<description>A typical flare gun, fires a pyrotechnic used to illuminate an area or as a signal.</description>
+		<graphicPathSingle>Things/Weapons/FlareGun</graphicPathSingle>
+		<soundInteract>InteractPistol</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>150</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <cooldownTicks>1200</cooldownTicks>
+  			<projectileDef>Bullet_FlareGun</projectileDef>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <accuracyTouch>0.85</accuracyTouch>
+        <accuracyShort>0.70</accuracyShort>
+        <accuracyMedium>0.65</accuracyMedium>
+        <accuracyLong>0.60</accuracyLong>
+  			<warmupTicks>60</warmupTicks>
+  			<range>24</range>
+  			<fireSound>StunGun</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="RailGunBullet">
+		<defName>Bullet_RailGun</defName>
+		<label>RailGun bullet</label>
+    <shaderType>MotePostLight</shaderType>
+		<graphicPathSingle>Things/Projectile/Charge_Small</graphicPathSingle>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+			<DamageAmountBase>1</DamageAmountBase>
+			<Speed>120</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_RailGun</defName>
+		<label>RailGun</label>
+		<description>An electrically powered electromagnetic projectile launcher.</description>
+		<graphicPathSingle>Things/Weapons/RailGun</graphicPathSingle>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>5000</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <cooldownTicks>600</cooldownTicks>
+  			<projectileDef>Bullet_RailGun</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <accuracyTouch>0.99</accuracyTouch>
+        <accuracyShort>0.90</accuracyShort>
+        <accuracyMedium>0.80</accuracyMedium>
+        <accuracyLong>0.70</accuracyLong>
+  			<warmupTicks>120</warmupTicks>
+  			<range>37</range>
+  			<fireSound>ChargeLance_Fire</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="RpgGunBullet">
+		<defName>Bullet_RpgGun</defName>
+		<label>Rpg Rocket</label>
+    <shaderType>MotePostLight</shaderType>
+		<graphicPathSingle>Things/Projectile/Rpg</graphicPathSingle>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Bomb</damageDef>
+			<DamageAmountBase>22</DamageAmountBase>
+      <explosionDelay>0</explosionDelay>
+      <explosionRadius >1.9</explosionRadius >
+      <soundExplode>Explosion_Bomb</soundExplode>
+			<Speed>30</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_RpgGun</defName>
+		<label>RPG</label>
+		<description>A shoulder fired, anti armour rocket propelled grenade launcher.</description>
+		<graphicPathSingle>Things/Weapons/Rpg</graphicPathSingle>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>1000</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass> 
+        <cooldownTicks>600</cooldownTicks>
+  			<projectileDef>Bullet_RpgGun</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <accuracyTouch>0.30</accuracyTouch>
+        <accuracyShort>0.40</accuracyShort>
+        <accuracyMedium>0.60</accuracyMedium>
+        <accuracyLong>0.70</accuracyLong>
+  			<warmupTicks>120</warmupTicks>
+  			<range>20</range>
+  			<fireSound>ShotT9Launcher</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="FlameThrowerBullet">
+		<defName>Bullet_FlameThrower</defName>
+		<label>FlameThrower Jet</label>
+		<graphicPathSingle>Things/Projectile/Jet</graphicPathSingle>
+    <thingClass>BulletIncendiary</thingClass>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Flame</damageDef>
+			<DamageAmountBase>0</DamageAmountBase>
+			<Speed>10</Speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_FlameThrower</defName>
+		<label>Flame Thrower</label>
+		<description>Probably not for people with Pyrophobia...Pyromaniacs though....*evil grin*</description>
+		<graphicPathSingle>Things/Weapons/FlameThrower</graphicPathSingle>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>950</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <cooldownTicks>40</cooldownTicks>
+  			<projectileDef>Bullet_FlameThrower</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <accuracyTouch>0.71</accuracyTouch>
+        <accuracyShort>0.51</accuracyShort>
+        <accuracyMedium>0.25</accuracyMedium>
+        <accuracyLong>0.11</accuracyLong>
+  			<warmupTicks>180</warmupTicks>
+        <burstShotCount>20</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+  			<range>15</range>
+  			<fireSound>FlameThrower</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  <ThingDef ParentName="FireExtinguisherBullet">
+		<defName>Bullet_FireExtinguisher</defName>
+		<label>Foam</label>
+		<graphicPathSingle>Things/Projectile/Foam</graphicPathSingle>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+			<DamageAmountBase>0</DamageAmountBase>
+			<Speed>10</Speed>
+		</projectile>
+	</ThingDef>
+  
+  <ThingDef ParentName="BaseGun">
+		<defName>Gun_FireExtinguisher</defName>
+		<label>Fire Extinguisher</label>
+		<description>Puts out fires.</description>
+		<graphicPathSingle>Things/Weapons/FireExtinguisher</graphicPathSingle>
+		<soundInteract>InteractRifle</soundInteract>
+		<tradersCarry>True</tradersCarry>
+		<baseMarketValue>500</baseMarketValue>
+		<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <cooldownTicks>40</cooldownTicks>
+  			<projectileDef>Bullet_FireExtinguisher</projectileDef>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ai_IsIncendiary>false</ai_IsIncendiary>
+        <accuracyTouch>0.9</accuracyTouch>
+        <accuracyShort>0.8</accuracyShort>
+        <accuracyMedium>0.7</accuracyMedium>
+        <accuracyLong>0.6</accuracyLong>
+  			<warmupTicks>30</warmupTicks>
+        <burstShotCount>20</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+  			<range>5</range>
+  			<fireSound>FireExtinguisher</fireSound>
+      </li>
+		</verbs>
+	</ThingDef>
+  
+  
+  
+</ThingDefs>

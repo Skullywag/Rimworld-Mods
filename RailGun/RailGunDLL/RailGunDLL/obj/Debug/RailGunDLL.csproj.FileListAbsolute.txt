@@ -1,0 +1,10 @@
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\RailGun\RailGunDLL\RailGunDLL\bin\Debug\RailGun.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\RailGun\RailGunDLL\RailGunDLL\bin\Debug\RailGun.pdb
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\RailGun\RailGunDLL\RailGunDLL\obj\Debug\RailGunDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\RailGun\RailGunDLL\RailGunDLL\obj\Debug\RailGun.dll
+C:\Users\mjsku_000\Desktop\RimWorld632WinDev\RimWorld632WinDev\Mods\RailGun\RailGunDLL\RailGunDLL\obj\Debug\RailGun.pdb
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\RailGun\RailGunDLL\RailGunDLL\bin\Debug\RailGun.dll
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\RailGun\RailGunDLL\RailGunDLL\bin\Debug\RailGun.pdb
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\RailGun\RailGunDLL\RailGunDLL\obj\Debug\RailGunDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\RailGun\RailGunDLL\RailGunDLL\obj\Debug\RailGun.dll
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\RailGun\RailGunDLL\RailGunDLL\obj\Debug\RailGun.pdb

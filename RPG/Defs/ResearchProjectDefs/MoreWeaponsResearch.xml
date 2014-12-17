@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Research>
+
+
+  
+	<ResearchProjectDef>
+		<defName>LandMines</defName>
+		<label>LandMines</label>
+		<description>We need some way to make it expensive for raiders to get to our stuff, hopefully some explosives will deter them.</description>
+		<totalCost>1000</totalCost>
+		<prerequisites></prerequisites>
+	</ResearchProjectDef>
+
+
+
+</Research>
