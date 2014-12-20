@@ -3,59 +3,63 @@
 
 
 	<ThingDef Name="BuildingBase" Abstract="True">
-		<category>Building</category>
-		<soundImpactDefault>BulletImpactWood</soundImpactDefault>
-		<selectable>true</selectable>
-		<drawerType>MapMeshAndRealTime</drawerType>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<constructEffect>ConstructMetal</constructEffect>
-		<repairEffect>Repair</repairEffect>
-	</ThingDef>
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
   
-  <ThingDef  Class="ThingDef_Torch" ParentName="BuildingBase">
-		<defName>Torch</defName>
-		<eType>BuildingComplex</eType>
-		<label>Torch</label>
-		<thingClass>Torch</thingClass>
-		<category>Building</category>
-		<graphicPath>Things/Torch</graphicPath>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Torch</defName>
+    <eType>BuildingComplex</eType>
+    <label>Torch</label>
+    <description>Torch that lights an area. Will burn out over time.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicPath>Things/Torch</graphicPath>
     <graphicClass>Graphic_Single</graphicClass>
-		<altitudeLayer>Waist</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<statBases>
-      <MaxHealth>10</MaxHealth>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <constructEffect>ConstructDirt</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <statBases>
+      <MaxHealth>20</MaxHealth>
       <WorkToMake>50</WorkToMake>
       <Flammability>1.0</Flammability>
-      <Beauty>3</Beauty>
     </statBases>
-		<selectable>true</selectable>
-    <tickerType>Rare</tickerType>
-		<description>Torch that lights an area. Will burn out over time.</description>
-		<size>(1,1)</size>
-		<costList>
-			<WoodLog>1</WoodLog>
-		</costList>
-		<soundImpactDefault>BulletImpactWood</soundImpactDefault>
-		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-		<comps>
-			<li>
-				<compClass>CompGlowerX</compClass>
-				<glowRadius>4</glowRadius>
-				<glowColor>(217,217,208,0)</glowColor>
-			</li>
+    <selectable>true</selectable>
+    <size>(1,1)</size>
+    <costList>
+      <WoodLog>35</WoodLog>
+    </costList>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
       <li>
-        <compClass>CompTempControl</compClass>
-        <energyPerSecond>20</energyPerSecond>
+        <compClass>CompGlower</compClass>
+        <glowRadius>4</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
       </li>
-		</comps>
-		<designationCategory>Furniture</designationCategory>
-		<sunShadowInfo>
-			<basewidth>0.1</basewidth>
-			<baseHeight>0.1</baseHeight>
-			<tallness>0.3</tallness>
-			<offset>(0,0,-0.1)</offset>
-		</sunShadowInfo>
-		<rotatable>false</rotatable>
+      <li>
+        <compClass>CompHeatPusher</compClass>
+        <heatPerSecond>9</heatPerSecond>
+        <heatPushMaxTemperature>15</heatPushMaxTemperature>
+      </li>
+      <li>
+        <compClass>CompLifespan</compClass>
+        <lifespanTicks>9000</lifespanTicks>
+      </li>
+    </comps>
+    <designationCategory>Temperature</designationCategory>
+    <rotatable>false</rotatable>
+    <designationHotKey>I</designationHotKey>
   </ThingDef>
 
 </Buildings>
