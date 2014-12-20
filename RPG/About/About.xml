@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>More Weapons</name>
+	<name>RPG</name>
 	<author>Skullywag</author>
-	<targetVersion>Alpha 7</targetVersion>
-	<description>Adds more weapons to the game.</description>
+	<targetVersion>Alpha 8</targetVersion>
+	<description>Adds an RPG to the game.</description>
 </ModMetaData>

@@ -7,8 +7,8 @@
     <ProjectGuid>{A36BEEB2-7379-475B-B537-827E34571962}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MoreWeapons</RootNamespace>
-    <AssemblyName>MoreWeapons</AssemblyName>
+    <RootNamespace>RPG</RootNamespace>
+    <AssemblyName>RPG</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -47,16 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Building_Flare.cs" />
-    <Compile Include="Building_APM.cs" />
-    <Compile Include="Building_PestZapper.cs" />
-    <Compile Include="CompGlowerNoPower.cs" />
-    <Compile Include="Projectile_FireExtinguisher.cs" />
-    <Compile Include="Projectile_FlareGunBullet.cs" />
-    <Compile Include="Projectile_StunGrenade.cs" />
     <Compile Include="Projectile_RpgGunBullet.cs" />
-    <Compile Include="Projectile_RailGunBullet.cs" />
-    <Compile Include="Projectile_StunGunBullet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
