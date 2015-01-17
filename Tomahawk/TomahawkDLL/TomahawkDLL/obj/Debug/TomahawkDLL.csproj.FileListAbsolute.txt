@@ -1,0 +1,5 @@
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\Tomahawk\TomahawkDLL\TomahawkDLL\bin\Debug\Tomahawks.dll
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\Tomahawk\TomahawkDLL\TomahawkDLL\bin\Debug\Tomahawks.pdb
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\Tomahawk\TomahawkDLL\TomahawkDLL\obj\Debug\TomahawkDLL.csprojResolveAssemblyReference.cache
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\Tomahawk\TomahawkDLL\TomahawkDLL\obj\Debug\Tomahawks.dll
+C:\Users\mjsku_000\Desktop\RimWorldAlpha8eWin\RimWorld657Win\Mods\Tomahawk\TomahawkDLL\TomahawkDLL\obj\Debug\Tomahawks.pdb

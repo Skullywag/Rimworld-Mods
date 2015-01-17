@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- ==================== Bases ========================== -->
+
+	<ThingDef Name="BaseEquipment" Abstract="True">
+    <eType>Equipment</eType>
+    <equipmentType>Secondary</equipmentType>
+    <label>equipment lacks label</label>
+    <thingClass>Equipment</thingClass>
+    <category>Item</category>
+    <useStandardHealth>true</useStandardHealth>
+    <selectable>true</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <description>Equipment lacks desc.</description>
+    <weaponTags>
+      <li>Grenade</li>
+    </weaponTags>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+
+	<ThingDef Name="BaseTom" Abstract="True">
+    <category>Projectile</category>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <label>projectile</label>
+    <tickerType>Normal</tickerType>
+    <useStandardHealth>False</useStandardHealth>
+    <neverMultiSelect>True</neverMultiSelect>
+    <shaderType>Transparent</shaderType>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <projectile>
+      <speed>20</speed>
+      <flyOverhead>false</flyOverhead>
+    </projectile>
+  </ThingDef>
+
+	
+	<!-- ==================== Stun grenade ========================== -->
+	  
+  <ThingDef ParentName="BaseTom">
+    <defName>Proj_Tomahawk</defName>
+    <label>Tomahawk</label>
+    <thingClass>Projectile_Tomahawk</thingClass>
+    <graphicPath>Things/Weapons/Tomahawk</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseEquipment">
+    <defName>Weapon_Tomahawk</defName>
+    <equipmentType>Primary</equipmentType>
+    <label>Tomahawk</label>
+    <description>An axe, made for throwing, deadly if it hits.</description>
+    <graphicPath>Things/Weapons/Tomahawk</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <soundInteract>InteractGrenade</soundInteract>
+    <techLevel>Midworld</techLevel>
+    <statBases>
+      <MarketValue>200</MarketValue>
+    </statBases>
+    <verbs>
+      <li>
+        <label>Throw Tomahawk</label>
+        <verbClass>Verb_ShootSingleBurstAndSelfDestruct</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>12.9</range>
+        <forcedMissRadius>0</forcedMissRadius>
+        <warmupTicks>200</warmupTicks>
+        <baseCooldownTicks>100</baseCooldownTicks>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+  				<canTargetLocations>true</canTargetLocations>
+  				<canTargetPawns>true</canTargetPawns>
+  				<canTargetBuildings>true</canTargetBuildings>
+  				<worldObjectTargetsMustBeAutoAttackable>true</worldObjectTargetsMustBeAutoAttackable>
+  			</targetParams>
+        <projectileDef>Proj_Tomahawk</projectileDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</ThingDefs>  
